@@ -6,7 +6,11 @@
       "Bash(git push:*)",
       "Bash(git config:*)",
       "Bash(git rm:*)",
-      "Bash(git commit -m \"$\\(cat <<''EOF''\nRemove large video files exceeding GitHub limit\n\n- Exclude 2 videos \\(463MB, 339MB\\) from tracking\n- Add .gitignore to prevent re-adding\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")"
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nRemove large video files exceeding GitHub limit\n\n- Exclude 2 videos \\(463MB, 339MB\\) from tracking\n- Add .gitignore to prevent re-adding\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nInitial commit: 노아이디어피자 랜딩페이지\n\n- 랜딩페이지 HTML/CSS/JS \\(Tailwind, GSAP\\)\n- 브랜드 에셋 \\(로고, 이미지, 메뉴 사진\\)\n- 브랜드 가이드라인 및 PRD 문서\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(gh pages --help:*)",
+      "Bash(gh repo edit --help:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nAdd GitHub Pages deployment workflow\n\n- Add GitHub Actions workflow for automatic deployment\n- Add root index.html redirect to landing page\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")"
     ]
   }
 }
