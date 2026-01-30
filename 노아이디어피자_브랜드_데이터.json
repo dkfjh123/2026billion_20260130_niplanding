@@ -1,0 +1,703 @@
+{
+    "meta": {
+        "document_type": "brand_guideline",
+        "version": "1.0",
+        "last_updated": "2026-01-29",
+        "timezone": "Asia/Seoul",
+        "data_sources": [
+            "naverplace",
+            "diningcode.com",
+            "polle.com",
+            "official_sns",
+            "blog_reviews",
+            "customer_reviews"
+        ],
+        "note": "가격 및 메뉴는 매장별로 다를 수 있으며, 변동 가능성이 있습니다."
+    },
+    "brand": {
+        "name_ko": "노아이디어피자",
+        "name_en": "NO IDEA PIZZA",
+        "slogan": "Our own pizza",
+        "type": "수제 피자 전문점",
+        "concept": "천연액종 폴리쉬 도우 + 독창적 토핑 조합 + 힙한 공간 경험",
+        "naming_meaning": {
+            "interpretation_1": "복잡한 고민 없이 편안하게 즐길 수 있는 피자",
+            "interpretation_2": "한 입 베어 물면 그 맛의 비결을 알 수 없는 놀라움"
+        },
+        "core_values": {
+            "freshness": "냉동 도우가 아닌 매일 직접 반죽하는 생도우와 신선한 원재료",
+            "originality": "기존 프랜차이즈에서 시도하지 않은 과감한 토핑 조합",
+            "experience": "단순히 음식을 먹는 공간을 넘어 시각적 즐거움을 제공하는 힙한 공간"
+        },
+        "philosophy": [
+            "천연액종을 이용한 폴리쉬 도우로 건강한 피자 제공",
+            "신선한 재료와 고품질 치즈 사용",
+            "일반 프랜차이즈와 차별화된 독창적인 토핑 조합",
+            "합리적인 가격으로 고퀄리티 피자 제공"
+        ]
+    },
+    "brand_identity": {
+        "colors": {
+            "primary": {
+                "name": "Signature Blue",
+                "description": "청량하고 현대적인 느낌, 위생적 신뢰감과 세련미"
+            },
+            "secondary": {
+                "name": "White",
+                "description": "깔끔함과 청결한 이미지"
+            },
+            "accent": [
+                {
+                    "name": "Yellow",
+                    "usage": "식욕 자극, 포인트 컬러"
+                },
+                {
+                    "name": "Pink",
+                    "usage": "메뉴별 차별화 (그린핑크 피자 등)"
+                },
+                {
+                    "name": "Red",
+                    "usage": "식욕 자극"
+                },
+                {
+                    "name": "Green",
+                    "usage": "신선함 표현"
+                }
+            ]
+        },
+        "character": {
+            "description": "안경과 모자를 착용하고 어깨를 으쓱하는 만화적 캐릭터",
+            "meaning": "'I have no idea'라고 말하는 듯한 유머러스한 분위기",
+            "effect": "젊은 세대에게 친근하고 위트 있는 브랜드 이미지 각인"
+        },
+        "tone_and_manner": [
+            "캐주얼",
+            "트렌디",
+            "힙한",
+            "위트",
+            "젊은",
+            "감각적인"
+        ],
+        "branding_elements": [
+            "NO IDEA PIZZA 로고 타이포그래피",
+            "시그니처 마스코트 캐릭터",
+            "커스텀 폰트",
+            "브랜드 굿즈",
+            "브랜드 컬러 적용 패키징"
+        ],
+        "has_character": true,
+        "has_custom_font": true,
+        "sells_merchandise": true
+    },
+    "technical_features": {
+        "dough": {
+            "name": "폴리쉬 도우 (Polish Dough)",
+            "method": "천연액종을 이용한 예비발효 방식",
+            "process": {
+                "pre_fermentation": "밀가루와 물, 효모를 1:1 비율로 섞어 장시간 사전 발효",
+                "low_temp_aging": "급격한 발효 지양, 저온에서 천천히 숙성",
+                "daily_production": "매일 매장에서 직접 반죽",
+                "rice_flour": "쌀가루 첨가로 쫀득퐁신한 식감"
+            },
+            "features": [
+                "매장에서 직접 반죽",
+                "쫄깃하고 쫀득한 식감",
+                "빵끝까지 맛있음",
+                "소화가 잘됨 (속 편함)",
+                "겉바속촉의 정석"
+            ],
+            "benefits": [
+                "건강한 도우",
+                "깊은 맛과 향",
+                "오래 씹어도 질리지 않음"
+            ]
+        },
+        "ingredients": {
+            "cheese": {
+                "base": "99~100% 자연산 모짜렐라",
+                "blend": ["라끌렛", "체다", "그라나 파다노"],
+                "feature": "푸짐한 양"
+            },
+            "sauce": {
+                "types": ["갈릭 디핑", "렌치", "할라피뇨 마요"],
+                "production": "매장 자체 제조"
+            },
+            "pickle": {
+                "types": ["오이", "무"],
+                "feature": "빙초산 미사용, 매일 직접 담금"
+            },
+            "vegetables": "직접 손질한 신선한 재료",
+            "meat": "두툼하고 품질 좋은 육류"
+        },
+        "cooking": {
+            "kitchen_type": "오픈 키친",
+            "preparation_time": "약 10분",
+            "style": "갓 구운 피자 즉석 제공"
+        }
+    },
+    "stores": [
+        {
+            "name": "이수 본점",
+            "type": "본점",
+            "address": "서울 동작구 동작대로33가길 5 1층 102호",
+            "location_detail": "이수역 (4호선) 14번 출구 도보 2~3분 (약 200m)",
+            "nearest_station": ["이수역", "총신대입구역"],
+            "phone": "070-8810-0174",
+            "naver_place": "https://naver.me/G381RqUp",
+            "business_hours": {
+                "daily": "11:30 - 21:30",
+                "holiday": "연중무휴"
+            },
+            "parking": "매장 앞 1-2대 가능",
+            "seats": 12,
+            "seat_detail": "4인 테이블 4개 + 창가석 4자리",
+            "services": ["홀식사", "포장", "배달", "셀프바", "바자리"],
+            "waiting_system": "캐치테이블",
+            "features": ["본점", "오픈형 키친"],
+            "delivery_platforms": ["쿠팡이츠", "배달의민족"]
+        },
+        {
+            "name": "목동 직영점",
+            "type": "직영점",
+            "address": "서울 양천구 신목로 53 1층",
+            "location_detail": "오목교역 7번 출구 도보 7분",
+            "nearest_station": ["오목교역"],
+            "phone": "0507-1422-5898",
+            "naver_place": "https://naver.me/GV2tGHiB",
+            "business_hours": {
+                "daily": "11:30 - 21:30",
+                "holiday": "연중무휴"
+            },
+            "parking": "건물 뒤편 대형 주차장 (1시간 무료)",
+            "services": ["홀식사", "포장", "배달", "셀프바"],
+            "features": ["하루 500판 이상 판매", "포장 공간"],
+            "instagram": "@noideapizza_mokdong",
+            "delivery_platforms": ["쿠팡이츠", "배달의민족"]
+        },
+        {
+            "name": "신사점",
+            "type": "지점",
+            "address": "서울 강남구 강남대로152길 65 지상1층",
+            "location_detail": "신사역 가로수길 인근",
+            "nearest_station": ["신사역"],
+            "phone": "02-6953-0266",
+            "naver_place": "https://naver.me/x5mbTjHs",
+            "business_hours": {
+                "daily": "11:30 - 21:30"
+            },
+            "features": ["가로수길 감성", "트렌드세터 타겟"]
+        },
+        {
+            "name": "노원점",
+            "type": "지점",
+            "address": "서울 노원구 동일로 1345 2층",
+            "nearest_station": ["상계역"],
+            "naver_place": "https://naver.me/FTXemVPN",
+            "business_hours": {
+                "weekday": "11:30 - 21:30",
+                "weekend": "11:30 - 21:30",
+                "closed": "월요일 정기휴무"
+            },
+            "instagram": "@noideapizza_nowon",
+            "features": ["피자 만드는 자매: 피자매", "2층 위치"]
+        }
+    ],
+    "menu": {
+        "currency": "KRW",
+        "size_system": {
+            "P": {
+                "name": "Personal",
+                "pieces": 4,
+                "suggested_serving": 1,
+                "description": "1인용 (혼밥)"
+            },
+            "R": {
+                "name": "Regular",
+                "pieces": 6,
+                "suggested_serving": 2,
+                "description": "2인용 (커플/친구)"
+            },
+            "L": {
+                "name": "Large",
+                "pieces": 8,
+                "suggested_serving": 4,
+                "description": "3~4인용 (가족/모임)"
+            }
+        },
+        "pizza": {
+            "signature": [
+                {
+                    "name_ko": "꽈리 불고기",
+                    "category": "시그니처",
+                    "popularity": "베스트셀러",
+                    "description": "불고기+꽈리고추+깻잎+쯔란마요 소스",
+                    "toppings": ["불고기", "꽈리고추", "깻잎", "쯔란마요"],
+                    "prices_krw": {
+                        "P": 12500,
+                        "R": 23500,
+                        "L": 29500
+                    },
+                    "features": ["일반 불고기피자보다 두꺼운 고기", "매콤달콤한 조화", "재방문율 최고"]
+                },
+                {
+                    "name_ko": "노아이디어 콤비네이션",
+                    "category": "시그니처",
+                    "popularity": "1등 시그니처",
+                    "description": "가지, 버섯, 페퍼로니, 통베이컨",
+                    "toppings": ["가지", "버섯", "페퍼로니", "통베이컨"],
+                    "prices_krw": {
+                        "P": 13000,
+                        "R": 24000,
+                        "L": 30000
+                    },
+                    "features": ["다양한 토핑", "기본에 충실한 맛"]
+                },
+                {
+                    "name_ko": "그린핑크",
+                    "category": "시그니처",
+                    "popularity": "SNS 인기",
+                    "description": "바질페스토+마스카포네+용과소스",
+                    "toppings": ["바질페스토", "마스카포네", "용과소스"],
+                    "prices_krw": {
+                        "P": 11500,
+                        "R": 22000,
+                        "L": 28000
+                    },
+                    "features": ["은은하게 달콤한 용과소스", "바질향과 조화", "비주얼 메뉴", "인스타그래머블"]
+                }
+            ],
+            "classic": [
+                {
+                    "name_ko": "페퍼로니",
+                    "category": "정통",
+                    "description": "킬바사 소시지와 페퍼로니를 사용한 육즙 가득한 페퍼로니 피자. 맥주와 잘 어울림",
+                    "toppings": ["페퍼로니", "킬바사 소시지"],
+                    "prices_krw": {
+                        "P": 11000,
+                        "R": 21000,
+                        "L": 26000
+                    }
+                },
+                {
+                    "name_ko": "4치즈",
+                    "category": "정통",
+                    "description": "99% 모짜렐라 치즈, 라끌렛치즈, 체다치즈, 그라나 파다노 4종 치즈의 조화",
+                    "toppings": ["모짜렐라", "라끌렛", "체다", "그라나 파다노"],
+                    "prices_krw": {
+                        "P": 8900,
+                        "R": 19000,
+                        "L": 24000
+                    },
+                    "features": ["치즈 많고 쭉쭉 늘어남", "쫄깃한 식감"]
+                },
+                {
+                    "name_ko": "크리스피 포테이토",
+                    "category": "정통",
+                    "description": "바삭한 감자칩 토핑",
+                    "toppings": ["포테이토"],
+                    "prices_krw": {
+                        "P": 12500,
+                        "R": 23500,
+                        "L": 29500
+                    },
+                    "features": ["짭짤하고 질리지 않는 맛", "감자 맛이 일품"]
+                }
+            ],
+            "creative": [
+                {
+                    "name_ko": "타코피자",
+                    "category": "독창적",
+                    "description": "적양파, 홍피망, 미티, 킬바사, 꽈리고추, 사워크림, 나쵸칩, 고수까지 타코 재료를 피자에 구현",
+                    "toppings": ["타코 미트", "킬바사", "사워크림", "나쵸칩", "고수", "꽈리고추"],
+                    "prices_krw": {
+                        "P": 12000,
+                        "R": 23000,
+                        "L": 29000
+                    },
+                    "spicy_level": 1,
+                    "features": ["독특한 퓨전 스타일", "호불호 있음"]
+                },
+                {
+                    "name_ko": "핫새우밤",
+                    "category": "독창적",
+                    "description": "적양파, 옥수수콘, 미티, 불맛 새우와 달콤한 밤을 칠리럽으로 마무리 (신라면보다 살짝 매움)",
+                    "toppings": ["새우", "밤", "칠리럽", "옥수수콘"],
+                    "prices_krw": {
+                        "P": 13500,
+                        "R": 25000,
+                        "L": 31000
+                    },
+                    "spicy_level": 2,
+                    "features": ["단짠매의 조화"]
+                },
+                {
+                    "name_ko": "불닭고구마",
+                    "category": "독창적",
+                    "description": "불닭매운맛+고구마단맛",
+                    "toppings": ["불닭소스", "고구마무스"],
+                    "prices_krw": {
+                        "P": 13500,
+                        "R": 25000,
+                        "L": 31000
+                    },
+                    "features": ["미친조합", "매운맛 주의"]
+                },
+                {
+                    "name_ko": "스파이시 치킨",
+                    "category": "독창적",
+                    "description": "한국인 소울푸드",
+                    "toppings": ["매콤한 치킨"],
+                    "prices_krw": {
+                        "P": 13500,
+                        "R": 24500,
+                        "L": 29500
+                    }
+                },
+                {
+                    "name_ko": "스위트 하와이안",
+                    "category": "독창적",
+                    "description": "통 파인애플에 단호박 크림치즈를 채우고 두툼한 베이컨으로 육향을 더한 하와이안 피자",
+                    "toppings": ["파인애플", "단호박 크림치즈", "베이컨"],
+                    "prices_krw": {
+                        "P": 11500,
+                        "R": 22000,
+                        "L": 27000
+                    }
+                }
+            ]
+        },
+        "half_and_half": {
+            "available": true,
+            "base_price": {
+                "R": 19000,
+                "L": 25000
+            },
+            "additional_cost": "메뉴별로 1,500원~2,250원 차등",
+            "popular_combinations": [
+                "꽈리불고기 + 콤비네이션",
+                "타코 + 꽈리불고기",
+                "4치즈 + 크리스피포테이토"
+            ]
+        },
+        "crust_options": [
+            {
+                "name": "오리지널 크러스트",
+                "price": 0,
+                "description": "폴리쉬 도우 (기본)"
+            },
+            {
+                "name": "치즈 크러스트",
+                "price": 3000,
+                "description": "크러스트에 치즈 추가"
+            },
+            {
+                "name": "리치골드 크러스트",
+                "price": 5000,
+                "description": "통치즈+고구마+체다치즈"
+            }
+        ],
+        "pasta": [
+            {
+                "name_ko": "핫새우 파스타",
+                "price_krw": 9000,
+                "description": "매콤한 새우 크림 파스타"
+            },
+            {
+                "name_ko": "라구 파스타",
+                "price_krw": 9000,
+                "description": "고기 많이 씹히는 미트소스",
+                "features": ["고기 냄새 전혀 없음", "탱글한 면"]
+            },
+            {
+                "name_ko": "불고기머쉬룸 파스타",
+                "price_krw": 9000,
+                "description": "불고기+버섯 크림"
+            }
+        ],
+        "sides": [
+            {
+                "name_ko": "할라피뇨마요 윙",
+                "variant": "6ps",
+                "price_krw": 8500,
+                "description": "매콤달콤 윙"
+            },
+            {
+                "name_ko": "치폴레마요 윙",
+                "variant": "6ps",
+                "price_krw": 8500,
+                "description": "스모키한 풍미"
+            },
+            {
+                "name_ko": "콘 샐러드",
+                "price_krw": 3000,
+                "features": ["양 많고 신선함"]
+            },
+            {
+                "name_ko": "노아이디어 겨울호빵",
+                "price_krw": 6900,
+                "seasonal": true,
+                "description": "칼조네 스타일의 디저트 피자 (팥, 치즈, 견과류 믹스, 슈가파우더)"
+            }
+        ],
+        "dipping_sauce": [
+            {
+                "name_ko": "갈릭",
+                "price_krw": 800,
+                "description": "갈릭의 향과 사워크림의 새콤함이 느껴지는 진한 갈릭소스",
+                "popular": true
+            },
+            {
+                "name_ko": "렌치",
+                "price_krw": 800,
+                "description": "사워크림의 새콤함과 청양고추의 매콤함이 들어간 매콤새콤 렌치소스"
+            },
+            {
+                "name_ko": "할라피뇨마요",
+                "price_krw": 800,
+                "description": "달콤하고 할라피뇨의 매운맛이 느껴지는 중독성 강한 소스"
+            },
+            {
+                "name_ko": "핫소스(추가)",
+                "price_krw": 100
+            },
+            {
+                "name_ko": "파마산치즈(추가)",
+                "price_krw": 200
+            },
+            {
+                "name_ko": "피클(추가)",
+                "price_krw": 500,
+                "popular": true
+            }
+        ],
+        "beverages": {
+            "signature_highball": [
+                {
+                    "name": "Red Highball",
+                    "price_krw": 5000
+                },
+                {
+                    "name": "Blue Highball",
+                    "price_krw": 5000
+                },
+                {
+                    "name": "Yellow Highball",
+                    "price_krw": 5000
+                }
+            ],
+            "beer": [
+                {
+                    "name_ko": "버드와이저",
+                    "volume": "330ml",
+                    "price_krw": 5500
+                },
+                {
+                    "name_ko": "하이네켄",
+                    "volume": "330ml",
+                    "price_krw": 6000
+                },
+                {
+                    "name_ko": "호가든로제",
+                    "volume": "330ml",
+                    "price_krw": 6000
+                },
+                {
+                    "name_ko": "1664블랑",
+                    "volume": "330ml",
+                    "price_krw": 6000
+                },
+                {
+                    "name_ko": "빅웨이브",
+                    "volume": "355ml",
+                    "price_krw": 7000
+                }
+            ],
+            "soda": [
+                {
+                    "name_ko": "펩시",
+                    "volume": "355ml",
+                    "price_krw": 2000
+                },
+                {
+                    "name_ko": "펩시제로-라임",
+                    "volume": "355ml",
+                    "price_krw": 2000
+                },
+                {
+                    "name_ko": "칠성사이다",
+                    "volume": "355ml",
+                    "price_krw": 2000
+                },
+                {
+                    "name_ko": "마운틴듀",
+                    "volume": "355ml",
+                    "price_krw": 2000
+                },
+                {
+                    "name_ko": "환타(파인)",
+                    "volume": "355ml",
+                    "price_krw": 2000
+                }
+            ]
+        }
+    },
+    "design": {
+        "exterior": {
+            "style": "뉴욕 스트릿 스타일",
+            "elements": ["파란색 포인트", "철제문"],
+            "characteristics": ["선명한 색감", "멀리서도 눈에 띔", "힙하고 감각적"]
+        },
+        "interior": {
+            "concept": "미국 빈티지 힙 (American Vintage Hip)",
+            "color_scheme": "화이트 + 블루",
+            "style": "캐주얼 아메리칸",
+            "furniture": ["블루 방석 철제 의자", "블루 붙박이 소파"],
+            "decor": ["귀여운 포스터", "말장난 요소", "감각적인 포스터 배치"],
+            "atmosphere": ["깔끔하고 세련됨", "경쾌한 음악", "밝고 활기참", "데이트하기 좋음"]
+        }
+    },
+    "social_media": {
+        "instagram": {
+            "main": "@noideapizza",
+            "stores": {
+                "nowon": "@noideapizza_nowon",
+                "mokdong": "@noideapizza_mokdong"
+            }
+        },
+        "reservation": {
+            "platform": "캐치테이블 (Catch Table)",
+            "url": "https://app.catchtable.co.kr/ct/shop/noideapizza"
+        },
+        "delivery": ["쿠팡이츠", "배달의민족"]
+    },
+    "target_market": {
+        "primary": {
+            "demographic": "MZ세대 (2030세대)",
+            "characteristics": [
+                "트렌디한 것을 선호",
+                "SNS 활동적",
+                "품질과 경험 중시",
+                "합리적 소비"
+            ]
+        },
+        "secondary": {
+            "demographic": "가족 단위 고객, 지역 주민",
+            "characteristics": [
+                "주거 밀집 지역 고객",
+                "배달/포장 수요",
+                "높은 재방문율"
+            ]
+        },
+        "visit_purposes": [
+            {
+                "purpose": "데이트",
+                "appeal": "힙한 분위기, SNS 인증샷, 시그니처 하이볼"
+            },
+            {
+                "purpose": "모임",
+                "appeal": "반반 피자로 다양한 맛, L사이즈"
+            },
+            {
+                "purpose": "일상 식사",
+                "appeal": "갓 구운 피자의 최상의 맛"
+            },
+            {
+                "purpose": "배달/포장",
+                "appeal": "집에서 편하게"
+            },
+            {
+                "purpose": "혼밥",
+                "appeal": "P사이즈 + 음료"
+            }
+        ]
+    },
+    "competitive_advantages": {
+        "vs_franchise": "품질과 독창성 (폴리쉬 도우, 수제 소스)",
+        "vs_handmade_pizza": "가격 경쟁력과 접근성",
+        "differentiation": "브랜드 감성 + 맛 + 가성비"
+    },
+    "customer_reviews": {
+        "overall_rating": {
+            "taste": 5.0,
+            "atmosphere": 5.0,
+            "service": 4.5,
+            "value": 3.5,
+            "revisit_rate": 0.9
+        },
+        "positive_feedback": [
+            "토핑 퀄리티가 일반 프랜차이즈보다 훨씬 뛰어남",
+            "도우가 쫄깃하고 맛있음",
+            "치즈가 고소하고 양이 많음",
+            "끝까지 먹어도 질리지 않음",
+            "꽈리불고기 피자는 재방문 의사 100%",
+            "주문 후 피자가 빨리 나옴",
+            "힙하고 트렌디한 인테리어",
+            "데이트하기 좋음",
+            "SNS 인증샷 찍기 좋음"
+        ],
+        "improvement_needed": [
+            "매장이 작아 웨이팅 가능성 높음",
+            "좌석 수 부족",
+            "일반 프랜차이즈보다는 비싼 편",
+            "타코피자 등 일부 메뉴 호불호"
+        ],
+        "keywords": [
+            "점심식사",
+            "저녁식사",
+            "데이트",
+            "가족외식",
+            "캐주얼한",
+            "예쁜",
+            "깔끔한",
+            "힙한",
+            "지역주민맛집",
+            "무료주차"
+        ]
+    },
+    "success_factors": [
+        {
+            "factor": "명확한 브랜드 아이덴티티",
+            "detail": "일관된 컬러와 디자인, 고유 캐릭터와 폰트"
+        },
+        {
+            "factor": "품질 중심 전략",
+            "detail": "천연발효종 도우, 신선한 재료, 수제 소스"
+        },
+        {
+            "factor": "트렌드 민감한 메뉴 개발",
+            "detail": "SNS 인기 비주얼 메뉴, MZ세대 취향 저격"
+        },
+        {
+            "factor": "합리적인 가격 정책",
+            "detail": "수제 피자치고 합리적, 반반 피자로 선택 폭 확대"
+        },
+        {
+            "factor": "경험 중심 공간 운영",
+            "detail": "홀 매장 운영, 힙한 인테리어, 오픈 키친"
+        },
+        {
+            "factor": "온오프라인 통합 마케팅",
+            "detail": "인스타그램 활용, 배달 서비스 연동"
+        }
+    ],
+    "recommended_menu_combinations": {
+        "first_visit": {
+            "main": "꽈리불고기 피자 (L)",
+            "side": "라구 파스타",
+            "extra": "갈릭 소스",
+            "note": "노아이디어피자의 진수"
+        },
+        "group_visit": {
+            "pizza_1": "반반 피자 (L) - 꽈리불고기 + 콤비네이션",
+            "pizza_2": "그린핑크 피자 (L)",
+            "side": "콘 샐러드",
+            "drink": "시그니처 하이볼",
+            "note": "SNS 인증용 + 다양한 맛"
+        },
+        "solo_visit": {
+            "main": "반반 피자 (R)",
+            "drink": "음료",
+            "note": "두 가지 맛 즐기기"
+        }
+    }
+}

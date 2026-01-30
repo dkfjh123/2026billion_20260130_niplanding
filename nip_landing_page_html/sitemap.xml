@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+    <!-- Homepage -->
+    <url>
+        <loc>https://noideapizza.com/</loc>
+        <lastmod>2026-01-30</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://noideapizza.com/assets/og-image.webp</image:loc>
+            <image:title>노아이디어피자 - 서울 수제피자 맛집</image:title>
+            <image:caption>천연액종 폴리쉬 도우와 독창적인 토핑의 수제피자</image:caption>
+        </image:image>
+    </url>
+
+    <!-- Menu Section -->
+    <url>
+        <loc>https://noideapizza.com/#menu</loc>
+        <lastmod>2026-01-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://noideapizza.com/assets/menu/꽈리불고기.jpg</image:loc>
+            <image:title>꽈리 불고기 피자 - 베스트셀러</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://noideapizza.com/assets/menu/그린핑크.jpg</image:loc>
+            <image:title>그린핑크 피자 - SNS 인기</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://noideapizza.com/assets/menu/콤비네이션.jpg</image:loc>
+            <image:title>노아이디어 콤비네이션 - 시그니처</image:title>
+        </image:image>
+    </url>
+
+    <!-- About / Brand Story Section -->
+    <url>
+        <loc>https://noideapizza.com/#about</loc>
+        <lastmod>2026-01-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Store Locations Section -->
+    <url>
+        <loc>https://noideapizza.com/#store</loc>
+        <lastmod>2026-01-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://noideapizza.com/assets/매장사진1.jpg</image:loc>
+            <image:title>노아이디어피자 매장 내부 인테리어</image:title>
+        </image:image>
+    </url>
+
+    <!-- Franchise Section -->
+    <url>
+        <loc>https://noideapizza.com/#franchise</loc>
+        <lastmod>2026-01-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Contact Section -->
+    <url>
+        <loc>https://noideapizza.com/#contact</loc>
+        <lastmod>2026-01-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+</urlset>
