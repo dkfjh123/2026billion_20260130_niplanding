@@ -442,50 +442,73 @@
             </div>
         </div>
 
-        <section class="py-16 md:py-20 bg-white relative overflow-hidden" aria-labelledby="brand-identity-title">
+        <section class="py-10 sm:py-16 md:py-20 bg-white relative overflow-hidden"
+            aria-labelledby="brand-identity-title">
             <div class="max-w-7xl mx-auto px-4 sm:px-6">
-                <div class="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
+                <div class="flex flex-col-reverse lg:flex-row items-center justify-between gap-6 sm:gap-8 lg:gap-12">
                     <!-- Left: Typography & Concept -->
                     <div class="w-full lg:w-1/2 text-center lg:text-left z-10">
                         <span
-                            class="text-brand-blue font-bold tracking-widest uppercase text-xs sm:text-sm mb-4 block">Brand
+                            class="text-brand-blue font-bold tracking-widest uppercase text-[10px] sm:text-xs md:text-sm mb-2 sm:mb-4 block">Brand
                             Identity</span>
                         <h2 id="brand-identity-title"
-                            class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-black leading-tight mb-6 md:mb-8">
-                            WE ARE<br>
+                            class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-display font-black leading-[0.85] sm:leading-[0.9] mb-4 sm:mb-6 md:mb-8">
+                            WE HAVE<br>
+                            <span class="text-gray-300">NO IDEA,</span><br>
                             <span
-                                class="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-accent-yellow">NO
-                                IDEA</span>
+                                class="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-dark">JUST<br>GOOD
+                                PIZZA.</span>
                         </h2>
-                        <p class="text-lg sm:text-xl text-gray-800 font-bold mb-4 md:mb-6">
-                            "I HAVE NO IDEA<br>HOW IT TASTES SO GOOD."
-                        </p>
+
                         <p
-                            class="text-sm sm:text-base text-gray-600 mb-6 md:mb-8 leading-relaxed max-w-md mx-auto lg:mx-0">
-                            우리의 로고 속 캐릭터처럼, 맛있는 피자를 먹었을 때의
-                            나도 모르게 나오는 제스처와 표정.<br>
-                            그 가장 솔직하고 유쾌한 순간을 담았습니다.
+                            class="text-base sm:text-xl md:text-2xl text-gray-900 font-bold mb-3 sm:mb-4 md:mb-6 leading-snug sm:leading-relaxed max-w-lg mx-auto lg:mx-0 tracking-tight">
+                            "생각 없이 먹어도,<br>
+                            결론은 노아이디어."
                         </p>
-                        <!-- Logo variations -->
-                        <div class="flex items-center justify-center lg:justify-start gap-4 sm:gap-6">
-                            <img src="../nip_assets/logo_hand_blue.png" alt="노아이디어피자 핸드 로고"
-                                class="w-16 sm:w-20 md:w-24 animate-bounce-slow" width="96" height="96" loading="lazy">
-                            <img src="../nip_assets/logo_circle_blue.png" alt="노아이디어피자 원형 로고"
-                                class="w-14 sm:w-16 md:w-20 opacity-80 hover:opacity-100 transition-opacity" width="80"
-                                height="80" loading="lazy">
-                        </div>
+
+                        <p
+                            class="text-sm sm:text-base md:text-lg text-gray-600 font-medium mb-6 sm:mb-8 max-w-md mx-auto lg:mx-0">
+                            뻔한 피자에 지친 당신을 위한<br>
+                            가장 힙한 해답.
+                        </p>
+                        <!-- Logo variations removed as per request -->
                     </div>
 
-                    <!-- Right: Visual Artwork -->
-                    <div class="w-full lg:w-1/2 relative z-10 mt-8 lg:mt-0">
+                    <div class="w-full lg:w-1/2 relative z-10 mt-0 lg:mt-0">
                         <div
-                            class="relative rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl border-2 sm:border-4 border-black transform rotate-1 sm:rotate-2 hover:rotate-0 transition-transform duration-500">
-                            <img src="../nip_assets/noideapizza_illu.webp" alt="노아이디어피자 브랜드 일러스트"
-                                class="w-full h-auto object-cover bg-gray-100" width="600" height="400" loading="lazy">
+                            class="relative rounded-xl sm:rounded-2xl md:rounded-3xl overflow-hidden shadow-xl sm:shadow-2xl border-2 sm:border-4 border-black transform rotate-0 sm:rotate-1 md:rotate-2 hover:rotate-0 transition-transform duration-500 min-h-[220px] sm:min-h-[300px] md:min-h-[400px]">
+
+                            <!-- Slideshow Container -->
+                            <div id="hero-slideshow" class="absolute inset-0 w-full h-full bg-gray-100">
+                                <img src="../nip_assets/menu/컨셉샷%201.jpg" alt="노아이디어피자 메뉴 컨셉"
+                                    class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100" />
+                                <img src="../nip_assets/menu/꽈리불고기.jpg" alt="꽈리불고기 피자"
+                                    class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0" />
+                                <img src="../nip_assets/menu/컨셉샷%203.jpg" alt="노아이디어피자 피자 연출"
+                                    class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0" />
+                            </div>
+
                             <div
                                 class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none">
                             </div>
                         </div>
+
+                        <!-- Slideshow Script -->
+                        <script>
+                            document.addEventListener('DOMContentLoaded', () => {
+                                const slides = document.querySelectorAll('#hero-slideshow img');
+                                if (slides.length > 0) {
+                                    let currentSlide = 0;
+                                    setInterval(() => {
+                                        slides[currentSlide].classList.remove('opacity-100');
+                                        slides[currentSlide].classList.add('opacity-0');
+                                        currentSlide = (currentSlide + 1) % slides.length;
+                                        slides[currentSlide].classList.remove('opacity-0');
+                                        slides[currentSlide].classList.add('opacity-100');
+                                    }, 4000); // Change every 4 seconds
+                                }
+                            });
+                        </script>
                     </div>
                 </div>
 
@@ -506,247 +529,383 @@
             </div>
         </section>
 
-        <!-- Section 2: Brand Identity & Spirit -->
-        <section id="about" class="py-20 md:py-24 bg-gray-50 relative overflow-hidden" aria-labelledby="about-title">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6">
-                <!-- Brand Definition -->
-                <div class="mb-10 text-center max-w-4xl mx-auto">
-                    <div class="w-20 sm:w-24 mx-auto mb-6">
-                        <img src="../nip_assets/noidea_store_logo.webp" alt="NO IDEA PIZZA Store Logo"
-                            class="w-full h-auto opacity-100">
-                    </div>
-                    <span class="text-brand-blue font-bold tracking-widest uppercase text-xs sm:text-sm">Our Brand
-                        Spirit</span>
-
+        <!-- Section 2: Brand Story -->
+        <section id="about" class="py-16 sm:py-20 md:py-24 bg-gray-50 relative overflow-hidden"
+            aria-labelledby="about-title">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                <!-- Section Header -->
+                <div class="text-center mb-10 sm:mb-14">
+                    <span class="text-brand-blue font-bold tracking-widest uppercase text-xs sm:text-sm block mb-3">Our
+                        Story</span>
                     <h2 id="about-title"
-                        class="text-3xl sm:text-4xl md:text-5xl font-display font-bold mt-3 text-gray-900 mb-8 md:mb-10">
-                        WHY "NO IDEA"?</h2>
-                    <div
-                        class="w-full max-w-2xl mx-auto mb-10 md:mb-12 rounded-2xl overflow-hidden shadow-lg border border-gray-100">
-                        <img src="../nip_assets/section_noidea.webp" alt="NO IDEA Mood"
-                            class="w-full h-auto object-cover">
+                        class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-black text-gray-900 leading-tight mb-6 sm:mb-8">
+                        WHY NO IDEA?
+                    </h2>
+                </div>
+
+                <!-- Brand Slogan Banner (Relocated) -->
+                <div
+                    class="mb-16 bg-brand-blue rounded-2xl sm:rounded-3xl p-6 sm:p-10 text-white relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-1/2 h-full opacity-10" aria-hidden="true">
+                        <img src="../nip_assets/logo_circle_blue.png"
+                            class="w-full h-full object-contain translate-x-1/4" alt="" loading="lazy">
                     </div>
+                    <div class="relative z-10 max-w-3xl mx-auto text-center">
+                        <span
+                            class="text-white/70 font-bold tracking-widest uppercase text-xs sm:text-sm block mb-4">Brand
+                            Slogan</span>
+                        <p class="text-sm sm:text-base text-white/80 leading-relaxed mb-6">
+                            수많은 사람들에게는 각기다른 수많은 일상이 있습니다.<br class="hidden sm:block">
+                            피자를 닮은 동그란 시간표에는 다양한 일상의 모습들로 배고픔도 밀려온 채 바쁜 일상을 채우는 사람들을 향해<br class="hidden sm:block">
+                            노아이디어피자는 단 하나의 질문으로 매일 돌아가는 사람들의 시간표를 잠시 멈춰 세웁니다.
+                        </p>
+                        <p
+                            class="text-1xl sm:text-2xl md:text-2xl font-display font-bold text-white leading-tight tracking-tight mt-5">
+                            "Are You Hungry?<br>
+                            Just Do Eat!"
+                        </p>
+                    </div>
+                </div>
 
+                <!-- City Logo Image (New Insertion) -->
+                <div class="max-w-5xl mx-auto px-4 sm:px-6 my-24 lg:my-32 flex justify-center">
+                    <img src="../nip_assets/city_blue_logo_2men.webp" alt="No Idea Pizza City Vibe"
+                        class="w-full max-w-2xl h-auto rounded-3xl shadow-lg transform hover:scale-[1.01] transition-transform duration-500">
+                </div>
 
-
-                    <p class="text-lg md:text-xl text-gray-600 mb-10 md:mb-12 font-light px-2">
-                        <strong class="text-brand-blue">"No Idea"</strong>라는 이름에는 두 가지 역설적인 의미가 담겨 있습니다.
-                    </p>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-                        <!-- Card 1: No Worries -->
+                <!-- Main Content: Single Column Layout -->
+                <div class="grid grid-cols-1 gap-12 lg:gap-24 items-center max-w-4xl mx-auto mb-32 lg:mb-40">
+                    <!-- 1. Brand Story Letter (First on all screens) -->
+                    <div class="order-1 relative">
+                        <!-- Decorative Elements -->
                         <div
-                            class="group bg-white p-8 rounded-[2rem] border-2 border-gray-100 hover:border-brand-blue hover:shadow-[0_10px_40px_-10px_rgba(0,85,255,0.15)] transition-all duration-300 relative overflow-hidden">
-                            <div class="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
-                                <i data-lucide="smile" class="w-32 h-32 text-brand-blue"></i>
-                            </div>
-                            <div class="relative z-10">
-                                <span
-                                    class="block text-6xl font-display font-black text-gray-100 mb-6 group-hover:text-brand-blue group-hover:scale-110 transition-all duration-300 origin-left">01</span>
-                                <h3
-                                    class="text-2xl font-bold mb-4 text-gray-900 group-hover:text-brand-blue transition-colors">
-                                    No Worries</h3>
-                                <p class="text-gray-600 leading-relaxed font-medium">
-                                    "오늘 뭐 먹지?" 복잡한 고민은 그만.<br>
-                                    결정 피로 없이 누구나 편안하게 즐길 수 있는<br>
-                                    가장 직관적이고 완벽한 선택입니다.
-                                </p>
-                            </div>
+                            class="absolute -top-4 -left-4 w-24 h-24 bg-brand-blue/10 rounded-full blur-2xl pointer-events-none">
+                        </div>
+                        <div
+                            class="absolute -bottom-4 -right-4 w-32 h-32 bg-accent-yellow/10 rounded-full blur-2xl pointer-events-none">
                         </div>
 
-                        <!-- Card 2: Great Surprise -->
+                        <!-- Letter Card -->
                         <div
-                            class="group bg-white p-8 rounded-[2rem] border-2 border-gray-100 hover:border-accent-yellow hover:shadow-[0_10px_40px_-10px_rgba(255,221,0,0.2)] transition-all duration-300 relative overflow-hidden">
-                            <div class="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
-                                <i data-lucide="zap" class="w-32 h-32 text-accent-yellow"></i>
+                            class="relative bg-white p-8 sm:p-12 rounded-3xl shadow-xl border border-gray-100 transform transition-transform hover:-translate-y-1 duration-300 text-center">
+                            <!-- Brand Image -->
+                            <div class="w-32 sm:w-40 mx-auto mb-8">
+                                <img src="../nip_assets/logo_circle_blue.png" alt="No Idea Pizza Circle Logo"
+                                    class="w-full h-full object-contain opacity-90">
                             </div>
-                            <div class="relative z-10">
-                                <span
-                                    class="block text-6xl font-display font-black text-gray-100 mb-6 group-hover:text-accent-yellow group-hover:scale-110 transition-all duration-300 origin-left">02</span>
-                                <h3
-                                    class="text-2xl font-bold mb-4 text-gray-900 group-hover:text-amber-500 transition-colors">
-                                    Great Surprise</h3>
-                                <p class="text-gray-600 leading-relaxed font-medium">
-                                    "어떻게 이런 맛이?"<br>
-                                    한 입 베어 무는 순간, 그 비결을 알 수 없는<br>
-                                    놀라운 미식의 경험을 선사합니다.
-                                </p>
+
+                            <!-- Header -->
+                            <div class="mb-8 border-b border-gray-100 pb-4">
+                                <span class="font-display font-bold text-xl text-gray-900 block">Our Story</span>
+                                <span class="text-sm text-gray-400 font-medium block mt-1">Est. 2023, Isu</span>
+                            </div>
+
+                            <!-- Content -->
+                            <div class="space-y-8 text-gray-700 leading-relaxed font-medium text-lg sm:text-xl">
+                                <div>
+                                    <strong class="block text-gray-900 mb-3 text-l">2023년, 이수역 뒷골목의 작은 매장.</strong>
+                                    <p>
+                                        수제 피자 시장이 이미 포화 상태였던 그때,<br>
+                                        우리는 가장 미국적인 피자 위에<br>
+                                        가장 한국적인 맛을 올리는 도전을 시작했습니다.
+                                    </p>
+                                </div>
+
+                                <!-- Menu Line -->
+                                <div
+                                    class="bg-gray-50 rounded-2xl p-6 sm:p-8 mt-8 border border-gray-100 text-base sm:text-lg">
+                                    <h4
+                                        class="font-bold text-gray-900 mb-4 text-sm uppercase tracking-wide text-center">
+                                        Menu Highlights</h4>
+                                    <ul class="space-y-4 inline-block text-left">
+                                        <li class="flex items-start">
+                                            <span
+                                                class="w-2 h-2 bg-brand-blue rounded-full mt-2.5 mr-3 flex-shrink-0"></span>
+                                            <span><strong class="text-gray-900">코리안 시그니처:</strong><br>제육피자, 꽈리불고기</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span
+                                                class="w-2 h-2 bg-gray-300 rounded-full mt-2.5 mr-3 flex-shrink-0"></span>
+                                            <span><strong class="text-gray-900">정통 클래식:</strong><br>페퍼로니, 4치즈,
+                                                콤비네이션</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- Brand Origin Photos -->
+                                <div class="relative h-56 sm:h-80 my-8 sm:my-10 max-w-md mx-auto">
+                                    <div
+                                        class="absolute left-4 sm:-left-2 top-0 w-40 sm:w-60 h-40 sm:h-60 transform -rotate-6 z-10 hover:rotate-0 transition-transform duration-300 border-4 border-white shadow-lg rounded-xl overflow-hidden">
+                                        <img src="../nip_assets/brand_origin_1.png" alt="Brand Origin Photo 1"
+                                            class="w-full h-full object-cover">
+                                    </div>
+                                    <div
+                                        class="absolute right-4 sm:-right-2 top-12 sm:top-16 w-40 sm:w-60 h-40 sm:h-60 transform rotate-6 z-20 hover:rotate-0 transition-transform duration-300 border-4 border-white shadow-lg rounded-xl overflow-hidden">
+                                        <img src="../nip_assets/brand_origin_2.jpg" alt="Brand Origin Photo 2"
+                                            class="w-full h-full object-cover">
+                                    </div>
+                                    <div
+                                        class="absolute -top-4 left-1/2 -translate-x-1/2 w-20 h-5 bg-yellow-100/50 rotate-2 blur-sm rounded-full">
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <strong class="block text-brand-blue mb-3 font-display text-2xl">"No Idea? That's
+                                        the Idea."</strong>
+                                    <p>
+                                        이름은 '노아이디어'지, 맛에 대한 철학은 확고했습니다.<br>
+                                        복잡한 메뉴판 앞에서 결정 장애를 겪는 손님들을 위해,<br>
+                                        고민 없이 주문해도 실패 없는<br>
+                                        <strong class="text-gray-900 bg-accent-yellow/20 px-1">'코리안 피자 컴퍼니'</strong>를
+                                        만들기로 한 것이죠.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
+
+
+
+                    <!-- Body Paragraphs -->
+
                 </div>
+            </div>
 
-                <div class="mb-8 md:mb-10 text-center">
-                    <h3 class="text-xl sm:text-2xl font-display font-bold text-gray-900">SNS에서 만나는 노아이디어피자</h3>
-                    <div class="w-12 h-1 bg-brand-blue mx-auto mt-4 rounded-full"></div>
+
+
+            <div class="mt-16 sm:mt-24 mb-8 md:mb-10 text-center">
+                <h3 class="text-xl sm:text-2xl font-display font-bold text-gray-900">SNS에서 만나는 노아이디어피자</h3>
+                <div class="w-12 h-1 bg-brand-blue mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="relative group">
+                <!-- SNS Scroll Container -->
+                <div id="snsScrollContainer"
+                    class="flex overflow-x-auto snap-x snap-mandatory gap-4 sm:gap-6 pb-6 hide-scrollbar px-2">
+                    <!-- Item 1 -->
+                    <a href="https://www.instagram.com/noideapizza/" target="_blank" rel="noopener noreferrer"
+                        class="flex-shrink-0 w-[280px] sm:w-[320px] aspect-[9/16] bg-gray-900 rounded-2xl overflow-hidden relative group/item snap-center shadow-lg hover:shadow-xl transition-all border border-gray-800">
+                        <img src="../nip_assets/section_noidea.webp"
+                            class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover/item:scale-105 transition-transform duration-700"
+                            alt="Instagram 1">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+
+                        <!-- Overlay -->
+                        <div
+                            class="absolute inset-0 flex flex-col items-center justify-center text-white p-6 text-center opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 bg-black/40 backdrop-blur-[2px]">
+                            <i data-lucide="play-circle" class="w-12 h-12 mb-4 text-white"></i>
+                            <span class="font-bold text-lg">Reel 보기</span>
+                        </div>
+                        <div
+                            class="absolute bottom-4 left-4 flex items-center gap-2 text-white/90 group-hover/item:opacity-0 transition-opacity">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                            <span class="text-sm font-medium">@noideapizza</span>
+                        </div>
+                    </a>
+
+                    <!-- Item 2 -->
+                    <a href="https://www.instagram.com/noideapizza/" target="_blank" rel="noopener noreferrer"
+                        class="flex-shrink-0 w-[280px] sm:w-[320px] aspect-[9/16] bg-gray-900 rounded-2xl overflow-hidden relative group/item snap-center shadow-lg hover:shadow-xl transition-all border border-gray-800">
+                        <img src="../nip_assets/noideapizzamap_1.webp"
+                            class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover/item:scale-105 transition-transform duration-700"
+                            alt="Instagram 2">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+
+                        <div
+                            class="absolute inset-0 flex flex-col items-center justify-center text-white p-6 text-center opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 bg-black/40 backdrop-blur-[2px]">
+                            <i data-lucide="image" class="w-12 h-12 mb-4 text-white"></i>
+                            <span class="font-bold text-lg">게시물 보기</span>
+                        </div>
+                        <div
+                            class="absolute bottom-4 left-4 flex items-center gap-2 text-white/90 group-hover/item:opacity-0 transition-opacity">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                            <span class="text-sm font-medium">@noideapizza</span>
+                        </div>
+                    </a>
+
+                    <!-- Item 3 -->
+                    <a href="https://www.instagram.com/noideapizza/" target="_blank" rel="noopener noreferrer"
+                        class="flex-shrink-0 w-[280px] sm:w-[320px] aspect-[9/16] bg-gray-900 rounded-2xl overflow-hidden relative group/item snap-center shadow-lg hover:shadow-xl transition-all border border-gray-800">
+                        <img src="../nip_assets/noideapizza_illu.webp"
+                            class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover/item:scale-105 transition-transform duration-700"
+                            alt="Instagram 3">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+
+                        <div
+                            class="absolute inset-0 flex flex-col items-center justify-center text-white p-6 text-center opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 bg-black/40 backdrop-blur-[2px]">
+                            <i data-lucide="image" class="w-12 h-12 mb-4 text-white"></i>
+                            <span class="font-bold text-lg">게시물 보기</span>
+                        </div>
+                        <div
+                            class="absolute bottom-4 left-4 flex items-center gap-2 text-white/90 group-hover/item:opacity-0 transition-opacity">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                            <span class="text-sm font-medium">@noideapizza</span>
+                        </div>
+                    </a>
+
+                    <!-- Item 4 -->
+                    <a href="https://www.instagram.com/noideapizza/" target="_blank" rel="noopener noreferrer"
+                        class="flex-shrink-0 w-[280px] sm:w-[320px] aspect-[9/16] bg-gray-900 rounded-2xl overflow-hidden relative group/item snap-center shadow-lg hover:shadow-xl transition-all border border-gray-800">
+                        <img src="../nip_assets/noidea_store_logo.webp"
+                            class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover/item:scale-105 transition-transform duration-700"
+                            alt="Instagram 4">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+
+                        <div
+                            class="absolute inset-0 flex flex-col items-center justify-center text-white p-6 text-center opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 bg-black/40 backdrop-blur-[2px]">
+                            <i data-lucide="image" class="w-12 h-12 mb-4 text-white"></i>
+                            <span class="font-bold text-lg">게시물 보기</span>
+                        </div>
+                        <div
+                            class="absolute bottom-4 left-4 flex items-center gap-2 text-white/90 group-hover/item:opacity-0 transition-opacity">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                            <span class="text-sm font-medium">@noideapizza</span>
+                        </div>
+                    </a>
+
+                    <!-- Item 5 -->
+                    <a href="https://www.instagram.com/noideapizza/" target="_blank" rel="noopener noreferrer"
+                        class="flex-shrink-0 w-[280px] sm:w-[320px] aspect-[9/16] bg-gray-900 rounded-2xl overflow-hidden relative group/item snap-center shadow-lg hover:shadow-xl transition-all border border-gray-800">
+                        <img src="../nip_assets/logo_slogan.webp"
+                            class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover/item:scale-105 transition-transform duration-700"
+                            alt="Instagram 5">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+
+                        <div
+                            class="absolute inset-0 flex flex-col items-center justify-center text-white p-6 text-center opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 bg-black/40 backdrop-blur-[2px]">
+                            <i data-lucide="image" class="w-12 h-12 mb-4 text-white"></i>
+                            <span class="font-bold text-lg">게시물 보기</span>
+                        </div>
+                        <div
+                            class="absolute bottom-4 left-4 flex items-center gap-2 text-white/90 group-hover/item:opacity-0 transition-opacity">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                            <span class="text-sm font-medium">@noideapizza</span>
+                        </div>
+                    </a>
+
+                    <!-- Item 6 -->
+                    <a href="https://www.instagram.com/noideapizza/" target="_blank" rel="noopener noreferrer"
+                        class="flex-shrink-0 w-[280px] sm:w-[320px] aspect-[9/16] bg-gray-900 rounded-2xl overflow-hidden relative group/item snap-center shadow-lg hover:shadow-xl transition-all border border-gray-800">
+                        <img src="../nip_assets/logo_hand_blue.png"
+                            class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover/item:scale-105 transition-transform duration-700"
+                            alt="Instagram 6">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+
+                        <div
+                            class="absolute inset-0 flex flex-col items-center justify-center text-white p-6 text-center opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 bg-black/40 backdrop-blur-[2px]">
+                            <i data-lucide="image" class="w-12 h-12 mb-4 text-white"></i>
+                            <span class="font-bold text-lg">게시물 보기</span>
+                        </div>
+                        <div
+                            class="absolute bottom-4 left-4 flex items-center gap-2 text-white/90 group-hover/item:opacity-0 transition-opacity">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                            <span class="text-sm font-medium">@noideapizza</span>
+                        </div>
+                    </a>
                 </div>
-
-                <div class="relative group">
-                    <!-- SNS Scroll Container -->
-                    <div id="snsScrollContainer"
-                        class="flex overflow-x-auto snap-x snap-mandatory gap-4 sm:gap-6 pb-6 hide-scrollbar px-2">
-                        <!-- Item 1 -->
-                        <a href="https://www.instagram.com/reel/C11TEd3yPOp/" target="_blank" rel="noopener noreferrer"
-                            class="flex-shrink-0 w-[280px] sm:w-[320px] aspect-[9/16] bg-gray-100 rounded-2xl overflow-hidden relative group/item snap-center shadow-lg hover:shadow-xl transition-all border border-gray-100">
-                            <div
-                                class="absolute inset-0 bg-gradient-to-br from-gray-800 to-black flex items-center justify-center text-white/20">
-                                <i data-lucide="instagram" class="w-16 h-16 opacity-50"></i>
-                            </div>
-                            <!-- Placeholder Overlay -->
-                            <div
-                                class="absolute inset-0 bg-black/40 group-hover/item:bg-black/20 transition-colors flex flex-col items-center justify-center text-white p-6 text-center">
-                                <i data-lucide="play-circle"
-                                    class="w-12 h-12 mb-4 text-white opacity-80 group-hover/item:scale-110 transition-transform"></i>
-                                <span class="font-bold text-lg mb-2">Reel 보기</span>
-                                <span class="text-xs text-white/70">@noideapizza</span>
-                            </div>
-                        </a>
-
-                        <!-- Item 2 -->
-                        <a href="https://www.instagram.com/reel/CxJ5n0CydUH/" target="_blank" rel="noopener noreferrer"
-                            class="flex-shrink-0 w-[280px] sm:w-[320px] aspect-[9/16] bg-gray-100 rounded-2xl overflow-hidden relative group/item snap-center shadow-lg hover:shadow-xl transition-all border border-gray-100">
-                            <div
-                                class="absolute inset-0 bg-gradient-to-br from-gray-800 to-black flex items-center justify-center text-white/20">
-                                <i data-lucide="instagram" class="w-16 h-16 opacity-50"></i>
-                            </div>
-                            <div
-                                class="absolute inset-0 bg-black/40 group-hover/item:bg-black/20 transition-colors flex flex-col items-center justify-center text-white p-6 text-center">
-                                <i data-lucide="play-circle"
-                                    class="w-12 h-12 mb-4 text-white opacity-80 group-hover/item:scale-110 transition-transform"></i>
-                                <span class="font-bold text-lg mb-2">Reel 보기</span>
-                                <span class="text-xs text-white/70">@noideapizza</span>
-                            </div>
-                        </a>
-
-                        <!-- Item 3 -->
-                        <a href="https://www.instagram.com/reel/DQx8ktOEzSy/" target="_blank" rel="noopener noreferrer"
-                            class="flex-shrink-0 w-[280px] sm:w-[320px] aspect-[9/16] bg-gray-100 rounded-2xl overflow-hidden relative group/item snap-center shadow-lg hover:shadow-xl transition-all border border-gray-100">
-                            <div
-                                class="absolute inset-0 bg-gradient-to-br from-gray-800 to-black flex items-center justify-center text-white/20">
-                                <i data-lucide="instagram" class="w-16 h-16 opacity-50"></i>
-                            </div>
-                            <div
-                                class="absolute inset-0 bg-black/40 group-hover/item:bg-black/20 transition-colors flex flex-col items-center justify-center text-white p-6 text-center">
-                                <i data-lucide="play-circle"
-                                    class="w-12 h-12 mb-4 text-white opacity-80 group-hover/item:scale-110 transition-transform"></i>
-                                <span class="font-bold text-lg mb-2">Reel 보기</span>
-                                <span class="text-xs text-white/70">@noideapizza</span>
-                            </div>
-                        </a>
-
-                        <!-- Item 4 -->
-                        <a href="https://www.instagram.com/p/DF7i5IkP8Yi/" target="_blank" rel="noopener noreferrer"
-                            class="flex-shrink-0 w-[280px] sm:w-[320px] aspect-[9/16] bg-gray-100 rounded-2xl overflow-hidden relative group/item snap-center shadow-lg hover:shadow-xl transition-all border border-gray-100">
-                            <div
-                                class="absolute inset-0 bg-gradient-to-br from-gray-800 to-black flex items-center justify-center text-white/20">
-                                <i data-lucide="instagram" class="w-16 h-16 opacity-50"></i>
-                            </div>
-                            <div
-                                class="absolute inset-0 bg-black/40 group-hover/item:bg-black/20 transition-colors flex flex-col items-center justify-center text-white p-6 text-center">
-                                <i data-lucide="image"
-                                    class="w-12 h-12 mb-4 text-white opacity-80 group-hover/item:scale-110 transition-transform"></i>
-                                <span class="font-bold text-lg mb-2">게시물 보기</span>
-                                <span class="text-xs text-white/70">@noideapizza</span>
-                            </div>
-                        </a>
-
-                        <!-- Item 5 -->
-                        <a href="https://www.instagram.com/reel/Cy8SqPqSRD-/" target="_blank" rel="noopener noreferrer"
-                            class="flex-shrink-0 w-[280px] sm:w-[320px] aspect-[9/16] bg-gray-100 rounded-2xl overflow-hidden relative group/item snap-center shadow-lg hover:shadow-xl transition-all border border-gray-100">
-                            <div
-                                class="absolute inset-0 bg-gradient-to-br from-gray-800 to-black flex items-center justify-center text-white/20">
-                                <i data-lucide="instagram" class="w-16 h-16 opacity-50"></i>
-                            </div>
-                            <div
-                                class="absolute inset-0 bg-black/40 group-hover/item:bg-black/20 transition-colors flex flex-col items-center justify-center text-white p-6 text-center">
-                                <i data-lucide="play-circle"
-                                    class="w-12 h-12 mb-4 text-white opacity-80 group-hover/item:scale-110 transition-transform"></i>
-                                <span class="font-bold text-lg mb-2">Reel 보기</span>
-                                <span class="text-xs text-white/70">@noideapizza</span>
-                            </div>
-                        </a>
-                    </div>
-                    <p class="text-center text-gray-400 text-xs sm:text-sm mt-3 sm:mt-4">좌우로 스와이프하여 더 많은 소식 보기</p>
-                </div>
+                <p class="text-center text-gray-400 text-xs sm:text-sm mt-3 sm:mt-4">좌우로 스와이프하여 더 많은 소식 보기</p>
+            </div>
             </div>
         </section>
 
-        <!-- Section 2.5: 숨쉬는 이수명장 도우 -->
-        <section id="dough" class="py-16 md:py-24 bg-white" aria-labelledby="dough-title">
+        <!-- Section 2.5: 숨쉬는 이수명장 도우 (Redesign) -->
+        <section id="dough" class="py-24 bg-gray-50" aria-labelledby="dough-title">
             <div class="max-w-7xl mx-auto px-4 sm:px-6">
-                <!-- Section Header -->
-                <div class="text-center mb-10 md:mb-14">
-                    <span class="text-brand-blue font-bold tracking-widest uppercase text-xs sm:text-sm">Our
-                        Dough</span>
+                <!-- 1. Headline Area: Bold & Calligraphy Style -->
+                <div class="text-center mb-16">
+                    <span
+                        class="inline-block py-2 px-4 rounded-full bg-brand-blue/10 text-brand-blue font-bold tracking-widest uppercase text-sm mb-6">
+                        Premium Quality
+                    </span>
                     <h2 id="dough-title"
-                        class="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-gray-900 mt-2 mb-3">
-                        숨쉬는 이수명장 도우
+                        class="text-5xl sm:text-6xl md:text-7xl font-display font-black text-gray-900 leading-tight mb-8">
+                        "숨쉬는 <span class="text-brand-blue italic">명장의 도우</span>"
                     </h2>
-                    <p class="text-sm sm:text-base text-gray-600 max-w-xl mx-auto">
-                        48시간 저온 숙성, 빵끝까지 남기지 않는 비밀
+                    <p class="text-xl sm:text-2xl text-gray-600 font-medium max-w-2xl mx-auto break-keep">
+                        우리는 기계처럼 찍어내지 않습니다.<br>
+                        살아있는 도우가 숨을 쉴 때까지 기다립니다.
                     </p>
                 </div>
 
-                <!-- Main Content Grid -->
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-                    <!-- Left: Image Gallery -->
-                    <div class="relative">
-                        <div class="grid grid-cols-2 gap-3">
-                            <div class="rounded-xl overflow-hidden">
-                                <img src="../nip_assets/폴리쉬도우1.jpg" alt="노아이디어피자 도우 반죽"
-                                    class="w-full h-40 sm:h-52 md:h-60 object-cover" width="400" height="240"
-                                    loading="lazy">
-                            </div>
-                            <div class="rounded-xl overflow-hidden mt-4">
-                                <img src="../nip_assets/폴리쉬도우2.jpg" alt="노아이디어피자 숙성 도우"
-                                    class="w-full h-40 sm:h-52 md:h-60 object-cover" width="400" height="240"
-                                    loading="lazy">
-                            </div>
-                        </div>
+                <!-- 2. Dough Image Slideshow -->
+                <div
+                    class="relative w-full aspect-video md:aspect-[2.35/1] rounded-3xl overflow-hidden shadow-2xl mb-16 group">
+                    <!-- Slideshow Container -->
+                    <div id="dough-slideshow" class="absolute inset-0 w-full h-full">
+                        <img src="../nip_assets/폴리쉬도우2.jpg" alt="숨쉬는 노아이디어피자 도우 1"
+                            class="dough-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100">
+                        <img src="../nip_assets/폴리쉬도우1.jpg" alt="숨쉬는 노아이디어피자 도우 2"
+                            class="dough-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
                     </div>
 
-                    <!-- Right: Description -->
-                    <div>
-                        <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-4">
-                            왜 피자 크러스트는 항상 남길까요?
-                        </h3>
-                        <p class="text-sm sm:text-base text-gray-600 leading-relaxed mb-6">
-                            대부분의 프랜차이즈는 냉동 도우를 사용합니다. 노아이디어피자는 다릅니다.
-                            매일 매장에서 직접 반죽하고, 48시간 저온 숙성을 거칩니다.
-                        </p>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10">
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 text-white z-20">
+                        <p class="text-lg md:text-xl font-bold opacity-90 mb-2">천연액종 폴리쉬(Poolish) 공법</p>
+                        <h3 class="text-3xl md:text-4xl font-display font-bold">72시간의 기다림이 만든<br>완벽한 기공과 풍미</h3>
+                    </div>
+                </div>
 
-                        <!-- Feature List -->
-                        <div class="grid grid-cols-2 gap-3 sm:gap-4">
-                            <div class="bg-gray-50 rounded-lg p-3 sm:p-4">
-                                <p class="font-bold text-gray-900 text-sm sm:text-base mb-1">겉바속촉</p>
-                                <p class="text-xs text-gray-500">바삭하고 쫄깃한 식감</p>
-                            </div>
-                            <div class="bg-gray-50 rounded-lg p-3 sm:p-4">
-                                <p class="font-bold text-gray-900 text-sm sm:text-base mb-1">속 편한 피자</p>
-                                <p class="text-xs text-gray-500">발효로 소화가 잘됨</p>
-                            </div>
-                            <div class="bg-gray-50 rounded-lg p-3 sm:p-4">
-                                <p class="font-bold text-gray-900 text-sm sm:text-base mb-1">깊은 풍미</p>
-                                <p class="text-xs text-gray-500">고소하고 크리미한 맛</p>
-                            </div>
-                            <div class="bg-gray-50 rounded-lg p-3 sm:p-4">
-                                <p class="font-bold text-gray-900 text-sm sm:text-base mb-1">빵끝까지</p>
-                                <p class="text-xs text-gray-500">크러스트도 맛있게</p>
-                            </div>
-                        </div>
+                <script>
+                    document.addEventListener('DOMContentLoaded', () => {
+                        const slides = document.querySelectorAll('.dough-slide');
+                        let currentSlide = 0;
 
-                        <!-- Key Points -->
-                        <div class="flex flex-wrap gap-2 mt-6">
-                            <span
-                                class="px-3 py-1.5 bg-brand-blue text-white text-xs sm:text-sm font-medium rounded-full">매일
-                                직접 반죽</span>
-                            <span
-                                class="px-3 py-1.5 bg-gray-900 text-white text-xs sm:text-sm font-medium rounded-full">48시간
-                                숙성</span>
-                            <span
-                                class="px-3 py-1.5 bg-gray-200 text-gray-800 text-xs sm:text-sm font-medium rounded-full">냉동
-                                도우 NO</span>
+                        setInterval(() => {
+                            // Fade out current
+                            slides[currentSlide].classList.remove('opacity-100');
+                            slides[currentSlide].classList.add('opacity-0');
+
+                            // Move to next
+                            currentSlide = (currentSlide + 1) % slides.length;
+
+                            // Fade in next
+                            slides[currentSlide].classList.remove('opacity-0');
+                            slides[currentSlide].classList.add('opacity-100');
+                        }, 4000); // 4 seconds interval
+                    });
+                </script>
+
+                <!-- 3. Key Features : Solid Color Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <!-- Card 1 -->
+                    <div
+                        class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:-translate-y-2 transition-transform duration-300">
+                        <div class="text-brand-blue mb-4">
+                            <span class="text-5xl font-display font-black">01</span>
                         </div>
+                        <h4 class="text-2xl font-bold text-gray-900 mb-2">천연액종</h4>
+                        <p class="text-gray-600 font-medium">인공 이스트 NO.<br>자연이 만든 발효종</p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div
+                        class="bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-800 text-white hover:-translate-y-2 transition-transform duration-300">
+                        <div class="text-brand-blue mb-4">
+                            <span class="text-5xl font-display font-black">02</span>
+                        </div>
+                        <h4 class="text-2xl font-bold text-white mb-2">72시간 숙성</h4>
+                        <p class="text-gray-400 font-medium">48시간을 넘어<br>72시간의 깊은 기다림</p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div
+                        class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:-translate-y-2 transition-transform duration-300">
+                        <div class="text-brand-blue mb-4">
+                            <span class="text-5xl font-display font-black">03</span>
+                        </div>
+                        <h4 class="text-2xl font-bold text-gray-900 mb-2">매일 반죽</h4>
+                        <p class="text-gray-600 font-medium">그날 쓸 도우만<br>매장 직접 반죽</p>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div
+                        class="bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-800 text-white hover:-translate-y-2 transition-transform duration-300">
+                        <div class="text-brand-blue mb-4">
+                            <span class="text-5xl font-display font-black">04</span>
+                        </div>
+                        <h4 class="text-2xl font-bold text-white mb-2">쌀가루 블렌딩</h4>
+                        <p class="text-gray-400 font-medium">한국인의 입맛에 딱,<br>질리지 않는 쫄깃함</p>
                     </div>
                 </div>
             </div>
@@ -770,9 +929,11 @@
                     </div>
                 </div>
 
-                <div class="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6 lg:gap-8">
+                <div
+                    class="flex overflow-x-auto snap-x snap-mandatory gap-4 -mx-4 px-4 pb-6 hide-scrollbar md:grid md:grid-cols-3 md:gap-6 lg:gap-8 md:overflow-visible md:pb-0 md:px-0">
                     <!-- Menu Item 1: 꽈리 불고기 (베스트셀러) -->
-                    <article class="menu-item group cursor-pointer" itemscope itemtype="https://schema.org/MenuItem">
+                    <article class="menu-item group cursor-pointer min-w-[85vw] snap-center md:min-w-0" itemscope
+                        itemtype="https://schema.org/MenuItem">
                         <div
                             class="relative overflow-hidden rounded-lg sm:rounded-xl aspect-[4/3] mb-2 sm:mb-4 bg-gray-800">
                             <img src="../nip_assets/menu/꽈리불고기.jpg" alt="꽈리 불고기 피자 - 불고기와 꽈리고추, 깻잎이 올라간 노아이디어피자 베스트셀러"
@@ -806,7 +967,8 @@
                     </article>
 
                     <!-- Menu Item 2: 노아이디어 콤비네이션 -->
-                    <article class="menu-item group cursor-pointer" itemscope itemtype="https://schema.org/MenuItem">
+                    <article class="menu-item group cursor-pointer min-w-[85vw] snap-center md:min-w-0" itemscope
+                        itemtype="https://schema.org/MenuItem">
                         <div class="relative overflow-hidden rounded-xl aspect-[4/3] mb-4 bg-gray-800">
                             <img src="../nip_assets/menu/콤비네이션.jpg"
                                 alt="노아이디어 콤비네이션 피자 - 가지, 버섯, 페퍼로니, 통베이컨이 올라간 시그니처 메뉴"
@@ -837,7 +999,8 @@
                     </article>
 
                     <!-- Menu Item 3: 그린핑크 (SNS 인기) -->
-                    <article class="menu-item group cursor-pointer" itemscope itemtype="https://schema.org/MenuItem">
+                    <article class="menu-item group cursor-pointer min-w-[85vw] snap-center md:min-w-0" itemscope
+                        itemtype="https://schema.org/MenuItem">
                         <div class="relative overflow-hidden rounded-xl aspect-[4/3] mb-4 bg-gray-800">
                             <img src="../nip_assets/menu/그린핑크.jpg" alt="그린핑크 피자 - 바질페스토와 마스카포네, 용과소스의 SNS 인기 비주얼 피자"
                                 class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
@@ -867,7 +1030,8 @@
                     </article>
 
                     <!-- Menu Item 4: 크리스피 포테이토 -->
-                    <article class="menu-item group cursor-pointer" itemscope itemtype="https://schema.org/MenuItem">
+                    <article class="menu-item group cursor-pointer min-w-[85vw] snap-center md:min-w-0" itemscope
+                        itemtype="https://schema.org/MenuItem">
                         <div class="relative overflow-hidden rounded-xl aspect-[4/3] mb-4 bg-gray-800">
                             <img src="../nip_assets/menu/크리스피포테이토.jpg" alt="크리스피 포테이토 피자 - 바삭한 감자칩과 단호박 크림치즈"
                                 class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
@@ -893,7 +1057,8 @@
                     </article>
 
                     <!-- Menu Item 5: 4치즈 -->
-                    <article class="menu-item group cursor-pointer" itemscope itemtype="https://schema.org/MenuItem">
+                    <article class="menu-item group cursor-pointer min-w-[85vw] snap-center md:min-w-0" itemscope
+                        itemtype="https://schema.org/MenuItem">
                         <div class="relative overflow-hidden rounded-xl aspect-[4/3] mb-4 bg-gray-800">
                             <img src="../nip_assets/menu/4치즈.jpg" alt="4치즈 피자 - 모짜렐라, 라끌렛, 체다, 그라나 파다노 4종 치즈"
                                 class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
@@ -919,7 +1084,8 @@
                     </article>
 
                     <!-- Menu Item 6: 타코피자 -->
-                    <article class="menu-item group cursor-pointer" itemscope itemtype="https://schema.org/MenuItem">
+                    <article class="menu-item group cursor-pointer min-w-[85vw] snap-center md:min-w-0" itemscope
+                        itemtype="https://schema.org/MenuItem">
                         <div class="relative overflow-hidden rounded-xl aspect-[4/3] mb-4 bg-gray-800">
                             <img src="../nip_assets/menu/타코.jpg" alt="타코 피자 - 타코미트, 사워크림, 나쵸칩, 고수가 올라간 퓨전 피자"
                                 class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
