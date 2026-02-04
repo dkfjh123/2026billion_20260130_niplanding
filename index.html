@@ -340,6 +340,29 @@
     </div>
 
     <main id="main-content">
+        <!-- Video Intro Section -->
+        <section id="video-intro" class="relative w-full h-screen overflow-hidden bg-black">
+            <video id="intro-video" autoplay muted playsinline class="w-full h-full object-cover"
+                poster="https://assets.noideapizza.org/노아이디어피자-히어로-섹션.webp">
+                <source src="https://assets.noideapizza.org/노아이디어피자_목동점.mp4" type="video/mp4">
+            </video>
+            <!-- Gradient overlay -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30"></div>
+            <!-- Logo & Skip button -->
+            <div class="absolute inset-0 flex flex-col items-center justify-between py-16">
+                <div class="text-center mt-8">
+                    <h1 class="font-display text-white text-5xl md:text-7xl tracking-wider">NO IDEA PIZZA</h1>
+                    <p class="text-white/70 text-sm md:text-base mt-2 tracking-[0.3em]">가장 힙한 코리안 피자 컴퍼니</p>
+                </div>
+                <a href="#hero" class="group flex flex-col items-center gap-2 text-white/80 hover:text-white transition-colors cursor-pointer">
+                    <span class="text-sm tracking-widest uppercase">Scroll Down</span>
+                    <div class="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center pt-2 group-hover:border-white transition-colors">
+                        <div class="w-1.5 h-3 bg-white/80 rounded-full animate-bounce"></div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
         <!-- Section 1: Hero Section -->
         <header id="hero" class="relative w-full h-screen min-h-[600px] overflow-hidden">
             <!-- Video Background -->
