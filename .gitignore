@@ -1,6 +1,12 @@
-# Large video files (exceed GitHub 100MB limit)
-nip_assets/Video from Vrew(1734489850426).mp4
-nip_assets/menu/250731_이승준 작가 목동점 영상.mp4
+# Video files
+*.mp4
+*.mov
+*.avi
+*.wmv
+*.flv
+*.mkv
+*.webm
+*.m4v
 
 # System files
 nul
