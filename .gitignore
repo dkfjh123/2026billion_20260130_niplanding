@@ -1,3 +1,6 @@
+# Assets (hosted on R2)
+nip_assets/
+
 # Video files
 *.mp4
 *.mov
@@ -13,3 +16,7 @@ nul
 
 # Editor settings (personal)
 .vscode/
+
+# Dependencies & build
+node_modules/
+.wrangler/
