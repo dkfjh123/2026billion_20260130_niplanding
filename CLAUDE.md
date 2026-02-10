@@ -6,6 +6,18 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is a landing page for **노아이디어피자 (NO IDEA PIZZA)**, a Korean artisan pizza brand. The site targets MZ generation customers and potential franchise partners, emphasizing the brand's "American Vintage Hip" aesthetic.
 
+## Cloud References (상위 폴더)
+
+브랜드 자료가 필요할 때 상위 폴더의 클라우드 참조 사용:
+
+```
+../_cloud-ref/
+├── gdrive-brand-assets/   # 브랜드별 에셋 (로고, 사진, PDF 등)
+│   └── 4. Brand_assets_노아이디어/
+├── gdrive-obsidian/       # 옵시디언 노트
+└── onedrive-areas/        # 원드라이브 문서
+```
+
 ## Tech Stack
 
 - **HTML5** with Tailwind CSS (CDN)
