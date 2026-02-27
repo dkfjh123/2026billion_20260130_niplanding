@@ -277,38 +277,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            // Hidden form + iframe 방식 (CORS/리다이렉트 문제 없음)
-            const iframe = document.createElement('iframe');
-            iframe.name = 'hidden_iframe';
-            iframe.style.display = 'none';
-            document.body.appendChild(iframe);
-
-            const hiddenForm = document.createElement('form');
-            hiddenForm.method = 'POST';
-            hiddenForm.action = APPS_SCRIPT_URL;
-            hiddenForm.target = 'hidden_iframe';
-            hiddenForm.style.display = 'none';
-
-            Object.entries(payload).forEach(([key, value]) => {
-                const input = document.createElement('input');
-                input.type = 'hidden';
-                input.name = key;
-                input.value = value;
-                hiddenForm.appendChild(input);
-            });
-
-            document.body.appendChild(hiddenForm);
-            hiddenForm.submit();
-
-            // 전송 후 처리
-            setTimeout(() => {
+            fetch(APPS_SCRIPT_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'text/plain' },
+                body: JSON.stringify(payload)
+            })
+            .then(() => {
                 alert('문의가 접수되었습니다.\n담당자가 확인 후 빠른 시일 내에 연락드리겠습니다.');
                 form.reset();
+            })
+            .catch(() => {
+                alert('전송 중 오류가 발생했습니다.\n전화(0507-1422-5898)로 문의해 주세요.');
+            })
+            .finally(() => {
                 btn.disabled = false;
                 btnText.innerText = originalText;
-                document.body.removeChild(hiddenForm);
-                document.body.removeChild(iframe);
-            }, 2000);
+            });
         });
 
         // Phone number formatting
