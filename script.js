@@ -279,13 +279,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
             fetch(APPS_SCRIPT_URL, {
                 method: 'POST',
-                mode: 'no-cors',
-                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload)
             })
-            .then(() => {
-                alert('문의가 접수되었습니다.\n담당자가 확인 후 빠른 시일 내에 연락드리겠습니다.');
-                form.reset();
+            .then(res => res.json())
+            .then(data => {
+                if (data.result === 'success') {
+                    alert('문의가 접수되었습니다.\n담당자가 확인 후 빠른 시일 내에 연락드리겠습니다.');
+                    form.reset();
+                } else {
+                    alert('전송 중 오류가 발생했습니다.\n전화(0507-1422-5898)로 문의해 주세요.');
+                }
             })
             .catch(() => {
                 alert('전송 중 오류가 발생했습니다.\n전화(0507-1422-5898)로 문의해 주세요.');
