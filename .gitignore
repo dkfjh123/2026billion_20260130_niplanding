@@ -1,14 +1,10 @@
-# Assets (hosted on R2)
-nip_assets/
-
-# Video files
+# Video files (too large for git)
 *.mp4
 *.mov
 *.avi
 *.wmv
 *.flv
 *.mkv
-*.webm
 *.m4v
 
 # System files
