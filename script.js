@@ -4,8 +4,8 @@ lucide.createIcons();
 // Register GSAP ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
 
-// EmailJS Authorization (Replace with your actual Public Key from EmailJS dashboard)
-// emailjs.init("YOUR_PUBLIC_KEY"); // User needs to input this later
+// Google Apps Script 웹 앱 URL (배포 후 여기에 붙여넣기)
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby2_UFRFhN1B7eS_uEPoVQKNrBNIZESW3y-nvqFwHRxJP--DUeHRWDML9PuNuJMw-D_/exec';
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -191,6 +191,19 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
+        // Best Menu Showcase Cards
+        gsap.from(".best-menu-card", {
+            scrollTrigger: {
+                trigger: "#best-menu",
+                start: "top 80%",
+            },
+            y: 60,
+            opacity: 0,
+            duration: 0.7,
+            stagger: 0.15,
+            ease: "power3.out"
+        });
+
         // Menu Items
         gsap.from(".menu-item", {
             scrollTrigger: {
@@ -217,18 +230,6 @@ document.addEventListener('DOMContentLoaded', () => {
             ease: "power2.out"
         });
 
-        // Franchise Stats Counter Animation
-        gsap.from(".franchise-stat", {
-            scrollTrigger: {
-                trigger: "#franchise",
-                start: "top 75%",
-            },
-            y: 50,
-            opacity: 0,
-            duration: 0.6,
-            stagger: 0.15,
-            ease: "power3.out"
-        });
     } else {
         // Immediately show hero elements for reduced motion
         document.querySelectorAll('.hero-tag, .hero-line, .hero-tagline, .hero-cta, .hero-badge').forEach(el => {
@@ -237,52 +238,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Animate numbers in franchise section
-    const animateCounter = (element, target, suffix = '') => {
-        if (prefersReducedMotion) {
-            element.textContent = target + suffix;
-            return;
-        }
-
-        const obj = { value: 0 };
-        gsap.to(obj, {
-            value: target,
-            duration: 2,
-            ease: "power2.out",
-            scrollTrigger: {
-                trigger: element,
-                start: "top 85%",
-                once: true
-            },
-            onUpdate: () => {
-                if (suffix === '%' || suffix === '+') {
-                    element.textContent = Math.round(obj.value) + suffix;
-                } else if (target % 1 !== 0) {
-                    element.textContent = obj.value.toFixed(1);
-                } else {
-                    element.textContent = Math.round(obj.value);
-                }
-            }
-        });
-    };
-
-    // Initialize counters for franchise section
-    const franchiseStats = document.querySelectorAll('.franchise-stat .font-display');
-    franchiseStats.forEach((stat) => {
-        const text = stat.textContent;
-        const value = parseFloat(text);
-        const suffix = text.includes('%') ? '%' : text.includes('+') ? '+' : '';
-        if (!isNaN(value)) {
-            stat.textContent = '0' + suffix;
-            animateCounter(stat, value, suffix);
-        }
-    });
-
     // --- Form Handling ---
     const form = document.getElementById('inquiryForm');
     if (form) {
         form.addEventListener('submit', function(e) {
             e.preventDefault();
+
+            // 개인정보 동의 체크 확인
+            const privacyCheckbox = form.querySelector('#privacy');
+            if (privacyCheckbox && !privacyCheckbox.checked) {
+                alert('개인정보 수집 및 이용에 동의해 주세요.');
+                privacyCheckbox.focus();
+                return;
+            }
 
             const btn = form.querySelector('button[type="submit"]');
             const btnText = document.getElementById('btnText');
@@ -292,27 +260,40 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.disabled = true;
             btnText.innerText = "전송 중...";
 
-            const templateParams = {
-                from_name: form.name.value,
+            const payload = {
+                name: form.name.value,
                 phone: form.phone.value,
-                region: form.region.value,
-                has_store: form.has_store.value,
-                message: form.message.value,
-                to_email: 'dkfjh1234@gmail.com'
+                region: form.region.value || '',
+                has_store: form.has_store.value || '',
+                message: form.message.value || ''
             };
 
-            // For real usage:
-            // emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
-            //    .then(() => { ... })
-            //    .catch((error) => { ... });
-
-            // Mock success for demo
-            setTimeout(() => {
-                alert(`문의가 접수되었습니다.\n담당자가 확인 후 빠른 시일 내에 연락드리겠습니다.`);
-                form.reset();
+            // Google Apps Script로 전송
+            if (!APPS_SCRIPT_URL || APPS_SCRIPT_URL === 'YOUR_APPS_SCRIPT_URL') {
+                // URL 미설정 시 안내
+                alert('문의 시스템 준비 중입니다.\n전화(0507-1422-5898)로 문의해 주세요.');
                 btn.disabled = false;
                 btnText.innerText = originalText;
-            }, 1500);
+                return;
+            }
+
+            fetch(APPS_SCRIPT_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            })
+            .then(() => {
+                alert('문의가 접수되었습니다.\n담당자가 확인 후 빠른 시일 내에 연락드리겠습니다.');
+                form.reset();
+            })
+            .catch(() => {
+                alert('전송 중 오류가 발생했습니다.\n전화(0507-1422-5898)로 문의해 주세요.');
+            })
+            .finally(() => {
+                btn.disabled = false;
+                btnText.innerText = originalText;
+            });
         });
 
         // Phone number formatting

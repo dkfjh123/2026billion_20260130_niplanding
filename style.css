@@ -204,6 +204,20 @@ button:focus:not(:focus-visible) {
     text-orientation: mixed;
 }
 
+/* ===== BEST MENU SHOWCASE ===== */
+.best-menu-card {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.best-menu-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 85, 255, 0.15);
+}
+
+.best-menu-card:hover .aspect-\[4\/3\] img {
+    filter: brightness(0.85);
+}
+
 /* ===== MENU ITEMS ===== */
 .menu-item:hover img,
 .menu-item:focus-within img {

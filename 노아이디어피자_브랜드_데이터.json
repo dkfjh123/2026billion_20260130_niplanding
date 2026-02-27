@@ -25,7 +25,7 @@
             "interpretation_2": "한 입 베어 물면 그 맛의 비결을 알 수 없는 놀라움"
         },
         "core_values": {
-            "freshness": "냉동 도우가 아닌 매일 직접 반죽하는 생도우와 신선한 원재료",
+            "freshness": "냉동 도우가 아닌 천연액종 폴리쉬 공법으로 72시간 이상 숙성한 도우와 신선한 원재료",
             "originality": "기존 프랜차이즈에서 시도하지 않은 과감한 토핑 조합",
             "experience": "단순히 음식을 먹는 공간을 넘어 시각적 즐거움을 제공하는 힙한 공간"
         },
@@ -96,11 +96,10 @@
             "process": {
                 "pre_fermentation": "밀가루와 물, 효모를 1:1 비율로 섞어 장시간 사전 발효",
                 "low_temp_aging": "급격한 발효 지양, 저온에서 천천히 숙성",
-                "daily_production": "매일 매장에서 직접 반죽",
-                "rice_flour": "쌀가루 첨가로 쫀득퐁신한 식감"
+                "aging": "72시간 이상 저온 숙성으로 깊은 풍미와 겉바속촉 식감"
             },
             "features": [
-                "매장에서 직접 반죽",
+                "천연액종 폴리쉬 공법",
                 "쫄깃하고 쫀득한 식감",
                 "빵끝까지 맛있음",
                 "소화가 잘됨 (속 편함)",
@@ -333,6 +332,7 @@
                 {
                     "name_ko": "불닭고구마",
                     "category": "독창적",
+                    "label": "신규",
                     "description": "불닭매운맛+고구마단맛",
                     "toppings": ["불닭소스", "고구마무스"],
                     "prices_krw": {
@@ -340,6 +340,7 @@
                         "R": 25000,
                         "L": 31000
                     },
+                    "spicy_level": 3,
                     "features": ["미친조합", "매운맛 주의"]
                 },
                 {
@@ -409,9 +410,9 @@
                 "features": ["고기 냄새 전혀 없음", "탱글한 면"]
             },
             {
-                "name_ko": "불고기머쉬룸 파스타",
+                "name_ko": "불고기크림파스타",
                 "price_krw": 9000,
-                "description": "불고기+버섯 크림"
+                "description": "불고기 크림 파스타"
             }
         ],
         "sides": [
@@ -428,9 +429,9 @@
                 "description": "스모키한 풍미"
             },
             {
-                "name_ko": "콘 샐러드",
+                "name_ko": "펌킨 그릭요거트",
                 "price_krw": 3000,
-                "features": ["양 많고 신선함"]
+                "description": "단호박+그릭요거트"
             },
             {
                 "name_ko": "노아이디어 겨울호빵",
@@ -471,20 +472,6 @@
             }
         ],
         "beverages": {
-            "signature_highball": [
-                {
-                    "name": "Red Highball",
-                    "price_krw": 5000
-                },
-                {
-                    "name": "Blue Highball",
-                    "price_krw": 5000
-                },
-                {
-                    "name": "Yellow Highball",
-                    "price_krw": 5000
-                }
-            ],
             "beer": [
                 {
                     "name_ko": "버드와이저",
@@ -591,7 +578,7 @@
         "visit_purposes": [
             {
                 "purpose": "데이트",
-                "appeal": "힙한 분위기, SNS 인증샷, 시그니처 하이볼"
+                "appeal": "힙한 분위기, SNS 인증샷, 시그니처 맥주"
             },
             {
                 "purpose": "모임",
@@ -690,8 +677,8 @@
         "group_visit": {
             "pizza_1": "반반 피자 (L) - 꽈리불고기 + 콤비네이션",
             "pizza_2": "그린핑크 피자 (L)",
-            "side": "콘 샐러드",
-            "drink": "시그니처 하이볼",
+            "side": "펌킨 그릭요거트",
+            "drink": "맥주",
             "note": "SNS 인증용 + 다양한 맛"
         },
         "solo_visit": {
