@@ -18,7 +18,13 @@ const EMAIL_TO = 'dkfjh1234@gmail.com'; // 수신 이메일
 
 function doPost(e) {
   try {
-    const data = JSON.parse(e.postData.contents);
+    // form 파라미터 또는 JSON body 둘 다 지원
+    let data;
+    if (e.parameter && e.parameter.name) {
+      data = e.parameter;
+    } else {
+      data = JSON.parse(e.postData.contents);
+    }
     const ss = SpreadsheetApp.getActiveSpreadsheet();
     let sheet = ss.getSheetByName(SHEET_NAME);
 
