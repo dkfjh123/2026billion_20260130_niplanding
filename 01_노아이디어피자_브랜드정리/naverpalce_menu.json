@@ -1,0 +1,523 @@
+[
+    {
+        "count": 2,
+        "category": "반반피자",
+        "items": [
+            {
+                "label": "인기",
+                "name": "[주문량 1등] 반 반 피자 R",
+                "description": "R size(6조각)- 핫소스 1개, 파마산치즈 1개, 피클 1개\n저희 노아이디어피자 메뉴들을 반반으로 즐기실수 있습니다.\n\n각 피자 마다 가격이 상이하니 주문시 참고해주세요 :)\n\n각 피자에 대한 설명은 단품메뉴를 참고해주세요 :)",
+                "price_won": 19000,
+                "price_text": "19,000원",
+                "order_count": 39,
+                "spicy_level": null,
+                "image_url": "https://naverbooking-phinf.pstatic.net/20250813_96/1755092746894Tmav2_JPEG/%BE%C6%C6%AE%BA%B8%B5%E5_6.jpg?type=f220_220_60_sharpen"
+            },
+            {
+                "label": "인기",
+                "name": "[주문량 1등] 반 반 피자 L",
+                "description": "L size (8조각)- 핫소스 2개, 파마산치즈 1개, 피클 1개                                                      저희 노아이디어피자 메뉴들을 반반으로 즐기실수 있습니다.\n\n각 피자 마다 가격이 상이하니 주문시 참고해주세요 :)\n\n각 피자에 대한 설명은 단품메뉴를 참고해주세요 :)",
+                "price_won": 24000,
+                "price_text": "24,000원",
+                "order_count": 124,
+                "spicy_level": null,
+                "image_url": "https://naverbooking-phinf.pstatic.net/20250813_173/1755092726471Optty_JPEG/%BE%C6%C6%AE%BA%B8%B5%E5_6.jpg?type=f220_220_60_sharpen"
+            }
+        ]
+    },
+    {
+        "count": 12,
+        "note": "원본 HTML에서 (P size)피자 카테고리의 총 개수는 11로 표시되어 있으나, 제공된 코드 조각에는 11개 중 11번째 이후 항목이 더 있을 수 있습니다. 위 JSON은 붙여주신 코드 내에서 실제로 확인 가능한 항목만 추출했습니다.",
+        "category": "(P size)피자",
+        "items": [
+            {
+                "label": null,
+                "name": "[치즈가 4종류나?] 4치즈(P)",
+                "description": "99% 모짜렐라 치즈, 풍미를 더할 라끌렛치즈,체다치즈와 은은한 단맛을 느끼게 해주는 그라나 파다노가 들어간 노아이디어 4치즈 피자.",
+                "price_won": 8900,
+                "price_text": "8,900원",
+                "order_count": 4,
+                "spicy_level": null,
+                "image_url": "https://naverbooking-phinf.pstatic.net/20250813_167/1755093075376N7N7i_JPEG/%BE%C6%C6%AE%BA%B8%B5%E5_1.jpg?type=f220_220_60_sharpen"
+            },
+            {
+                "label": null,
+                "name": "[퀄리티가 다른] 페퍼로니(P)",
+                "description": "말밥굽 소시지라고 불리는 킬바사 소시지를 찹하여 페퍼로니와 같이 토핑에 올려 육즙이 그득하고 고소함 그 자체인 페퍼로니 피자.\n맥주와 너무 잘 어울리는 피자입니다.",
+                "price_won": 11000,
+                "price_text": "11,000원",
+                "order_count": null,
+                "spicy_level": null,
+                "image_url": "https://naverbooking-phinf.pstatic.net/20250813_142/17550930874187RcPi_JPEG/%BE%C6%C6%AE%BA%B8%B5%E5_7.jpg?type=f220_220_60_sharpen"
+            },
+            {
+                "label": null,
+                "name": "[단호박 크림치즈] 스위트 하와이안(P)",
+                "description": "통 파인애플과 그 파인애플의 동그란 틈에 단호박 크림치즈를 꽉 채워 파인애플의 달콤함을 한층 끌어올리고 두툼한 베이컨으로 육향도 가득한 하와이안 피자",
+                "price_won": 11500,
+                "price_text": "11,500원",
+                "order_count": 2,
+                "spicy_level": null,
+                "image_url": "https://naverbooking-phinf.pstatic.net/20250813_134/17550931049320AFJt_JPEG/%BE%C6%C6%AE%BA%B8%B5%E5_8.jpg?type=f220_220_60_sharpen"
+            },
+            {
+                "label": null,
+                "name": "[진짜 타코맛] 타코피자(P)",
+                "description": "아삭한 적양파,홍피망, 고소하고 육즙 가득한 미티와 킬바사, 매콤함을 더 해줄 꽈리고추, 타코에 빠질수 없는 사워크림, 식감을 더해줄 양념된 나쵸칩. 향을 더해줄 고수까지\n타코 안에 들어가는 재료들이 피자에 들어가면 어떨까라고 생각하다 만든 노아이디어 타코 피자.",
+                "price_won": 12000,
+                "price_text": "12,000원",
+                "order_count": null,
+                "spicy_level": 1,
+                "image_url": "https://naverbooking-phinf.pstatic.net/20250813_20/17550931168919xKSV_JPEG/%BE%C6%C6%AE%BA%B8%B5%E5_9.jpg?type=f220_220_60_sharpen"
+            },
+            {
+                "label": null,
+                "name": "[RED용과로 만든] 그린핑크(P)",
+                "description": "Fresh한 바질페스토를 베이스로 하고 그 위에 모짜렐라 치즈와 노아이디어만의 마스카포네 치즈를 얹고 리코타치즈,레드용과로 만든 핑크소스로 마무리한 그린 핑크 피자 처음에는 물음표가 나오지만 바질의 향이 가득하고 달콤하고 고소한 색감과 맛까지 다 잡은 그린핑크 피자.\n예전 미국에서 유행한 핑크소스를 보고 피자에 넣어봐야겠다 라고 생각하다 만든 그린핑크 피자.",
+                "price_won": 11500,
+                "price_text": "11,500원",
+                "order_count": null,
+                "spicy_level": null,
+                "image_url": "https://naverbooking-phinf.pstatic.net/20250813_242/1755093134366weAcu_JPEG/%BE%C6%C6%AE%BA%B8%B5%E5_10.jpg?type=f220_220_60_sharpen"
+            },
+            {
+                "label": null,
+                "name": "[완전히 차별화된] 크리스피 포테이토(P)",
+                "description": "아삭한 적양파와 톡톡터지는 옥수수콘 위에 마리네이드된 얇은 감자로 다 덮고 육즙가득한 통베이컨, 달콤한 단호박 크림치즈, 크리스피를 담당할 크리스피럽으로 마무리한 크리스피 포테이토피자.\n감자의 향과 바삭하고 달콤한 맛이 가득한  포테이토 피자 입니다.(주문량 2위)",
+                "price_won": 12500,
+                "price_text": "12,500원",
+                "order_count": 1,
+                "spicy_level": null,
+                "image_url": "https://naverbooking-phinf.pstatic.net/20250813_255/1755093162195LvR1C_JPEG/%BE%C6%C6%AE%BA%B8%B5%E5_2.jpg?type=f220_220_60_sharpen"
+            },
+            {
+                "label": null,
+                "name": "[사장님 마음속 1등] 꽈리 불고기(P)",
+                "description": "프레시한 적양파, 홍피망에 고기의 약간의 느끼함을 없애는 꽈리고추, 노아이디어만의 불고기 양념으로 재운 불고기가 가득 들어가고 식감을 더해줄 양파튀김, \n쌈장을 대신해서 감칠맛을 더해줄 쯔란마요와 깻잎을 얇게 슬라이스해서 마무리한 꽈리 불고기 피자.\n고깃집에서 깻잎에 고기, 쌈장, 고추 등등을 넣어 쌈을 먹는 것을 모티브로 만든 꽈리 불고기 피자입니다.",
+                "price_won": 12500,
+                "price_text": "12,500원",
+                "order_count": 2,
+                "spicy_level": null,
+                "image_url": "https://naverbooking-phinf.pstatic.net/20250813_256/1755093180572NXtD6_JPEG/%BE%C6%C6%AE%BA%B8%B5%E5_12.jpg?type=f220_220_60_sharpen"
+            },
+            {
+                "label": "인기",
+                "name": "[1등 시그니처] 노아이디어 콤비네이션(P)",
+                "description": "채즙 가득한 가지,버섯과 프레시한 적양파,홍피망,주키니,톡톡 터지는 옥수수콘, 감칠맛 좋은 그린올리브,짭짤한 페퍼로니와 통베이컨 육즙을 더해줄 미티 약간의 매콤함을 더해줄 콤비소스까지 노아이디어 만의 시그니처 콤비네이션 피자입니다.(주문량 1위)",
+                "price_won": 13000,
+                "price_text": "13,000원",
+                "order_count": 15,
+                "spicy_level": null,
+                "image_url": "https://naverbooking-phinf.pstatic.net/20250813_267/1755093203623wdVEU_JPEG/%BE%C6%C6%AE%BA%B8%B5%E5_11.jpg?type=f220_220_60_sharpen"
+            },
+            {
+                "label": null,
+                "name": "[매콤새우+달콤밤] 핫새우밤(P)",
+                "description": "아삭한 적양파, 오도독 터지는 콘, 감칠맛을 더해줄 미티, 탱글하고 불맛 가득한 새우와 달콤하게 익은 밤이 조화롭게 어울리는 매콤한 칠리럽으로 마무리한 핫새우 밤 피자.신라면 보다 살짝 매우니 주문시 참고해주세요 :) 가을에 할머니집 뒷산에서 밤을 수확하다가 밤을 피자에 넣어보면 어떨까 생각하다만든 핫새우밤 피자입니다.",
+                "price_won": 13500,
+                "price_text": "13,500원",
+                "order_count": null,
+                "spicy_level": 2,
+                "image_url": "https://naverbooking-phinf.pstatic.net/20250813_18/1755093228144jGXy9_JPEG/%BE%C6%C6%AE%BA%B8%B5%E5_3.jpg?type=f220_220_60_sharpen"
+            },
+            {
+                "label": null,
+                "name": "[한국인 소울푸드] 스파이시 치킨(P)",
+                "description": "불향 가득한 닭갈비 양념으로 마리네이드한 닭가슴살을 듬뿍올려 화끈한 감칠맛을 살리고 고구마 대신 달콤한 밤을 더해 깊고 부드러운 단맛 주고 여기에 아삭한 적양파,\n꽈리고추가 어울려져 풍미와 식감을 살린 핫치킨밤 피자.\n춘천에서 닭갈비를 먹다가 영감을 얻어서 기존의 핫치킨피자와 다른 핫치킨 피자를 만들어 보겠다는 생각으로 만든 피자입니다.",
+                "price_won": 13500,
+                "price_text": "13,500원",
+                "order_count": null,
+                "spicy_level": 1,
+                "image_url": "https://naverbooking-phinf.pstatic.net/20250813_176/1755093245463KDRjJ_JPEG/%BE%C6%C6%AE%BA%B8%B5%E5_4.jpg?type=f220_220_60_sharpen"
+            },
+            {
+                "label": "신규",
+                "name": "[미친조합] 불닭고구마피자(P)",
+                "description": "갈릭소스, 매콤한 불닭면과 노아이디어만의 달콤한 고구마 무스 위 마리네이드된 호박고구마, 100% 자연 모짜렐라 치즈와 마무리로 달달하고 바삭한 고구마 칩까지. 맵찔이에게는 살짝 도전적인 매움, 불닭 마니아에겐 달콤한 밸런스맛의 피자",
+                "price_won": 13500,
+                "price_text": "13,500원",
+                "order_count": 1,
+                "spicy_level": 3,
+                "image_url": "https://naverbooking-phinf.pstatic.net/20250813_262/1755093368316NCDYm_JPEG/%BE%C6%C6%AE%BA%B8%B5%E5_5.jpg?type=f220_220_60_sharpen"
+            },
+            {
+                "label": "신규",
+                "name": "火제육피자(P)",
+                "description": "불향 가득 매콤한 제육을 듬뿍 올린 한국식 시그니처 피자! 한국인이 사랑할 수 밖에 없는 매콤한 제육+쭉 늘어나는 치즈의 미친 조합. 남녀노소 실패없는 매콤불향 제육피자",
+                "price_won": 13000,
+                "price_text": "13,000원",
+                "order_count": null,
+                "spicy_level": 2,
+                "image_url": "https://naverbooking-phinf.pstatic.net/20260304_205/1772618344324XboHM_PNG/image.png?type=f220_220_60_sharpen"
+            }
+        ]
+    },
+    {
+        "count": 11,
+        "category": "(R size)피자",
+        "items": [
+            {
+                "label": null,
+                "name": "[치즈가 4종류나?] 4치즈(R)",
+                "description": "99% 모짜렐라 치즈에 라끌렛, 체다, 그라나 파다노를 더한 4치즈 피자",
+                "price_won": 19000,
+                "price_text": "19,000원",
+                "order_count": null,
+                "spicy_level": null,
+                "image_url": "https://naverbooking-phinf.pstatic.net/20250813_11/17550924783536GVTO_JPEG/%BE%C6%C6%AE%BA%B8%B5%E5_1.jpg?type=f220_220_60_sharpen"
+            },
+            {
+                "label": null,
+                "name": "[단호박 크림치즈] 스위트하와이안(R)",
+                "description": "파인애플과 단호박 크림치즈, 두툼한 베이컨의 조합",
+                "price_won": 22000,
+                "price_text": "22,000원",
+                "order_count": 1,
+                "spicy_level": null,
+                "image_url": "https://naverbooking-phinf.pstatic.net/20250813_97/17550925518439oPrp_JPEG/%BE%C6%C6%AE%BA%B8%B5%E5_8.jpg?type=f220_220_60_sharpen"
+            },
+            {
+                "label": null,
+                "name": "[진짜 타코맛] 타코 피자(R)",
+                "description": "타코 재료(미티, 킬바사, 사워크림, 나쵸칩, 고수)를 피자에 구현",
+                "price_won": 23000,
+                "price_text": "23,000원",
+                "order_count": null,
+                "spicy_level": 1,
+                "image_url": "https://naverbooking-phinf.pstatic.net/20250813_52/1755092664701xjLII_JPEG/%BE%C6%C6%AE%BA%B8%B5%E5_9.jpg?type=f220_220_60_sharpen"
+            },
+            {
+                "label": null,
+                "name": "[RED용과로 만든] 그린핑크(R)",
+                "description": "바질페스토와 마스카포네·리코타 치즈, 레드용과 핑크소스 조합",
+                "price_won": 22000,
+                "price_text": "22,000원",
+                "order_count": null,
+                "spicy_level": null,
+                "image_url": "https://naverbooking-phinf.pstatic.net/20250813_143/1755092448521AxVrI_JPEG/%BE%C6%C6%AE%BA%B8%B5%E5_10.jpg?type=f220_220_60_sharpen"
+            },
+            {
+                "label": null,
+                "name": "[완전히 차별화된] 크리스피포테이토(R)",
+                "description": "얇은 감자로 덮은 포테이토 피자, 통베이컨과 단호박 크림치즈",
+                "price_won": 23500,
+                "price_text": "23,500원",
+                "order_count": 1,
+                "spicy_level": null,
+                "image_url": "https://naverbooking-phinf.pstatic.net/20250813_63/17550926036107XgAH_JPEG/%BE%C6%C6%AE%BA%B8%B5%E5_2.jpg?type=f220_220_60_sharpen"
+            },
+            {
+                "label": null,
+                "name": "[사장님 맘속 1등] 꽈리불고기(R)",
+                "description": "불고기와 꽈리고추, 쯔란마요, 깻잎을 더한 한국식 피자",
+                "price_won": 23500,
+                "price_text": "23,500원",
+                "order_count": 1,
+                "spicy_level": null,
+                "image_url": "https://naverbooking-phinf.pstatic.net/20250813_124/1755092575279Ka5my_JPEG/%BE%C6%C6%AE%BA%B8%B5%E5_12.jpg?type=f220_220_60_sharpen"
+            },
+            {
+                "label": null,
+                "name": "[1등 시그니처] 노아이디어 콤비네이션(R)",
+                "description": "채소·고기·올리브·콤비소스를 조합한 시그니처 피자",
+                "price_won": 24000,
+                "price_text": "24,000원",
+                "order_count": 13,
+                "spicy_level": 1,
+                "image_url": "https://naverbooking-phinf.pstatic.net/20250813_285/1755092643434PEa6Q_JPEG/%BE%C6%C6%AE%BA%B8%B5%E5_11.jpg?type=f220_220_60_sharpen"
+            },
+            {
+                "label": null,
+                "name": "[매콤새우+달콤밤] 핫새우밤(R)",
+                "description": "불맛 새우와 달콤한 밤을 칠리럽으로 마무리한 매콤한 피자",
+                "price_won": 25000,
+                "price_text": "25,000원",
+                "order_count": null,
+                "spicy_level": 2,
+                "image_url": "https://naverbooking-phinf.pstatic.net/20250813_87/1755092682698JiRgQ_JPEG/%BE%C6%C6%AE%BA%B8%B5%E5_3.jpg?type=f220_220_60_sharpen"
+            },
+            {
+                "label": null,
+                "name": "[한국인 소울푸드] 스파이시 치킨(R)",
+                "description": "닭갈비 양념 닭가슴살과 밤, 꽈리고추의 조합",
+                "price_won": 24500,
+                "price_text": "24,500원",
+                "order_count": null,
+                "spicy_level": 2,
+                "image_url": "https://naverbooking-phinf.pstatic.net/20250813_219/1755092709998HFkIr_JPEG/%BE%C6%C6%AE%BA%B8%B5%E5_4.jpg?type=f220_220_60_sharpen"
+            },
+            {
+                "label": "신규",
+                "name": "[미친조합] 불닭고구마피자(R)",
+                "description": "불닭면과 고구마 무스, 호박고구마, 모짜렐라 치즈의 달콤매콤 조합",
+                "price_won": 25000,
+                "price_text": "25,000원",
+                "order_count": null,
+                "spicy_level": 3,
+                "image_url": "https://naverbooking-phinf.pstatic.net/20250813_29/1755093434171AvOEB_JPEG/%BE%C6%C6%AE%BA%B8%B5%E5_5.jpg?type=f220_220_60_sharpen"
+            },
+            {
+                "label": "신규",
+                "name": "火제육피자(R)",
+                "description": "불향 가득 매콤한 제육을 듬뿍 올린 한국식 시그니처 피자! 한국인이 사랑할 수 밖에 없는 매콤한 제육+쭉 늘어나는 치즈의 미친 조합. 남녀노소 실패없는 매콤불향 제육피자",
+                "price_won": 24000,
+                "price_text": "24,000원",
+                "order_count": null,
+                "spicy_level": 2,
+                "image_url": "https://naverbooking-phinf.pstatic.net/20260304_73/1772618239244m67ag_PNG/image.png?type=f220_220_60_sharpen"
+            }
+        ]
+    },
+    {
+        "count": 12,
+        "category": "(L size)피자",
+        "items": [
+            {
+                "label": null,
+                "name": "[치즈가 4종류나?] 4치즈(L)",
+                "description": "99% 모짜렐라 치즈, 라끌렛치즈, 체다치즈, 그라나 파다노가 들어간 노아이디어 4치즈 피자.",
+                "price_won": 24000,
+                "price_text": "24,000원",
+                "order_count": 2,
+                "spicy_level": null,
+                "image_url": "https://naverbooking-phinf.pstatic.net/20250813_44/1755092897448h1Azy_JPEG/%BE%C6%C6%AE%BA%B8%B5%E5_1.jpg?type=f220_220_60_sharpen"
+            },
+            {
+                "label": null,
+                "name": "[퀄리티가 다른] 페퍼로니(L)",
+                "description": "킬바사 소시지를 찹하여 페퍼로니와 같이 토핑에 올린 육즙 가득한 페퍼로니 피자. 맥주와 잘 어울리는 피자.",
+                "price_won": 26000,
+                "price_text": "26,000원",
+                "order_count": 5,
+                "spicy_level": null,
+                "image_url": "https://naverbooking-phinf.pstatic.net/20250813_120/1755092914333dA9I4_JPEG/%BE%C6%C6%AE%BA%B8%B5%E5_7.jpg?type=f220_220_60_sharpen"
+            },
+            {
+                "label": null,
+                "name": "[단호박 크림치즈] 스위트하와이안(L)",
+                "description": "통 파인애플의 틈에 단호박 크림치즈를 채우고 두툼한 베이컨으로 육향을 더한 하와이안 피자",
+                "price_won": 27000,
+                "price_text": "27,000원",
+                "order_count": null,
+                "spicy_level": null,
+                "image_url": "https://naverbooking-phinf.pstatic.net/20250813_135/1755092934961Fmquq_JPEG/%BE%C6%C6%AE%BA%B8%B5%E5_8.jpg?type=f220_220_60_sharpen"
+            },
+            {
+                "label": null,
+                "name": "[진짜 타코맛] 타코피자(L)",
+                "description": "적양파·홍피망, 미티·킬바사, 꽈리고추, 사워크림, 양념 나쵸칩, 고수까지 타코 재료를 피자에 구현",
+                "price_won": 29000,
+                "price_text": "29,000원",
+                "order_count": 1,
+                "spicy_level": 1,
+                "image_url": "https://naverbooking-phinf.pstatic.net/20250813_145/17550929548211sWA7_JPEG/%BE%C6%C6%AE%BA%B8%B5%E5_9.jpg?type=f220_220_60_sharpen"
+            },
+            {
+                "label": null,
+                "name": "[RED 용과로 만든] 그린핑크(L)",
+                "description": "바질페스토 베이스에 모짜렐라·마스카포네·리코타 치즈, 레드용과로 만든 핑크소스로 마무리한 그린핑크 피자",
+                "price_won": 28000,
+                "price_text": "28,000원",
+                "order_count": 1,
+                "spicy_level": null,
+                "image_url": "https://naverbooking-phinf.pstatic.net/20250813_110/1755092978084lIUFX_JPEG/%BE%C6%C6%AE%BA%B8%B5%E5_10.jpg?type=f220_220_60_sharpen"
+            },
+            {
+                "label": null,
+                "name": "[완전히 차별화된] 크리스피포테이토(L)",
+                "description": "적양파·옥수수콘 위를 마리네이드된 얇은 감자로 덮고 통베이컨, 단호박 크림치즈, 크리스피럽으로 마무리한 포테이토 피자(주문량 2위)",
+                "price_won": 29500,
+                "price_text": "29,500원",
+                "order_count": 6,
+                "spicy_level": null,
+                "image_url": "https://naverbooking-phinf.pstatic.net/20250813_22/1755092992664hlpqL_JPEG/%BE%C6%C6%AE%BA%B8%B5%E5_2.jpg?type=f220_220_60_sharpen"
+            },
+            {
+                "label": null,
+                "name": "[사장님 맘속 1등] 꽈리불고기(L)",
+                "description": "적양파·홍피망, 꽈리고추, 불고기 양념 불고기, 양파튀김, 쯔란마요, 깻잎으로 마무리한 꽈리 불고기 피자",
+                "price_won": 29500,
+                "price_text": "29,500원",
+                "order_count": 3,
+                "spicy_level": null,
+                "image_url": "https://naverbooking-phinf.pstatic.net/20250813_87/1755093009703augIv_JPEG/%BE%C6%C6%AE%BA%B8%B5%E5_12.jpg?type=f220_220_60_sharpen"
+            },
+            {
+                "label": "인기",
+                "name": "[1등 시그니처] 노아이디어 콤비네이션(L)",
+                "description": "가지·버섯·적양파·홍피망·주키니·옥수수콘·그린올리브, 페퍼로니·통베이컨·미티, 콤비소스로 완성한 시그니처 콤비네이션 피자(주문량 1위)",
+                "price_won": 30000,
+                "price_text": "30,000원",
+                "order_count": 19,
+                "spicy_level": null,
+                "image_url": "https://naverbooking-phinf.pstatic.net/20250813_64/1755093026727Sdfrn_JPEG/%BE%C6%C6%AE%BA%B8%B5%E5_11.jpg?type=f220_220_60_sharpen"
+            },
+            {
+                "label": null,
+                "name": "[매콤새우+달콤밤] 핫새우밤(L)",
+                "description": "적양파·옥수수콘, 미티, 불맛 새우와 달콤한 밤을 매콤한 칠리럽으로 마무리한 핫새우밤 피자(신라면보다 살짝 매움)",
+                "price_won": 31000,
+                "price_text": "31,000원",
+                "order_count": 1,
+                "spicy_level": 2,
+                "image_url": "https://naverbooking-phinf.pstatic.net/20250813_129/1755093048310rmkWK_JPEG/%BE%C6%C6%AE%BA%B8%B5%E5_3.jpg?type=f220_220_60_sharpen"
+            },
+            {
+                "label": null,
+                "name": "[한국인 소울푸드] 스파이시 치킨(L)",
+                "description": "닭갈비 양념 닭가슴살과 달콤한 밤, 적양파·꽈리고추로 풍미와 식감을 살린 핫치킨밤 피자",
+                "price_won": 29500,
+                "price_text": "29,500원",
+                "order_count": 1,
+                "spicy_level": 2,
+                "image_url": "https://naverbooking-phinf.pstatic.net/20250813_2/17550930626061vyyj_JPEG/%BE%C6%C6%AE%BA%B8%B5%E5_4.jpg?type=f220_220_60_sharpen"
+            },
+            {
+                "label": "신규",
+                "name": "[미친조합] 불닭고구마피자(L)",
+                "description": "갈릭소스, 매콤한 불닭면과 달콤한 고구마 무스 위 호박고구마, 100% 자연 모짜렐라 치즈, 달달하고 바삭한 고구마 칩까지 더한 달콤매콤 피자",
+                "price_won": 31000,
+                "price_text": "31,000원",
+                "order_count": null,
+                "spicy_level": 3,
+                "image_url": "https://naverbooking-phinf.pstatic.net/20250813_50/1755093477156FAu3x_JPEG/%BE%C6%C6%AE%BA%B8%B5%E5_5.jpg?type=f220_220_60_sharpen"
+            },
+            {
+                "label": "신규",
+                "name": "火제육피자(L)",
+                "description": "불향 가득 매콤한 제육을 듬뿍 올린 한국식 시그니처 피자! 한국인이 사랑할 수 밖에 없는 매콤한 제육+쭉 늘어나는 치즈의 미친 조합. 남녀노소 실패없는 매콤불향 제육피자",
+                "price_won": 30000,
+                "price_text": "30,000원",
+                "order_count": null,
+                "spicy_level": 2,
+                "image_url": "https://naverbooking-phinf.pstatic.net/20260304_136/17726183033283XA16_PNG/image.png?type=f220_220_60_sharpen"
+            }
+        ]
+    },
+    {
+        "category": "사이드",
+        "items": [
+            {
+                "name": "노아이디어 겨울호빵",
+                "price_won": 6900,
+                "badges": [
+                    "신규"
+                ],
+                "spicy_level": null,
+                "description": "노아이디어 만의 깔조네 스타일의 디저트 피자\n(팥,치즈,견과류 믹스, 슈가파우더)\n\n피자 먹고 디저트로 즐겨보세요 :)",
+                "order_count": 9,
+                "image_url": "https://naverbooking-phinf.pstatic.net/20251119_89/17635273912705kiWq_JPEG/image.jpg?type=f220_220_60_sharpen"
+            },
+            {
+                "name": "할라피뇨마요 윙(6ps)",
+                "price_won": 8500,
+                "badges": [],
+                "spicy_level": null,
+                "description": null,
+                "order_count": 6,
+                "image_url": "https://naverbooking-phinf.pstatic.net/20250813_253/1755092818080fKfzS_JPEG/%BE%C6%C6%AE%BA%B8%B5%E5_13.jpg?type=f220_220_60_sharpen"
+            },
+            {
+                "name": "치폴레마요 윙(6ps)",
+                "price_won": 8500,
+                "badges": [],
+                "spicy_level": 1,
+                "description": null,
+                "order_count": 2,
+                "image_url": "https://naverbooking-phinf.pstatic.net/20250813_115/17550928357860J407_JPEG/%BE%C6%C6%AE%BA%B8%B5%E5_14.jpg?type=f220_220_60_sharpen"
+            },
+            {
+                "name": "라구파스타",
+                "price_won": 9000,
+                "badges": [],
+                "spicy_level": null,
+                "description": null,
+                "order_count": 7,
+                "image_url": "https://naverbooking-phinf.pstatic.net/20250813_49/1755092771507z7bVk_JPEG/%BE%C6%C6%AE%BA%B8%B5%E5_18.jpg?type=f220_220_60_sharpen"
+            },
+            {
+                "name": "불고기머쉬룸파스타",
+                "price_won": 9000,
+                "badges": [],
+                "spicy_level": null,
+                "description": null,
+                "order_count": 3,
+                "image_url": "https://naverbooking-phinf.pstatic.net/20260105_24/1767598740189YSzCz_PNG/%BA%D2%B0%ED%B1%E2_%B8%D3%BD%AC%B7%EB_%C6%C4%BD%BA%C5%B8_%282%29.png?type=f220_220_60_sharpen"
+            },
+            {
+                "name": "핫새우파스타",
+                "price_won": 9000,
+                "badges": [],
+                "spicy_level": 2,
+                "description": null,
+                "order_count": null,
+                "image_url": "https://naverbooking-phinf.pstatic.net/20250813_299/1755092876891gxtGV_JPEG/%BE%C6%C6%AE%BA%B8%B5%E5_16.jpg?type=f220_220_60_sharpen"
+            }
+        ],
+        "count": 6
+    },
+    {
+        "category": "디핑소스",
+        "items": [
+            {
+                "name": "갈릭",
+                "price_won": 800,
+                "badges": [
+                    "인기"
+                ],
+                "spicy_level": null,
+                "description": "갈릭의 향과 사워크림의 새콤함이 느껴져 \n다른 피자집에서는 맛 보지 못한 갈릭소스의 진함을 느끼실수 있습니다 :)",
+                "order_count": 63,
+                "image_url": "https://naverbooking-phinf.pstatic.net/20240923_11/1727065406450PkpGm_PNG/%B0%A5%B8%AF.png?type=f220_220_60_sharpen"
+            },
+            {
+                "name": "렌치",
+                "price_won": 800,
+                "badges": [],
+                "spicy_level": null,
+                "description": "사워크림의 새콤함과 청양고추의 매콤함이 들어가서 매콤,새콤한 노아이디어 만의 렌치 소스",
+                "order_count": 6,
+                "image_url": "https://naverbooking-phinf.pstatic.net/20240923_182/1727065391918Nk59m_PNG/%B7%BB%C4%A1.png?type=f220_220_60_sharpen"
+            },
+            {
+                "name": "할라피뇨마요",
+                "price_won": 800,
+                "badges": [],
+                "spicy_level": null,
+                "description": "달콤하고 할라피뇨의 매운맛이 느껴지는 \n중독성 강한 노아이디어 만의 할라피뇨 마요",
+                "order_count": 10,
+                "image_url": "https://naverbooking-phinf.pstatic.net/20240923_248/172706536569320exV_PNG/%C7%D2%B6%F3%B8%B6%BF%E4.png?type=f220_220_60_sharpen"
+            },
+            {
+                "name": "핫소스(추가)",
+                "price_won": 100,
+                "badges": [],
+                "spicy_level": null,
+                "description": null,
+                "order_count": 11,
+                "image_url": null
+            },
+            {
+                "name": "파마산치즈(추가)",
+                "price_won": 200,
+                "badges": [],
+                "spicy_level": null,
+                "description": null,
+                "order_count": 1,
+                "image_url": null
+            },
+            {
+                "name": "피클(추가)",
+                "price_won": 500,
+                "badges": [
+                    "인기"
+                ],
+                "spicy_level": null,
+                "description": null,
+                "order_count": 20,
+                "image_url": null
+            }
+        ],
+        "count": 6
+    }
+]
