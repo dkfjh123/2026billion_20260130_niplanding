@@ -20,6 +20,8 @@ import combinationPizza from "../nip_assets/menu/콤비네이션.jpg";
 import kkwariBulgogiPizza from "../nip_assets/menu/꽈리불고기.jpg";
 import doughTexture from "../nip_assets/dough/폴리쉬도우2.jpg";
 import storeInterior from "../nip_assets/store/매장사진1.jpg";
+import storeInterior2 from "../nip_assets/store/매장사진3.jpg";
+import conceptShot from "../nip_assets/menu/컨셉샷 1.jpg";
 
 const heroMessages = [
   {
@@ -34,11 +36,7 @@ const heroMessages = [
     text: "프랜차이즈 말고, 우리 매장만의 메뉴가 필요해요.",
     Icon: Sparkles,
   },
-  {
-    text: "술은 팔리는데 테이블 단가를 올릴 메뉴가 없어요.",
-    Icon: Utensils,
-  },
-  {
+{
     text: "검증된 피자 감도를 내 메뉴로 붙이고 싶어요.",
     Icon: Pizza,
   },
@@ -65,7 +63,7 @@ const PROBLEM_FIT_VIDEO_MOBILE_URL =
 function App() {
   return (
     <div className="overflow-x-hidden bg-[#f8fafc] selection:bg-slate-200">
-      <section className="relative min-h-screen overflow-hidden bg-[#f8fafc]">
+      <section className="relative min-h-[70vh] overflow-hidden bg-[#f8fafc] md:min-h-screen">
         <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden bg-[#f8fafc]">
           <div className="absolute left-[-18rem] top-[-16rem] h-[38rem] w-[38rem] rounded-full bg-sky-200/45 blur-3xl" />
           <div className="absolute right-[-16rem] top-20 h-[34rem] w-[34rem] rounded-full bg-blue-300/35 blur-3xl" />
@@ -73,7 +71,7 @@ function App() {
           <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(15,23,42,0.035)_1px,transparent_1px),linear-gradient(rgba(15,23,42,0.035)_1px,transparent_1px)] bg-[size:44px_44px] opacity-60" />
         </div>
 
-        <div className="relative z-10 flex min-h-screen flex-col">
+        <div className="relative z-10 flex min-h-[70vh] flex-col md:min-h-screen">
           <Navbar />
           <Hero />
         </div>
@@ -88,7 +86,7 @@ function Navbar() {
   const links = ["브랜드 증거", "상품 모듈", "상담 절차", "FAQ", "자료"];
 
   return (
-    <nav className="relative z-50 mx-auto flex w-full max-w-7xl select-none items-center justify-between px-6 py-5">
+    <nav className="relative z-50 mx-auto flex w-full max-w-7xl select-none items-center justify-between px-[5%] py-5">
       <a href="#" className="flex items-center">
         <span className="text-[21px] font-bold tracking-tight text-[#0f172a]">
           No Idea Supply
@@ -132,8 +130,8 @@ function Hero() {
   }, []);
 
   return (
-    <section className="relative flex w-full flex-1 select-none flex-col items-center justify-center pb-16 pt-8">
-      <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center px-6 text-center">
+    <section className="relative flex w-full flex-1 select-none flex-col items-center justify-center pb-10 pt-4 sm:pb-16 sm:pt-8">
+      <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center px-[5%] text-center">
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
@@ -147,11 +145,11 @@ function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="mx-auto max-w-4xl text-[40px] font-semibold leading-[1.08] tracking-[-0.048em] text-slate-950 md:text-[62px]"
+          className="mx-auto max-w-4xl text-4xl font-bold leading-[1.08] tracking-[-0.048em] text-slate-950 sm:text-5xl md:text-6xl lg:text-7xl"
         >
           간판은 그대로.
           <br />
-          <span className="text-slate-500">피자 경쟁력만</span>
+          <span className="text-slate-400">피자 경쟁력만</span>
           <br />
           노아이디어처럼.
         </motion.h1>
@@ -160,23 +158,24 @@ function Hero() {
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.18, duration: 0.8, ease: "easeOut" }}
-          className="mt-8 flex min-h-[108px] w-full max-w-6xl items-center justify-center md:min-h-[120px]"
+          className="mt-6 flex w-full max-w-2xl items-center justify-center sm:mt-8 md:max-w-3xl"
         >
           <AnimatePresence mode="wait">
             <motion.div
               key={`hero-line-${messageIndex}`}
-              initial={{ opacity: 0, y: 18, filter: "blur(10px)" }}
+              initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
               animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-              exit={{ opacity: 0, y: -18, filter: "blur(10px)" }}
-              transition={{ duration: 0.58, ease: [0.16, 1, 0.3, 1] }}
-              className="flex w-full items-center justify-center gap-4 md:gap-5"
+              exit={{ opacity: 0, y: -20, filter: "blur(8px)" }}
+              transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+              className="flex w-full items-center gap-3 rounded-2xl border border-slate-200/80 bg-white/50 px-4 py-3.5 shadow-[0_8px_32px_rgba(15,23,42,0.08)] backdrop-blur-md sm:gap-4 sm:rounded-[20px] sm:px-6 sm:py-5 md:px-8 md:py-6"
             >
-              <div className="flex h-14 w-14 shrink-0 rotate-[-8deg] items-center justify-center rounded-2xl border border-slate-900/10 bg-white/45 text-slate-950 shadow-[0_12px_38px_rgba(15,23,42,0.06)] backdrop-blur-md md:h-16 md:w-16 md:rounded-[22px]">
-                <ActiveIcon className="h-7 w-7 md:h-8 md:w-8" strokeWidth={2.35} />
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-slate-900 text-white sm:h-12 sm:w-12 sm:rounded-2xl md:h-14 md:w-14">
+                <ActiveIcon className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7" strokeWidth={2} />
               </div>
-              <p className="max-w-[960px] text-left text-[30px] font-semibold leading-[1.08] tracking-[-0.05em] text-slate-950 md:whitespace-nowrap md:text-[44px]">
+              <p className="flex-1 text-left text-[15px] font-semibold leading-snug tracking-[-0.02em] text-slate-800 sm:text-lg md:text-xl lg:text-[22px]">
                 {activeMessage.text}
               </p>
+              <ChevronRight className="h-4 w-4 shrink-0 text-slate-400 sm:h-5 sm:w-5" />
             </motion.div>
           </AnimatePresence>
         </motion.div>
@@ -189,7 +188,7 @@ function Hero() {
         >
           <a
             href="#contact"
-            className="mx-auto flex items-center gap-2 rounded-xl border border-slate-900/80 bg-gradient-to-b from-[#252a38] to-[#1a1e29] px-7 py-4 text-base font-semibold text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.12),0_8px_24px_rgba(15,23,42,0.18)] transition-all duration-150 hover:from-[#1d212c] hover:to-[#12151e] active:scale-95 md:px-8 md:py-4 md:text-lg"
+            className="mx-auto flex items-center gap-2 rounded-xl border border-slate-900/80 bg-gradient-to-b from-[#252a38] to-[#1a1e29] px-6 py-3.5 text-[15px] font-semibold text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.12),0_8px_24px_rgba(15,23,42,0.18)] transition-all duration-150 hover:from-[#1d212c] hover:to-[#12151e] active:scale-95 sm:px-7 sm:py-4 sm:text-base md:px-8 md:text-lg"
           >
             우리매장 도입 문의하기
             <ChevronRight className="h-5 w-5" />
@@ -297,18 +296,205 @@ function LandingStory() {
   ];
 
   return (
-    <section className="relative z-20 mx-auto w-full max-w-6xl px-6 pb-20 pt-10">
+    <section className="relative z-20 mx-auto w-full max-w-6xl px-[5%] pb-20 pt-10">
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="relative mt-6 overflow-hidden rounded-[32px] bg-[#050505] px-6 py-10 text-white shadow-[0_28px_90px_rgba(15,23,42,0.16)] md:px-12 md:py-14"
+        className="overflow-hidden rounded-[32px] bg-[#0A0A0B] px-6 py-12 sm:py-16 md:px-12 md:py-20"
       >
-        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px)] bg-[size:60px_60px]" />
-        <div className="relative z-10">
-          <div className="mb-10">
-            <h2 className="text-[30px] font-bold leading-tight tracking-[-0.04em] text-white md:text-[38px]">
+        <h2 className="max-w-3xl text-[28px] font-bold leading-[1.15] tracking-[-0.04em] text-white sm:text-4xl md:text-5xl lg:text-[56px]">
+          창업을 준비하면서,
+          <br />
+          이 숫자들을 보셨을 겁니다.
+        </h2>
+
+        <div className="mt-10 grid gap-4 sm:mt-12 sm:grid-cols-3 md:gap-5">
+          {[
+            {
+              number: "1,000만 원",
+              label: "오픈 전에 먼저 나가는 가맹비.",
+              gradient: "linear-gradient(137deg, #FF3D77 0%, #FFB1CE 45%, #FF9D3C 100%)",
+              delay: 0.1,
+            },
+            {
+              number: "100만 원",
+              label: "매달 빠져나가는 로열티.",
+              gradient: "linear-gradient(137deg, #FF6B35 0%, #FFD07B 45%, #FF3D77 100%)",
+              delay: 0.15,
+            },
+            {
+              number: "8,000만 원",
+              label: "본사 기준에 맞추는 인테리어 비용.",
+              gradient: "linear-gradient(137deg, #C73E6B 0%, #FF8FA3 45%, #FF6B35 100%)",
+              delay: 0.2,
+            },
+          ].map((item) => (
+            <motion.div
+              key={item.number}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: item.delay }}
+              className="group relative"
+            >
+              <div
+                className="pointer-events-none absolute inset-0 rounded-[32px] opacity-50"
+                style={{ background: item.gradient, filter: "blur(45px)" }}
+              />
+              <div
+                className="relative z-10 overflow-hidden rounded-[32px]"
+                style={{
+                  border: "1.5px solid transparent",
+                  background: `linear-gradient(#1A1A1C, #1A1A1C) padding-box, ${item.gradient} border-box`,
+                }}
+              >
+                <div className="flex min-h-[180px] flex-col items-center justify-center p-7 text-center sm:min-h-[220px]">
+                  <span className="font-rubik text-[32px] font-black leading-none tracking-[-0.03em] text-white sm:text-[36px] md:text-[42px]">
+                    {item.number}
+                  </span>
+                  <span className="mt-3 text-[13px] leading-relaxed text-gray-400 sm:text-[14px]">
+                    {item.label}
+                  </span>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        <div className="mt-10 text-center sm:mt-14">
+          <p className="text-[19px] font-semibold leading-relaxed tracking-[-0.02em] text-white/80 sm:text-[22px] md:text-2xl">
+            무조건 나쁜 구조가 아닙니다.
+            <br />
+            정말 좋은 본사도 있으니까요.
+          </p>
+          <p className="mt-3 text-[14px] leading-relaxed text-gray-500 sm:text-lg md:text-xl">
+            다만 그 비용과 시간이 아깝다고 느끼셨다면.
+          </p>
+        </div>
+
+        <div className="mt-14 border-t border-white/10 pt-14 sm:mt-18 sm:pt-18">
+          <h3 className="max-w-3xl text-[26px] font-bold leading-[1.15] tracking-[-0.04em] text-white sm:text-[34px] md:text-[44px]">
+            그렇다고 개인창업은요?
+          </h3>
+          <div className="mt-8 grid gap-4 sm:mt-10 sm:grid-cols-2 md:gap-5">
+            {[
+              {
+                q: "시중에서 쉽게 구하는 치즈와 고기류로, 손님이 다시 올 이유를 만들 수 있을까요?",
+                gradient: "linear-gradient(137deg, #4361EE 0%, #7DD3FC 45%, #06B6D4 100%)",
+                delay: 0.1,
+              },
+              {
+                q: "원팩 구조의 육수와 양념으로, 옆 매장과 다른 맛을 낼 수 있을까요?",
+                gradient: "linear-gradient(137deg, #3B82F6 0%, #93C5FD 45%, #4361EE 100%)",
+                delay: 0.15,
+              },
+              {
+                q: "누구나 쓰는 소스, 누구나 쓰는 원두로 시그니처 메뉴가 만들어질까요?",
+                gradient: "linear-gradient(137deg, #6366F1 0%, #A5B4FC 45%, #3B82F6 100%)",
+                delay: 0.2,
+              },
+              {
+                q: "레시피도, 공급처도, 브랜드 기획도 혼자서 — 어디서부터 시작하시겠습니까?",
+                gradient: "linear-gradient(137deg, #4361EE 0%, #E0AEFF 45%, #6366F1 100%)",
+                delay: 0.25,
+              },
+            ].map((item) => (
+              <motion.div
+                key={item.q}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: item.delay }}
+                className="group relative"
+              >
+                <div
+                  className="pointer-events-none absolute inset-0 rounded-[32px] opacity-40"
+                  style={{ background: item.gradient, filter: "blur(45px)" }}
+                />
+                <div
+                  className="relative z-10 overflow-hidden rounded-[32px]"
+                  style={{
+                    border: "1.5px solid transparent",
+                    background: `linear-gradient(#1A1A1C, #1A1A1C) padding-box, ${item.gradient} border-box`,
+                  }}
+                >
+                  <div className="flex min-h-[160px] flex-col items-center justify-center p-7 text-center sm:min-h-[180px]">
+                    <p className="text-[14px] font-medium leading-relaxed text-gray-400 sm:text-[15px]">
+                      {item.q}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+              className="group relative sm:col-span-2"
+            >
+              <div
+                className="pointer-events-none absolute inset-0 rounded-[32px] opacity-50"
+                style={{ background: "linear-gradient(137deg, #F72585 0%, #FF8FA3 45%, #4361EE 100%)", filter: "blur(45px)" }}
+              />
+              <div
+                className="relative z-10 overflow-hidden rounded-[32px]"
+                style={{
+                  border: "1.5px solid transparent",
+                  background: "linear-gradient(#1A1A1C, #1A1A1C) padding-box, linear-gradient(137deg, #F72585 0%, #FF8FA3 45%, #4361EE 100%) border-box",
+                }}
+              >
+                <div className="flex min-h-[200px] flex-col items-center justify-center p-8 text-center sm:min-h-[220px] sm:p-10">
+                  <p className="text-[16px] font-semibold leading-[1.8] text-gray-200 sm:text-[18px]">
+                    좁은 매장에서 몇 시간씩
+                    <br />
+                    육수 끓이고, 도우 반죽하고, 소스 만들고.
+                    <br />
+                    그 시간과 인건비가
+                    <br />
+                    식자재보다 더 나갑니다.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+          <div className="mt-14 border-t border-white/10 pt-14 text-center sm:mt-18 sm:pt-18">
+            <p className="text-[13px] font-semibold uppercase tracking-[0.2em] text-white/30">
+              Direct Operation
+            </p>
+            <h3 className="mx-auto mt-5 max-w-2xl text-[24px] font-bold leading-[1.2] tracking-[-0.03em] text-white sm:text-[32px] md:text-[40px]">
+              사무실에서 기획한 메뉴가 아닙니다.
+            </h3>
+
+            <div className="mx-auto mt-8 sm:mt-10">
+              <div className="-mx-6 flex gap-3 overflow-x-auto px-6 pb-4 sm:mx-0 sm:justify-center sm:gap-4 sm:overflow-visible sm:px-0 sm:pb-0">
+                <div className="relative -rotate-2 shrink-0 overflow-hidden rounded-2xl border border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.4)] sm:rounded-[20px]">
+                  <img src={storeInterior} alt="노아이디어피자 매장" className="h-[160px] w-[220px] object-cover sm:h-[180px] sm:w-[240px]" />
+                </div>
+                <div className="relative z-10 rotate-1 shrink-0 overflow-hidden rounded-2xl border border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.4)] sm:rounded-[20px]">
+                  <img src={conceptShot} alt="노아이디어피자 메뉴" className="h-[180px] w-[240px] object-cover sm:h-[200px] sm:w-[260px]" />
+                </div>
+                <div className="relative -rotate-1 shrink-0 overflow-hidden rounded-2xl border border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.4)] sm:rounded-[20px]">
+                  <img src={storeInterior2} alt="노아이디어피자 내부" className="h-[160px] w-[220px] object-cover sm:h-[180px] sm:w-[240px]" />
+                </div>
+              </div>
+            </div>
+
+            <p className="mx-auto mt-8 max-w-xl text-[15px] leading-relaxed text-gray-400 sm:text-[17px] sm:leading-relaxed">
+              매일 매장을 열고, 줄 서는 손님을 받고,
+              <br className="sm:hidden" />
+              서비스하면서 세팅한 것들입니다.
+              <br />
+              도우, 소스, 토핑, 운영 구조 — 전부
+              <br className="sm:hidden" />
+              직영점에서 검증한 뒤에 공급합니다.
+            </p>
+          </div>
+
+          <div className="mt-14 border-t border-white/10 pt-14 sm:mt-18 sm:pt-18">
+            <h2 className="text-[26px] font-bold leading-tight tracking-[-0.04em] text-white sm:text-[32px] md:text-[38px]">
               가맹이 아니라, 이렇게 도입합니다.
             </h2>
             <p className="mt-3 max-w-md text-[15px] leading-relaxed text-white/55">
@@ -318,54 +504,54 @@ function LandingStory() {
             <p className="mt-3 text-sm font-medium text-white/35">
               상담은 구매 압박이 아니라 적용 가능성을 확인하는 과정입니다.
             </p>
-          </div>
 
-          <div className="grid gap-5 md:grid-cols-3">
-            {supplyCards.map((card) => (
-              <div
-                key={card.title}
-                className="group relative min-h-[320px] transition-transform duration-300 ease-out hover:-translate-y-1"
-              >
+            <div className="mt-10 grid gap-5 md:grid-cols-3">
+              {supplyCards.map((card) => (
                 <div
-                  className="relative flex min-h-[290px] flex-1 flex-col gap-4 overflow-hidden rounded-3xl p-7 shadow-[inset_0_-4px_15px_-2px_rgba(255,255,255,0.9)]"
-                  style={{ background: card.background }}
+                  key={card.title}
+                  className="group relative min-h-[320px] transition-transform duration-300 ease-out hover:-translate-y-1"
                 >
                   <div
-                    className="relative z-10 mb-2 flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-xl border"
-                    style={{
-                      background: card.iconBg,
-                      borderColor: card.iconBorder,
-                    }}
+                    className="relative flex min-h-[290px] flex-1 flex-col gap-4 overflow-hidden rounded-3xl p-7 shadow-[inset_0_-4px_15px_-2px_rgba(255,255,255,0.9)]"
+                    style={{ background: card.background }}
                   >
-                    <div className="absolute -left-2.5 -top-2.5 h-8 w-8 rounded-full bg-white/20 opacity-60 blur-sm" />
-                    <card.Icon className="relative z-10 h-5 w-5 text-white/90" strokeWidth={2} />
-                  </div>
-
-                  <div className="relative z-10 flex flex-1 flex-col gap-3">
-                    <h3 className="text-[22px] font-bold leading-snug tracking-[-0.03em] text-white">
-                      {card.title}
-                    </h3>
-                    <p className="text-sm leading-relaxed text-white/50">{card.desc}</p>
-                    <a
-                      href="#contact"
-                      className="mt-1 inline-flex items-center gap-1.5 text-[13.5px] font-bold text-white no-underline transition-all duration-200 group-hover:gap-2.5 group-hover:opacity-85"
+                    <div
+                      className="relative z-10 mb-2 flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-xl border"
+                      style={{
+                        background: card.iconBg,
+                        borderColor: card.iconBorder,
+                      }}
                     >
-                      {card.link}
-                      <span aria-hidden="true">→</span>
-                    </a>
+                      <div className="absolute -left-2.5 -top-2.5 h-8 w-8 rounded-full bg-white/20 opacity-60 blur-sm" />
+                      <card.Icon className="relative z-10 h-5 w-5 text-white/90" strokeWidth={2} />
+                    </div>
+
+                    <div className="relative z-10 flex flex-1 flex-col gap-3">
+                      <h3 className="text-[22px] font-bold leading-snug tracking-[-0.03em] text-white">
+                        {card.title}
+                      </h3>
+                      <p className="text-sm leading-relaxed text-white/50">{card.desc}</p>
+                      <a
+                        href="#contact"
+                        className="mt-1 inline-flex items-center gap-1.5 text-[13.5px] font-bold text-white no-underline transition-all duration-200 group-hover:gap-2.5 group-hover:opacity-85"
+                      >
+                        {card.link}
+                        <span aria-hidden="true">→</span>
+                      </a>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
 
-          <div className="mt-8 flex flex-wrap items-center gap-4 pt-2 md:gap-8">
-            {supplyTags.map((tag) => (
-              <div key={tag.label} className="flex items-center gap-2 text-[13px] font-semibold text-white/45">
-                <tag.Icon className="h-4 w-4 text-white/60" />
-                {tag.label}
-              </div>
-            ))}
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-4 pt-2 md:gap-8">
+              {supplyTags.map((tag) => (
+                <div key={tag.label} className="flex items-center gap-2 text-[13px] font-semibold text-white/45">
+                  <tag.Icon className="h-4 w-4 text-white/60" />
+                  {tag.label}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </motion.div>
@@ -375,46 +561,41 @@ function LandingStory() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="mt-6 overflow-hidden rounded-[34px] border border-slate-200/80 bg-[#f2f3f1] p-6 text-center shadow-[0_24px_80px_rgba(15,23,42,0.08)] md:p-10"
+        className="py-16 sm:py-20 md:py-28"
       >
-        <div className="mx-auto max-w-4xl">
-          <p className="text-[10px] font-bold uppercase tracking-[0.24em] text-slate-400">
-            Brand Manifesto
-          </p>
-
-          <div className="mx-auto mt-7 max-w-3xl overflow-hidden rounded-[28px] border border-white/70 bg-white/70 p-2 shadow-[0_18px_70px_rgba(15,23,42,0.10)]">
-            <img
-              src={brandManifestoPizza}
-              alt="노아이디어피자 메뉴 비주얼"
-              className="aspect-[16/8] w-full rounded-[22px] object-cover object-center"
-            />
-          </div>
-
-          <h2 className="mt-8 text-[54px] font-black leading-[0.88] tracking-[-0.085em] text-slate-950 md:text-[104px]">
-            NO IDEA.
+        <div className="text-center">
+          <h2 className="font-rubik text-[48px] font-black leading-[0.88] tracking-[-0.06em] text-[#0047AB] sm:text-[72px] md:text-[88px] lg:text-[104px]">
+            NO IDEA PIZZA
           </h2>
 
-          <div className="mx-auto mt-7 max-w-3xl text-[16px] leading-8 text-slate-600 md:text-[19px] md:leading-9">
-            <p>
-              프랜차이즈는 좋은 구조일 수 있습니다. 처음 시작하는 대표님에게는
-              간판, 매뉴얼, 운영 시스템이 안정감을 주니까요. 그런데 모든 매장이
-              꼭 같은 간판과 같은 메뉴, 같은 방식으로 움직일 필요는 없습니다.
+          <div className="mx-auto mt-10 max-w-2xl">
+            <p className="text-[20px] font-bold leading-snug tracking-[-0.03em] text-slate-900 sm:text-[24px] md:text-[28px]">
+              "오늘 뭐 먹지?"에서 출발한 브랜드.
             </p>
-            <p className="mt-4">
-              노아이디어피자는 “오늘 뭐 먹지?”라는 고민에서 출발한 브랜드입니다.
-              이름은 엉뚱하지만, 메뉴에 대한 생각은 분명합니다. 좋은 재료,
-              폴리쉬 도우, 한국식 토핑, 그리고 다시 찾고 싶은 코발트블루의
-              경험을 피자 위에 올렸습니다.
+            <p className="mt-3 text-[20px] font-bold leading-snug tracking-[-0.03em] text-slate-900 sm:text-[24px] md:text-[28px]">
+              이름은 엉뚱하지만,
+              <br />
+              메뉴에 대한 생각은 분명합니다.
             </p>
-            <p className="mt-4">
-              우리가 하려는 일은 노아이디어피자 지점을 늘리는 일이 아닙니다.
-              대표님의 상호와 운영은 그대로 두고, 이미 반응한 피자 감도와 상품
-              모듈을 우리 매장에 붙일 수 있는지 함께 확인하는 일입니다.
-            </p>
-            <p className="mt-7 text-[19px] font-semibold leading-8 tracking-[-0.02em] text-slate-900 md:text-[24px] md:leading-9">
-              간판은 대표님 브랜드로. 피자 경쟁력만 노아이디어처럼.
+            <div className="mt-6 space-y-3 text-[15px] leading-relaxed text-slate-500 sm:text-[16px] md:text-[17px]">
+              <p>좋은 재료, 폴리쉬 도우, 한국식 토핑.</p>
+              <p>다시 찾고 싶은 코발트블루의 경험.</p>
+              <p>지점을 늘리는 일이 아니라, 이미 반응한 상품 모듈을 대표님 매장에 붙일 수 있는지 함께 확인하는 일입니다.</p>
+            </div>
+            <p className="mt-8 text-[19px] font-semibold leading-8 tracking-[-0.02em] text-slate-900 md:text-[24px] md:leading-9">
+              간판은 대표님 브랜드로.
+              <br />
+              피자 경쟁력만 노아이디어처럼.
             </p>
           </div>
+        </div>
+
+        <div className="mt-10 overflow-hidden rounded-[28px] border border-slate-200/60 bg-white/70 p-2 shadow-[0_18px_70px_rgba(15,23,42,0.10)] sm:mt-12">
+          <img
+            src={brandManifestoPizza}
+            alt="노아이디어피자 메뉴 비주얼"
+            className="aspect-[16/7] w-full rounded-[22px] object-cover object-center"
+          />
         </div>
       </motion.div>
 
