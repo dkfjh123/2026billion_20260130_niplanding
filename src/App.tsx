@@ -22,6 +22,7 @@ import doughTexture from "../nip_assets/dough/폴리쉬도우2.jpg";
 import storeInterior from "../nip_assets/store/매장사진1.jpg";
 import storeInterior2 from "../nip_assets/store/매장사진3.jpg";
 import conceptShot from "../nip_assets/menu/컨셉샷 1.jpg";
+import heroPizzaCafe from "../nip_assets/hero/hero-bg-desktop.webp";
 
 const heroMessages = [
   {
@@ -64,11 +65,14 @@ function App() {
   return (
     <div className="overflow-x-hidden bg-[#f8fafc] selection:bg-slate-200">
       <section className="relative min-h-[70vh] overflow-hidden bg-[#f8fafc] md:min-h-screen">
-        <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden bg-[#f8fafc]">
-          <div className="absolute left-[-18rem] top-[-16rem] h-[38rem] w-[38rem] rounded-full bg-sky-200/45 blur-3xl" />
-          <div className="absolute right-[-16rem] top-20 h-[34rem] w-[34rem] rounded-full bg-blue-300/35 blur-3xl" />
-          <div className="absolute bottom-[-22rem] left-1/2 h-[38rem] w-[58rem] -translate-x-1/2 rounded-full bg-white blur-3xl" />
-          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(15,23,42,0.035)_1px,transparent_1px),linear-gradient(rgba(15,23,42,0.035)_1px,transparent_1px)] bg-[size:44px_44px] opacity-60" />
+        <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
+          <img
+            src={heroPizzaCafe}
+            alt=""
+            className="h-full w-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/55 to-slate-950/10" />
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/45 via-transparent to-slate-950/35" />
         </div>
 
         <div className="relative z-10 flex min-h-[70vh] flex-col md:min-h-screen">
@@ -87,20 +91,20 @@ function Navbar() {
 
   return (
     <nav className="relative z-50 mx-auto flex w-full max-w-7xl select-none items-center justify-between px-[5%] py-5">
-      <a href="#" className="flex items-center">
-        <span className="text-[21px] font-bold tracking-tight text-[#0f172a]">
+      <a href="#" className="flex items-center drop-shadow-[0_1px_8px_rgba(0,0,0,0.35)]">
+        <span className="text-[21px] font-bold tracking-tight text-white">
           No Idea Supply
         </span>
         <span className="ml-1.5 flex translate-y-[1px] rotate-[-15deg] flex-col gap-[2.5px]">
-          <span className="h-[1.5px] w-3.5 rounded-full bg-[#0f172a]" />
-          <span className="h-[1.5px] w-2.5 translate-x-[2px] rounded-full bg-[#0f172a]" />
-          <span className="h-[1.5px] w-3 translate-x-[4px] rounded-full bg-[#64748b]" />
+          <span className="h-[1.5px] w-3.5 rounded-full bg-white" />
+          <span className="h-[1.5px] w-2.5 translate-x-[2px] rounded-full bg-white" />
+          <span className="h-[1.5px] w-3 translate-x-[4px] rounded-full bg-white/55" />
         </span>
       </a>
 
-      <div className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 text-[13px] font-medium text-slate-600 md:flex">
+      <div className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 text-[13px] font-medium text-white/75 drop-shadow-[0_1px_8px_rgba(0,0,0,0.35)] md:flex">
         {links.map((link) => (
-          <a key={link} href="#" className="transition-colors hover:text-slate-900">
+          <a key={link} href="#" className="transition-colors hover:text-white">
             {link}
           </a>
         ))}
@@ -108,7 +112,7 @@ function Navbar() {
 
       <a
         href="#contact"
-        className="rounded-full border border-slate-200 bg-white/30 px-4 py-1.5 text-xs font-medium text-slate-800 shadow-[0_1px_2px_rgba(0,0,0,0.02)] backdrop-blur-sm transition-all hover:bg-white/85"
+        className="rounded-full border border-white/40 bg-white/95 px-4 py-1.5 text-xs font-semibold text-slate-900 shadow-[0_2px_10px_rgba(0,0,0,0.18)] backdrop-blur-sm transition-all hover:bg-white"
       >
         도입 상담
       </a>
@@ -130,35 +134,56 @@ function Hero() {
   }, []);
 
   return (
-    <section className="relative flex w-full flex-1 select-none flex-col items-center justify-center pb-10 pt-4 sm:pb-16 sm:pt-8">
-      <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center px-[5%] text-center">
+    <section className="relative flex w-full flex-1 select-none items-center">
+      <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-start px-[5%] py-14 text-left sm:py-20">
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
-          className="mb-5 rounded-full border border-slate-200 bg-white/55 px-3 py-1 text-[11px] font-semibold text-slate-700 shadow-[0_1px_2px_rgba(0,0,0,0.03)] backdrop-blur-sm"
+          className="mb-5 inline-flex items-center gap-1.5 rounded-full border border-white/25 bg-white/10 px-3 py-1 text-[11px] font-semibold tracking-wide text-white/90 backdrop-blur-md"
         >
-          NO IDEA SUPPLY
+          <span className="h-1.5 w-1.5 rounded-full bg-[#5B8AD6]" />
+          NO IDEA SUPPLY · 피자 상품 공급
         </motion.p>
 
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="mx-auto max-w-4xl text-4xl font-bold leading-[1.08] tracking-[-0.048em] text-slate-950 sm:text-5xl md:text-6xl lg:text-7xl"
+          className="max-w-xl text-[40px] font-bold leading-[1.07] tracking-[-0.048em] text-white drop-shadow-[0_2px_24px_rgba(0,0,0,0.4)] sm:text-5xl md:text-6xl lg:text-[62px]"
         >
           간판은 그대로.
           <br />
-          <span className="text-slate-400">피자 경쟁력만</span>
+          <span className="text-white/55">피자 경쟁력만</span>
           <br />
           노아이디어처럼.
         </motion.h1>
 
+        <motion.p
+          initial={{ opacity: 0, y: 18 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.14, duration: 0.8, ease: "easeOut" }}
+          className="mt-5 max-w-lg text-[15px] font-medium leading-relaxed text-white/75 drop-shadow-[0_1px_8px_rgba(0,0,0,0.45)] sm:text-base"
+        >
+          노아이디어피자에서 검증된 피자 상품 모듈을, 내 상호·내 가격 그대로
+          도입하는 <span className="font-semibold text-white">B2B 상담</span>입니다.
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 14 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.22, duration: 0.8, ease: "easeOut" }}
+          className="mt-4 inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3 py-1.5 text-[11px] font-semibold text-white/80 backdrop-blur-md sm:text-xs"
+        >
+          <span className="h-1.5 w-1.5 rounded-full bg-[#5B8AD6]" />
+          가맹점 모집 아님 · 내 상호 그대로 운영
+        </motion.div>
+
         <motion.div
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.18, duration: 0.8, ease: "easeOut" }}
-          className="mt-6 flex w-full max-w-2xl items-center justify-center sm:mt-8 md:max-w-3xl"
+          transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}
+          className="mt-7 flex w-full max-w-xl items-center"
         >
           <AnimatePresence mode="wait">
             <motion.div
@@ -167,15 +192,15 @@ function Hero() {
               animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               exit={{ opacity: 0, y: -20, filter: "blur(8px)" }}
               transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-              className="flex w-full items-center gap-3 rounded-2xl border border-slate-200/80 bg-white/50 px-4 py-3.5 shadow-[0_8px_32px_rgba(15,23,42,0.08)] backdrop-blur-md sm:gap-4 sm:rounded-[20px] sm:px-6 sm:py-5 md:px-8 md:py-6"
+              className="flex w-full items-center gap-3 rounded-2xl border border-white/20 bg-white/10 px-4 py-3.5 shadow-[0_8px_32px_rgba(0,0,0,0.28)] backdrop-blur-md sm:gap-4 sm:rounded-[20px] sm:px-5 sm:py-4.5"
             >
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-slate-900 text-white sm:h-12 sm:w-12 sm:rounded-2xl md:h-14 md:w-14">
-                <ActiveIcon className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7" strokeWidth={2} />
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white text-slate-900 sm:h-12 sm:w-12 sm:rounded-2xl">
+                <ActiveIcon className="h-5 w-5 sm:h-6 sm:w-6" strokeWidth={2} />
               </div>
-              <p className="flex-1 text-left text-[15px] font-semibold leading-snug tracking-[-0.02em] text-slate-800 sm:text-lg md:text-xl lg:text-[22px]">
+              <p className="flex-1 text-left text-[15px] font-semibold leading-snug tracking-[-0.02em] text-white sm:text-lg lg:text-xl">
                 {activeMessage.text}
               </p>
-              <ChevronRight className="h-4 w-4 shrink-0 text-slate-400 sm:h-5 sm:w-5" />
+              <ChevronRight className="h-4 w-4 shrink-0 text-white/50 sm:h-5 sm:w-5" />
             </motion.div>
           </AnimatePresence>
         </motion.div>
@@ -183,18 +208,17 @@ function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.32, duration: 0.8, ease: "easeOut" }}
-          className="mt-9"
+          transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
+          className="mt-8"
         >
           <a
             href="#contact"
-            className="mx-auto flex items-center gap-2 rounded-xl border border-slate-900/80 bg-gradient-to-b from-[#252a38] to-[#1a1e29] px-6 py-3.5 text-[15px] font-semibold text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.12),0_8px_24px_rgba(15,23,42,0.18)] transition-all duration-150 hover:from-[#1d212c] hover:to-[#12151e] active:scale-95 sm:px-7 sm:py-4 sm:text-base md:px-8 md:text-lg"
+            className="inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3.5 text-[15px] font-semibold text-slate-950 shadow-[0_8px_24px_rgba(0,0,0,0.28)] transition-all duration-150 hover:bg-white/90 active:scale-95 sm:px-7 sm:py-4 sm:text-base"
           >
             우리매장 도입 문의하기
             <ChevronRight className="h-5 w-5" />
           </a>
         </motion.div>
-
       </div>
     </section>
   );
@@ -209,10 +233,10 @@ function LandingStory() {
       desc: "도우, 소스, 토핑, 사이드 메뉴를 대표님 매장 조건에 맞춰 검토합니다.",
       link: "도입 가능성 보기",
       background:
-        "radial-gradient(circle at 10% 10%, #d9511b50 0%, transparent 40%), linear-gradient(180deg, #180D0B 0%, #180D0B 40%, #CF451E 80%, #e9d551 96%, #FFFFFF 100%)",
+        "radial-gradient(circle at 10% 10%, rgba(0, 71, 171, 0.32) 0%, transparent 40%), linear-gradient(180deg, #0A0F1C 0%, #0A0F1C 40%, #0047AB 80%, #9DBDF0 96%, #FFFFFF 100%)",
       iconBg:
-        "linear-gradient(145deg, rgba(40, 28, 18, 0.9) 0%, rgba(14, 12, 10, 0.98) 100%)",
-      iconBorder: "rgba(232, 120, 40, 0.22)",
+        "linear-gradient(145deg, rgba(18, 26, 45, 0.9) 0%, rgba(10, 12, 18, 0.98) 100%)",
+      iconBorder: "rgba(40, 95, 200, 0.24)",
     },
     {
       tone: "blue",
@@ -221,10 +245,10 @@ function LandingStory() {
       desc: "상호, 가격, 메뉴명, 판매 방식은 파트너 매장의 판단과 상권에 맞게 유지합니다.",
       link: "자율 구조 확인",
       background:
-        "radial-gradient(circle at 10% 10%, rgba(80, 150, 255, 0.30) 0%, transparent 40%), linear-gradient(180deg, #0B0F17 0%, #0B0F17 40%, #4663BF 80%, #a1ccf7 96%, #FFFFFF 100%)",
+        "radial-gradient(circle at 10% 10%, rgba(80, 150, 255, 0.30) 0%, transparent 40%), linear-gradient(180deg, #0B0F17 0%, #0B0F17 40%, #2F6BD4 80%, #A8C6F2 96%, #FFFFFF 100%)",
       iconBg:
         "linear-gradient(145deg, rgba(20, 25, 45, 0.9) 0%, rgba(10, 12, 16, 0.98) 100%)",
-      iconBorder: "rgba(80, 130, 255, 0.22)",
+      iconBorder: "rgba(70, 120, 230, 0.24)",
     },
     {
       tone: "green",
@@ -233,10 +257,10 @@ function LandingStory() {
       desc: "검증된 브랜드 감도와 함께 실행 가능한 제조, 공급, 협력 구조를 함께 정리합니다.",
       link: "공급망 상담하기",
       background:
-        "radial-gradient(circle at 10% 10%, rgba(50, 200, 110, 0.30) 0%, transparent 40%), linear-gradient(180deg, #0B0B12 0%, #0B0B12 40%, #38D26B 80%, #aaf8cd 96%, #FFFFFF 100%)",
+        "radial-gradient(circle at 10% 10%, rgba(60, 160, 220, 0.30) 0%, transparent 40%), linear-gradient(180deg, #0A0E16 0%, #0A0E16 40%, #1E88C4 80%, #AED8F0 96%, #FFFFFF 100%)",
       iconBg:
         "linear-gradient(145deg, rgba(18, 35, 25, 0.9) 0%, rgba(10, 14, 12, 0.98) 100%)",
-      iconBorder: "rgba(50, 200, 110, 0.22)",
+      iconBorder: "rgba(60, 150, 215, 0.24)",
     },
   ];
 
@@ -315,19 +339,19 @@ function LandingStory() {
             {
               number: "1,000만 원",
               label: "오픈 전에 먼저 나가는 가맹비.",
-              gradient: "linear-gradient(137deg, #FF3D77 0%, #FFB1CE 45%, #FF9D3C 100%)",
+              gradient: "linear-gradient(137deg, #1F3A63 0%, #2C5288 45%, #3D6AA6 100%)",
               delay: 0.1,
             },
             {
               number: "100만 원",
               label: "매달 빠져나가는 로열티.",
-              gradient: "linear-gradient(137deg, #FF6B35 0%, #FFD07B 45%, #FF3D77 100%)",
+              gradient: "linear-gradient(137deg, #1B3358 0%, #284A7C 45%, #38609A 100%)",
               delay: 0.15,
             },
             {
               number: "8,000만 원",
               label: "본사 기준에 맞추는 인테리어 비용.",
-              gradient: "linear-gradient(137deg, #C73E6B 0%, #FF8FA3 45%, #FF6B35 100%)",
+              gradient: "linear-gradient(137deg, #172C4D 0%, #234470 45%, #335A90 100%)",
               delay: 0.2,
             },
           ].map((item) => (
@@ -382,22 +406,22 @@ function LandingStory() {
             {[
               {
                 q: "시중에서 쉽게 구하는 치즈와 고기류로, 손님이 다시 올 이유를 만들 수 있을까요?",
-                gradient: "linear-gradient(137deg, #4361EE 0%, #7DD3FC 45%, #06B6D4 100%)",
+                gradient: "linear-gradient(137deg, #1F3A63 0%, #2C5288 45%, #3D6AA6 100%)",
                 delay: 0.1,
               },
               {
                 q: "원팩 구조의 육수와 양념으로, 옆 매장과 다른 맛을 낼 수 있을까요?",
-                gradient: "linear-gradient(137deg, #3B82F6 0%, #93C5FD 45%, #4361EE 100%)",
+                gradient: "linear-gradient(137deg, #1B3358 0%, #284A7C 45%, #38609A 100%)",
                 delay: 0.15,
               },
               {
                 q: "누구나 쓰는 소스, 누구나 쓰는 원두로 시그니처 메뉴가 만들어질까요?",
-                gradient: "linear-gradient(137deg, #6366F1 0%, #A5B4FC 45%, #3B82F6 100%)",
+                gradient: "linear-gradient(137deg, #172C4D 0%, #234470 45%, #335A90 100%)",
                 delay: 0.2,
               },
               {
                 q: "레시피도, 공급처도, 브랜드 기획도 혼자서 — 어디서부터 시작하시겠습니까?",
-                gradient: "linear-gradient(137deg, #4361EE 0%, #E0AEFF 45%, #6366F1 100%)",
+                gradient: "linear-gradient(137deg, #1F3A63 0%, #2C5288 45%, #3D6AA6 100%)",
                 delay: 0.25,
               },
             ].map((item) => (
@@ -437,13 +461,13 @@ function LandingStory() {
             >
               <div
                 className="pointer-events-none absolute inset-0 rounded-[32px] opacity-50"
-                style={{ background: "linear-gradient(137deg, #F72585 0%, #FF8FA3 45%, #4361EE 100%)", filter: "blur(45px)" }}
+                style={{ background: "linear-gradient(137deg, #1B3358 0%, #2C508C 45%, #0047AB 100%)", filter: "blur(45px)" }}
               />
               <div
                 className="relative z-10 overflow-hidden rounded-[32px]"
                 style={{
                   border: "1.5px solid transparent",
-                  background: "linear-gradient(#1A1A1C, #1A1A1C) padding-box, linear-gradient(137deg, #F72585 0%, #FF8FA3 45%, #4361EE 100%) border-box",
+                  background: "linear-gradient(#1A1A1C, #1A1A1C) padding-box, linear-gradient(137deg, #1B3358 0%, #2C508C 45%, #0047AB 100%) border-box",
                 }}
               >
                 <div className="flex min-h-[200px] flex-col items-center justify-center p-8 text-center sm:min-h-[220px] sm:p-10">
@@ -737,7 +761,7 @@ function LandingStory() {
                   />
                 </div>
                 <div className="p-5 md:p-6">
-                  <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#0047ff]/70">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#0047AB]/70">
                     {card.label}
                   </p>
                   <h3 className="mt-3 text-[24px] font-semibold leading-tight tracking-[-0.04em] text-slate-950">
