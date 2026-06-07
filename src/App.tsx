@@ -22,7 +22,7 @@ import doughTexture from "../nip_assets/dough/폴리쉬도우2.jpg";
 import storeInterior from "../nip_assets/store/매장사진1.jpg";
 import storeInterior2 from "../nip_assets/store/매장사진3.jpg";
 import conceptShot from "../nip_assets/menu/컨셉샷 1.jpg";
-import heroPizzaCafe from "../nip_assets/hero/hero-bg-desktop.webp";
+import logoCircle from "../nip_assets/logo/logo_circle_blue.png";
 
 const heroMessages = [
   {
@@ -63,26 +63,101 @@ const PROBLEM_FIT_VIDEO_MOBILE_URL =
 
 function App() {
   return (
-    <div className="overflow-x-hidden bg-[#f8fafc] selection:bg-slate-200">
-      <section className="relative min-h-[70vh] overflow-hidden bg-[#f8fafc] md:min-h-screen">
+    <div className="overflow-x-hidden bg-[#EBEEE8] text-[#231815] selection:bg-[#E83517]/20">
+      <section className="relative overflow-hidden bg-[#EBEEE8]">
+        {/* 따뜻한 크림 캔버스 위 은은한 코발트/옐로우 앰비언트 */}
         <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
-          <img
-            src={heroPizzaCafe}
-            alt=""
-            className="h-full w-full object-cover object-center"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/55 to-slate-950/10" />
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/45 via-transparent to-slate-950/35" />
+          <div className="absolute -left-32 -top-28 h-96 w-96 rounded-full bg-[#0047AB]/10 blur-3xl" />
+          <div className="absolute right-[-6rem] top-44 h-80 w-80 rounded-full bg-[#F4BF1E]/15 blur-3xl" />
         </div>
 
-        <div className="relative z-10 flex min-h-[70vh] flex-col md:min-h-screen">
+        <div className="relative z-10 flex flex-col">
           <Navbar />
           <Hero />
         </div>
       </section>
 
+      <BrandIntro />
       <LandingStory />
     </div>
+  );
+}
+
+function BrandIntro() {
+  return (
+    <section className="mx-auto w-full max-w-6xl px-[5%] pt-16 sm:pt-20">
+      <motion.div
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-80px" }}
+        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+        className="grid items-start gap-8 rounded-[28px] border border-[#D3CDC3] bg-white px-7 py-9 md:grid-cols-[0.72fr_1.28fr] md:gap-12 md:px-12 md:py-12"
+      >
+        {/* 로고 영역 */}
+        <div className="flex flex-col items-start gap-3 border-b border-[#D3CDC3] pb-7 md:border-b-0 md:border-r md:pb-0 md:pr-12">
+          <img
+            src={logoCircle}
+            alt="No Idea Pizza 로고"
+            className="h-24 w-24 object-contain sm:h-28 sm:w-28"
+          />
+          <span className="text-[20px] font-extrabold tracking-[-0.03em] text-[#231815]">
+            NO IDEA <span className="text-[#0047AB]">SUPPLY</span>
+          </span>
+          <span className="rounded-full bg-[#0047AB]/10 px-2.5 py-1 text-[11px] font-bold tracking-wide text-[#0047AB]">
+            B2B 피자 상품 공급
+          </span>
+          <span className="mt-1 text-[12px] font-medium leading-relaxed text-[#231815]/45">
+            100여 개 매장 운영 경험에서
+            <br />
+            검증한 것만 나눕니다.
+          </span>
+        </div>
+
+        {/* 방향성 텍스트 */}
+        <div>
+          <p className="text-[26px] font-black leading-[1.3] tracking-[-0.03em] text-[#231815] sm:text-[34px]">
+            이제, 시대가 바뀌었어요.
+          </p>
+
+          <div className="mt-6 space-y-4 text-[16px] leading-[1.85] text-[#231815]/75 sm:text-[18px]">
+            <p>
+              손님들은 더 이상 못 속아요. 어디서 대충 사 온 원팩 소스인지, 새벽부터
+              정성 들인 진짜인지 — 한 입에 알아봅니다. 그래서 요즘은{" "}
+              <span className="font-semibold text-[#231815]">
+                검증된 진짜를 내는 가게에만 손님이 줄을 서요.
+              </span>
+            </p>
+            <p>
+              근데 그 '진짜'를 혼자 만들려면? 새벽부터 육수 끓이고, 도우 숙성하고…
+              시간도 사람도 돈도 다 갈립니다. 좋은 거래처 하나 뚫는 것도 한참이고요.
+            </p>
+            <p>
+              그래서 저희가 있는 거예요. 노아이디어피자가 직영점에서 수없이 굽고 팔며
+              검증한 도우·소스·토핑을, 대표님 가게에 그대로 나눠드립니다. 대표님만의
+              메뉴(돈까스든 갈비든)는 그대로 두고, 거기에 검증된 피자 한 축만 얹는
+              거죠. 간판도 가격도 운영도 100% 대표님 거예요 —{" "}
+              <span className="font-semibold text-[#231815]">
+                저흰 가맹점을 모으는 게 아니거든요.
+              </span>
+            </p>
+            <p>
+              식자재도, 고기도, 인테리어도, POS도 — 10년 넘게 믿고 거래해온 곳들을
+              친구 소개해주듯 연결해드려요. "여기 진짜 괜찮아, 바가지 없어" 하면서요.
+              혼자 창업이지만, 혼자 두진 않습니다.
+            </p>
+            <p>
+              가르치는 본사가 아니라, 옆에서 같이 뛰는 파트너. 대표님이 잘되면 저희
+              베이스를 쓰는 가게가 늘고, 그게 다시 저희 신뢰가 되니까 — 저흰 진심으로
+              대표님이 잘되길 바라요.
+            </p>
+          </div>
+
+          <p className="mt-7 text-[19px] font-extrabold tracking-[-0.02em] text-[#0047AB] sm:text-[22px]">
+            혼자 창업, 하지만 같이 가는 길. 그래서, 같이 가요.
+          </p>
+        </div>
+      </motion.div>
+    </section>
   );
 }
 
@@ -91,20 +166,19 @@ function Navbar() {
 
   return (
     <nav className="relative z-50 mx-auto flex w-full max-w-7xl select-none items-center justify-between px-[5%] py-5">
-      <a href="#" className="flex items-center drop-shadow-[0_1px_8px_rgba(0,0,0,0.35)]">
-        <span className="text-[21px] font-bold tracking-tight text-white">
+      <a href="#" className="flex items-center gap-2">
+        <img src={logoCircle} alt="No Idea Pizza" className="h-8 w-8 object-contain" />
+        <span className="text-[21px] font-bold tracking-tight text-[#231815]">
           No Idea Supply
         </span>
-        <span className="ml-1.5 flex translate-y-[1px] rotate-[-15deg] flex-col gap-[2.5px]">
-          <span className="h-[1.5px] w-3.5 rounded-full bg-white" />
-          <span className="h-[1.5px] w-2.5 translate-x-[2px] rounded-full bg-white" />
-          <span className="h-[1.5px] w-3 translate-x-[4px] rounded-full bg-white/55" />
+        <span className="rounded-full bg-[#0047AB]/10 px-2 py-0.5 text-[10px] font-bold tracking-wide text-[#0047AB]">
+          B2B
         </span>
       </a>
 
-      <div className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 text-[13px] font-medium text-white/75 drop-shadow-[0_1px_8px_rgba(0,0,0,0.35)] md:flex">
+      <div className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 text-[13px] font-medium text-[#231815]/55 md:flex">
         {links.map((link) => (
-          <a key={link} href="#" className="transition-colors hover:text-white">
+          <a key={link} href="#" className="transition-colors hover:text-[#231815]">
             {link}
           </a>
         ))}
@@ -112,7 +186,7 @@ function Navbar() {
 
       <a
         href="#contact"
-        className="rounded-full border border-white/40 bg-white/95 px-4 py-1.5 text-xs font-semibold text-slate-900 shadow-[0_2px_10px_rgba(0,0,0,0.18)] backdrop-blur-sm transition-all hover:bg-white"
+        className="rounded-full bg-[#E83517] px-4 py-2 text-xs font-semibold text-white shadow-[0_2px_10px_rgba(232,53,23,0.25)] transition-all hover:brightness-95"
       >
         도입 상담
       </a>
@@ -121,105 +195,116 @@ function Navbar() {
 }
 
 function Hero() {
-  const [messageIndex, setMessageIndex] = useState(0);
-  const activeMessage = heroMessages[messageIndex];
-  const ActiveIcon = activeMessage.Icon;
-
-  useEffect(() => {
-    const interval = window.setInterval(() => {
-      setMessageIndex((current) => (current + 1) % heroMessages.length);
-    }, 2800);
-
-    return () => window.clearInterval(interval);
-  }, []);
-
   return (
-    <section className="relative flex w-full flex-1 select-none items-center">
-      <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-start px-[5%] py-14 text-left sm:py-20">
+    <section className="relative w-full select-none">
+      {/* 중앙 정렬 텍스트 */}
+      <div className="mx-auto w-full max-w-5xl px-[5%] pt-8 text-center sm:pt-12">
         <motion.p
-          initial={{ opacity: 0, y: 16 }}
+          initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
-          className="mb-5 inline-flex items-center gap-1.5 rounded-full border border-white/25 bg-white/10 px-3 py-1 text-[11px] font-semibold tracking-wide text-white/90 backdrop-blur-md"
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="inline-flex items-center gap-1.5 rounded-full border border-[#0047AB]/20 bg-[#0047AB]/[0.07] px-3.5 py-1.5 text-[11px] font-semibold tracking-wide text-[#0047AB] sm:text-xs"
         >
-          <span className="h-1.5 w-1.5 rounded-full bg-[#5B8AD6]" />
-          NO IDEA SUPPLY · 피자 상품 공급
+          <span className="h-1.5 w-1.5 rounded-full bg-[#0047AB]" />
+          가맹점 모집이 아닌, 피자 상품 도입 B2B
         </motion.p>
 
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-xl text-[40px] font-bold leading-[1.07] tracking-[-0.048em] text-white drop-shadow-[0_2px_24px_rgba(0,0,0,0.4)] sm:text-5xl md:text-6xl lg:text-[62px]"
+          transition={{ delay: 0.08, duration: 0.8, ease: "easeOut" }}
+          className="mx-auto mt-6 max-w-4xl text-[32px] font-black leading-[1.08] tracking-[-0.045em] text-[#231815] sm:text-5xl md:text-6xl lg:text-[76px]"
         >
-          간판은 그대로.
+          간판은 그대로,
           <br />
-          <span className="text-white/55">피자 경쟁력만</span>
-          <br />
-          노아이디어처럼.
+          피자 경쟁력만{" "}
+          <span className="bg-gradient-to-r from-[#0047AB] via-[#2f6bd4] to-[#5b9bff] bg-clip-text text-transparent">
+            노아이디어처럼.
+          </span>
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.14, duration: 0.8, ease: "easeOut" }}
-          className="mt-5 max-w-lg text-[15px] font-medium leading-relaxed text-white/75 drop-shadow-[0_1px_8px_rgba(0,0,0,0.45)] sm:text-base"
+          transition={{ delay: 0.18, duration: 0.8, ease: "easeOut" }}
+          className="mx-auto mt-6 max-w-2xl text-[16px] font-medium leading-relaxed text-[#231815]/65 sm:text-xl"
         >
-          노아이디어피자에서 검증된 피자 상품 모듈을, 내 상호·내 가격 그대로
-          도입하는 <span className="font-semibold text-white">B2B 상담</span>입니다.
+          노아이디어피자가 직영점에서 검증한 도우·소스·토핑을 내 가게 메뉴로 들이는 B2B
+          공급 서비스. 가맹 없이 — 내 상호, 내 가격 그대로.
         </motion.p>
 
         <motion.div
-          initial={{ opacity: 0, y: 14 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.22, duration: 0.8, ease: "easeOut" }}
-          className="mt-4 inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3 py-1.5 text-[11px] font-semibold text-white/80 backdrop-blur-md sm:text-xs"
-        >
-          <span className="h-1.5 w-1.5 rounded-full bg-[#5B8AD6]" />
-          가맹점 모집 아님 · 내 상호 그대로 운영
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 18 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}
-          className="mt-7 flex w-full max-w-xl items-center"
-        >
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={`hero-line-${messageIndex}`}
-              initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
-              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-              exit={{ opacity: 0, y: -20, filter: "blur(8px)" }}
-              transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-              className="flex w-full items-center gap-3 rounded-2xl border border-white/20 bg-white/10 px-4 py-3.5 shadow-[0_8px_32px_rgba(0,0,0,0.28)] backdrop-blur-md sm:gap-4 sm:rounded-[20px] sm:px-5 sm:py-4.5"
-            >
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white text-slate-900 sm:h-12 sm:w-12 sm:rounded-2xl">
-                <ActiveIcon className="h-5 w-5 sm:h-6 sm:w-6" strokeWidth={2} />
-              </div>
-              <p className="flex-1 text-left text-[15px] font-semibold leading-snug tracking-[-0.02em] text-white sm:text-lg lg:text-xl">
-                {activeMessage.text}
-              </p>
-              <ChevronRight className="h-4 w-4 shrink-0 text-white/50 sm:h-5 sm:w-5" />
-            </motion.div>
-          </AnimatePresence>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
-          className="mt-8"
+          transition={{ delay: 0.28, duration: 0.8, ease: "easeOut" }}
+          className="mt-8 flex flex-col items-center gap-3"
         >
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3.5 text-[15px] font-semibold text-slate-950 shadow-[0_8px_24px_rgba(0,0,0,0.28)] transition-all duration-150 hover:bg-white/90 active:scale-95 sm:px-7 sm:py-4 sm:text-base"
+            className="group inline-flex items-center gap-2.5 rounded-full bg-[#E83517] py-2.5 pl-7 pr-2.5 text-[15px] font-semibold text-white shadow-[0_10px_30px_rgba(232,53,23,0.32)] transition-all duration-150 hover:brightness-95 active:scale-95 sm:text-base"
           >
             우리매장 도입 문의하기
-            <ChevronRight className="h-5 w-5" />
+            <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-[#E83517] transition-transform duration-150 group-hover:translate-x-0.5">
+              <ChevronRight className="h-4 w-4" strokeWidth={2.5} />
+            </span>
           </a>
+          <p className="text-xs text-[#231815]/45">
+            음식점 · 카페 · 펍 · 예비창업자 모두 상담 가능
+          </p>
         </motion.div>
       </div>
+
+      {/* 대형 배너 (실물 사진 자리) */}
+      <motion.div
+        initial={{ opacity: 0, y: 28 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.4, duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+        className="mx-auto mt-12 w-full max-w-7xl px-[5%] sm:mt-16"
+      >
+        <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[28px] border border-[#D3CDC3] shadow-[0_30px_80px_rgba(0,71,171,0.18)] sm:aspect-[16/9]">
+          {/* 실물 사진 (컨셉샷1) */}
+          <img
+            src={conceptShot}
+            alt="노아이디어피자 시그니처 상차림"
+            className="absolute inset-0 h-full w-full object-cover object-center"
+          />
+          {/* 가독성 스크림 */}
+          <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(7,16,35,0.5)_0%,rgba(7,16,35,0.1)_30%,rgba(7,16,35,0)_55%,rgba(7,16,35,0.7)_100%)]" />
+
+          {/* 좌상단 stat */}
+          <div className="absolute left-6 top-6 sm:left-9 sm:top-9">
+            <p className="text-[40px] font-extrabold leading-none tracking-[-0.04em] text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.55)] sm:text-[64px]">
+              5분
+            </p>
+            <p className="mt-2 text-[13px] font-semibold leading-tight text-white/85 drop-shadow-[0_1px_8px_rgba(0,0,0,0.55)] sm:text-sm">
+              주방장 없이,
+              <br />
+              오븐으로 완성
+            </p>
+          </div>
+
+          {/* 우상단 검증 마크 */}
+          <div className="absolute right-6 top-6 inline-flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1.5 text-[11px] font-bold text-[#0047AB] shadow-[0_4px_14px_rgba(0,0,0,0.25)]">
+            <CheckCircle2 className="h-3.5 w-3.5" />
+            직영점 검증
+          </div>
+
+          {/* 하단 모듈 칩 strip */}
+          <div className="absolute inset-x-0 bottom-0">
+            <div className="flex items-center gap-4 overflow-x-auto px-6 py-3.5 text-[12px] font-semibold text-white drop-shadow-[0_1px_8px_rgba(0,0,0,0.7)] sm:justify-center sm:gap-7 sm:text-[13px]">
+              <span className="whitespace-nowrap">폴리쉬 도우</span>
+              <span className="text-white/45">·</span>
+              <span className="whitespace-nowrap">시그니처 소스</span>
+              <span className="text-white/45">·</span>
+              <span className="whitespace-nowrap">한국식 토핑</span>
+              <span className="text-white/45">·</span>
+              <span className="whitespace-nowrap">사이드</span>
+              <span className="text-white/45">·</span>
+              <span className="whitespace-nowrap">5분 간편조리</span>
+            </div>
+          </div>
+        </div>
+      </motion.div>
     </section>
   );
 }
@@ -254,7 +339,7 @@ function LandingStory() {
       tone: "green",
       Icon: PackageCheck,
       title: "제조사·협력업체 연결",
-      desc: "검증된 브랜드 감도와 함께 실행 가능한 제조, 공급, 협력 구조를 함께 정리합니다.",
+      desc: "돈까스를 하든, 앞다리·뒷다리살을 받든 — 수년간 거래해온 거래처를 연결해 소통·품질·가격을 함께 잡습니다.",
       link: "공급망 상담하기",
       background:
         "radial-gradient(circle at 10% 10%, rgba(60, 160, 220, 0.30) 0%, transparent 40%), linear-gradient(180deg, #0A0E16 0%, #0A0E16 40%, #1E88C4 80%, #AED8F0 96%, #FFFFFF 100%)",
@@ -326,7 +411,7 @@ function LandingStory() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="overflow-hidden rounded-[32px] bg-[#0A0A0B] px-6 py-12 sm:py-16 md:px-12 md:py-20"
+        className="overflow-hidden rounded-[32px] bg-[#231815] px-6 py-12 sm:py-16 md:px-12 md:py-20"
       >
         <h2 className="max-w-3xl text-[28px] font-bold leading-[1.15] tracking-[-0.04em] text-white sm:text-4xl md:text-5xl lg:text-[56px]">
           창업을 준비하면서,
@@ -484,10 +569,15 @@ function LandingStory() {
               </div>
             </motion.div>
           </div>
-          <div className="mt-14 border-t border-white/10 pt-14 text-center sm:mt-18 sm:pt-18">
-            <p className="text-[13px] font-semibold uppercase tracking-[0.2em] text-white/30">
-              Direct Operation
+          <div className="mt-12 text-center sm:mt-16">
+            <p className="text-[18px] font-semibold leading-relaxed text-white/35 line-through decoration-[#E83517] decoration-2 sm:text-[22px]">
+              누구나 쓰는 원팩 소스로, 시그니처를?
             </p>
+            <p className="mt-3 text-[22px] font-bold leading-snug tracking-[-0.02em] text-white sm:text-[30px] md:text-[34px]">
+              새벽부터 끓인, 직영점에서 검증된 베이스로.
+            </p>
+          </div>
+          <div className="mt-14 border-t border-white/10 pt-14 text-center sm:mt-18 sm:pt-18">
             <h3 className="mx-auto mt-5 max-w-2xl text-[24px] font-bold leading-[1.2] tracking-[-0.03em] text-white sm:text-[32px] md:text-[40px]">
               사무실에서 기획한 메뉴가 아닙니다.
             </h3>
@@ -519,11 +609,11 @@ function LandingStory() {
 
           <div className="mt-14 border-t border-white/10 pt-14 sm:mt-18 sm:pt-18">
             <h2 className="text-[26px] font-bold leading-tight tracking-[-0.04em] text-white sm:text-[32px] md:text-[38px]">
-              가맹이 아니라, 이렇게 도입합니다.
+              가맹이 아니라, 같이 갑니다.
             </h2>
-            <p className="mt-3 max-w-md text-[15px] leading-relaxed text-white/55">
-              노아이디어피자의 메뉴 감도는 참고하되, 운영의 주도권은 대표님
-              매장에 남기는 구조입니다.
+            <p className="mt-3 max-w-xl text-[15px] leading-relaxed text-white/55">
+              검증된 전용상품 + 대표님 브랜드 + 믿고 거래해온 거래처까지.
+              무슨 메뉴를 하든 연결해서, 같이 키웁니다.
             </p>
             <p className="mt-3 text-sm font-medium text-white/35">
               상담은 구매 압박이 아니라 적용 가능성을 확인하는 과정입니다.
@@ -628,7 +718,7 @@ function LandingStory() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="relative mt-6 min-h-screen overflow-hidden rounded-[34px] bg-[#21346e] px-6 pb-10 pt-32 text-white shadow-[0_28px_90px_rgba(15,23,42,0.18)] md:px-12 md:pt-48"
+        className="relative mt-6 min-h-screen overflow-hidden rounded-[34px] bg-[#0047AB] px-6 pb-10 pt-32 text-white shadow-[0_28px_90px_rgba(0,71,171,0.22)] md:px-12 md:pt-48"
       >
         <video
           autoPlay
@@ -650,9 +740,6 @@ function LandingStory() {
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,16,35,0.25)_0%,rgba(7,16,35,0.78)_100%)]" />
 
         <div className="relative z-10 max-w-5xl">
-          <p className="font-rubik text-xs font-black uppercase tracking-[0.24em] text-white/50">
-            Problem / Fit
-          </p>
           <h2 className="mt-5 text-[44px] font-black uppercase leading-[1.02] tracking-[-0.045em] text-white sm:text-6xl md:text-7xl lg:text-[88px]">
             메뉴 고민
             <br />
@@ -708,9 +795,6 @@ function LandingStory() {
           ))}
 
           <div className="rounded-3xl border border-white/15 bg-white/10 p-7 backdrop-blur-md md:col-span-2">
-            <p className="font-rubik text-[10px] font-black uppercase tracking-[0.18em] text-white/45">
-              Total Freedom
-            </p>
             <p className="mt-4 text-[28px] font-semibold leading-[1.08] tracking-[-0.045em] text-white md:text-[42px]">
               써보고 판단하세요.
             </p>
@@ -718,6 +802,10 @@ function LandingStory() {
               도입할지, 멈출지, 바꿀지.
               <br />
               이후의 모든 선택은 대표님 자율입니다.
+            </p>
+            <p className="mt-6 max-w-3xl border-t border-white/15 pt-6 text-[16px] font-semibold leading-8 text-white/80 md:text-[19px] md:leading-9">
+              베이스는 검증된 걸로, 시그니처는 대표님 것으로 — 도입이 아니라{" "}
+              <span className="text-white">‘내 메뉴를 만드는’ 일</span>입니다.
             </p>
           </div>
         </div>
@@ -728,50 +816,67 @@ function LandingStory() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="relative mt-6 overflow-hidden rounded-[34px] border border-white/50 bg-white/76 p-7 shadow-[0_24px_80px_rgba(15,23,42,0.08)] backdrop-blur-xl md:p-10"
+        className="mt-6 py-4 md:py-8"
       >
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_15%_10%,rgba(0,71,171,0.10),transparent_32%),radial-gradient(circle_at_88%_18%,rgba(255,255,255,0.82),transparent_28%)]" />
-        <div className="relative z-10">
-          <div className="mb-9 max-w-3xl">
-            <p className="text-[10px] font-bold uppercase tracking-[0.24em] text-slate-400">
-              Brand Proof
-            </p>
-            <h2 className="mt-4 text-[34px] font-semibold leading-[1.04] tracking-[-0.055em] text-slate-950 md:text-[58px]">
-              No Idea라는 이름 뒤에,
-              <br />
-              꽤 치밀한 피자가 있습니다.
-            </h2>
-            <p className="mt-5 max-w-2xl text-[15px] leading-7 text-slate-500 md:text-base">
-              이름은 가볍게 들리지만, 메뉴와 도우, 공간과 반응은 가볍지 않습니다.
-              파트너 매장에 붙일 수 있는 상품성은 여기서 출발합니다.
-            </p>
-          </div>
+        <div className="mb-9 max-w-3xl">
+          <h2 className="mt-4 text-[32px] font-bold leading-[1.06] tracking-[-0.04em] text-[#231815] md:text-[52px]">
+            No Idea라는 이름 뒤에,
+            <br />
+            꽤 치밀한 피자가 있습니다.
+          </h2>
+          <p className="mt-5 max-w-2xl text-[15px] leading-7 text-[#231815]/60 md:text-base">
+            이름은 가볍게 들리지만, 메뉴와 도우, 공간과 반응은 가볍지 않습니다.
+            파트너 매장에 붙일 수 있는 상품성은 여기서 출발합니다.
+          </p>
+        </div>
 
-          <div className="grid gap-5 md:grid-cols-2">
-            {proofMenuItems.map((card) => (
-              <article
-                key={card.title}
-                className="group overflow-hidden rounded-[28px] border border-white/65 bg-white/58 shadow-[0_18px_60px_rgba(15,23,42,0.07)] backdrop-blur-xl"
-              >
-                <div className="overflow-hidden bg-slate-100">
-                  <img
-                    src={card.image}
-                    alt={card.title}
-                    className="aspect-[16/10] w-full object-cover object-center transition duration-500 group-hover:scale-[1.03]"
-                  />
-                </div>
-                <div className="p-5 md:p-6">
-                  <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#0047AB]/70">
-                    {card.label}
-                  </p>
-                  <h3 className="mt-3 text-[24px] font-semibold leading-tight tracking-[-0.04em] text-slate-950">
-                    {card.title}
-                  </h3>
-                  <p className="mt-3 text-sm leading-7 text-slate-500">{card.desc}</p>
-                </div>
-              </article>
-            ))}
+        {/* Featured proof — 대표 1장 */}
+        <article className="group grid overflow-hidden rounded-[24px] border border-[#D3CDC3] bg-white transition-colors duration-300 hover:border-[#0047AB] md:grid-cols-2">
+          <div className="overflow-hidden">
+            <img
+              src={proofMenuItems[0].image}
+              alt={proofMenuItems[0].title}
+              className="h-full min-h-[260px] w-full object-cover object-center transition duration-500 group-hover:scale-[1.03]"
+            />
           </div>
+          <div className="flex flex-col justify-center gap-3 p-7 md:p-10">
+            <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#0047AB]">
+              {proofMenuItems[0].label}
+            </p>
+            <h3 className="text-[28px] font-bold leading-tight tracking-[-0.03em] text-[#231815] md:text-[36px]">
+              {proofMenuItems[0].title}
+            </h3>
+            <p className="text-[15px] leading-7 text-[#231815]/60 md:text-base">
+              {proofMenuItems[0].desc}
+            </p>
+          </div>
+        </article>
+
+        {/* 보조 proof — 3장 */}
+        <div className="mt-5 grid gap-5 sm:grid-cols-3">
+          {proofMenuItems.slice(1).map((card) => (
+            <article
+              key={card.title}
+              className="group overflow-hidden rounded-[20px] border border-[#D3CDC3] bg-white transition-all duration-300 hover:-translate-y-1 hover:border-[#0047AB]"
+            >
+              <div className="overflow-hidden">
+                <img
+                  src={card.image}
+                  alt={card.title}
+                  className="aspect-[4/3] w-full object-cover object-center transition duration-500 group-hover:scale-[1.03]"
+                />
+              </div>
+              <div className="border-t border-[#D3CDC3] p-5">
+                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#0047AB]">
+                  {card.label}
+                </p>
+                <h3 className="mt-2.5 text-[18px] font-bold leading-tight tracking-[-0.03em] text-[#231815]">
+                  {card.title}
+                </h3>
+                <p className="mt-2 text-[13px] leading-6 text-[#231815]/60">{card.desc}</p>
+              </div>
+            </article>
+          ))}
         </div>
       </motion.div>
 
@@ -781,11 +886,8 @@ function LandingStory() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="mt-6 rounded-[28px] border border-slate-900/10 bg-gradient-to-b from-[#252a38] to-[#1a1e29] p-7 text-center text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.12)] md:p-10"
+        className="mt-6 rounded-[28px] border border-white/10 bg-[#231815] p-7 text-center text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.12)] md:p-10"
       >
-        <p className="text-[10px] font-bold uppercase tracking-[0.24em] text-white/40">
-          Final CTA
-        </p>
         <h2 className="mx-auto mt-3 max-w-2xl text-[30px] font-semibold leading-[1.08] tracking-tight md:text-[44px]">
           피자가 우리 매장에 붙을지,
           <br />
@@ -795,13 +897,21 @@ function LandingStory() {
           구매를 결정하라는 페이지가 아닙니다. 업종, 설비, 메뉴 방향을 먼저
           확인하고 도입 가능성부터 판단하세요.
         </p>
+        <p className="mx-auto mt-6 max-w-xl text-[15px] font-semibold leading-relaxed text-white/85 md:text-[17px]">
+          <span className="text-white/40 line-through decoration-[#E83517] decoration-2">원팩</span>{" "}
+          <span className="text-white/40 line-through decoration-[#E83517] decoration-2">획일 프랜차이즈</span>
+          {" "}— 이제, 검증된 베이스로 같이.
+        </p>
         <a
           href="mailto:hello@noideasupply.example"
-          className="mt-6 inline-flex items-center gap-1 rounded-lg bg-white px-5 py-2.5 text-xs font-semibold text-slate-950 transition hover:bg-white/90"
+          className="mt-6 inline-flex items-center gap-1 rounded-lg bg-[#E83517] px-5 py-2.5 text-xs font-semibold text-white transition hover:brightness-95"
         >
           우리매장 도입 문의하기
           <ChevronRight className="h-3.5 w-3.5" />
         </a>
+        <p className="mt-5 text-xs leading-relaxed text-white/45">
+          상담은 실제로 돌아가는 본점에서 — 말로 설명하지 않고, 직접 보여드립니다.
+        </p>
       </motion.div>
     </section>
   );
