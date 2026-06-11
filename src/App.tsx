@@ -39,7 +39,7 @@ const TICKER = [
 
 const SEE = [
   { t: "DOUGH", d: "24–48시간 저온 숙성 중인 폴리쉬 도우 숙성실" },
-  { t: "SAUCE", d: "새벽 소스 공정 — 원팩과 뭐가 다른지, 직접 맛으로" },
+  { t: "SAUCE", d: "원팩 소스와 노아이디어 베이스 — 그 차이를 직접 맛으로" },
   { t: "LIVE", d: "점심 피크에 실제로 돌아가는 주방과 홀" },
   { t: "TALK", d: "메뉴 · 동선 · 거래처 — 궁금한 건 그 자리에서 바로" },
 ];
@@ -262,7 +262,7 @@ function App() {
             <span className="sn">①</span>
             <div>
               <h2 className="sx">손님은 <span className="hl">한 입에</span> 압니다.</h2>
-              <p className="ss">대충 사 온 원팩인지, 새벽부터 끓인 진짜인지.</p>
+              <p className="ss">주인 없는 원팩인지, 레시피 주인이 있는 진짜인지.</p>
             </div>
           </div>
           <div className="stmt reveal">
@@ -320,7 +320,7 @@ function App() {
           </div>
           <div className="strike reveal">
             <p className="x"><span className="xx">누구나 쓰는 원팩 소스로, 시그니처를?</span></p>
-            <p className="y">새벽부터 끓인, <em>직영점에서 검증된 베이스</em>로.</p>
+            <p className="y">오래 다듬어 완성한, <em>직영점에서 검증된 베이스</em>로.</p>
           </div>
         </div>
       </section>
@@ -333,7 +333,7 @@ function App() {
         <div className="wrap tx">
           <p className="kick" style={{ color: "var(--yellow)" }}>REAL KITCHEN — NOT A DECK</p>
           <h2 style={{ marginTop: 14 }}>사무실에서 기획한<br />메뉴가 아닙니다.</h2>
-          <p className="lead">매일 매장을 열고 손님을 받으며 세팅한 것들입니다. 직영점에서 검증한 뒤, 도우는 HACCP 인증 전용 라인에서 같은 공정으로 생산해 공급합니다.</p>
+          <p className="lead">매일 매장을 열고 손님을 받으며 세팅한 것들입니다. 직영점에서 검증한 레시피 그대로, 베이스는 HACCP 인증 전용 라인에서 생산해 공급합니다.</p>
         </div>
       </section>
 
@@ -368,6 +368,15 @@ function App() {
         </div>
       </section>
 
+      {/* DECLARATION — 시선 선언 (FAQ에 묻혀 있던 핵심 문장 승격) */}
+      <section className="decl">
+        <div className="wrap decl-in reveal">
+          <p className="kick" style={{ color: "var(--yellow)" }}>OUR STANCE</p>
+          <p className="d-quote">묶어두는 게 아니라,<br /><span className="hl hd">계속 선택받는 게</span><br />저희 일입니다.</p>
+          <p className="d-sub">의무 발주도, 위약금도 없습니다. 경쟁력이 없다고 느껴지면 — 쓰시다가 멈추시면 됩니다. 그래서 저희는 매일 더 좋아질 수밖에 없습니다.</p>
+        </div>
+      </section>
+
       {/* MENU LINEUP — marquee */}
       <section className="sec menu-sec" id="menu">
         <div className="wrap">
@@ -394,21 +403,21 @@ function App() {
         <p className="menu-note">위 메뉴는 도입 시 대표님 매장 컨셉에 맞춰 선택·변형됩니다.</p>
       </section>
 
-      {/* CERTIFICATION MARK BANNER — 정성을 보이게 */}
+      {/* YOU'RE THE HERO — 주인공은 대표님 (무기고 페르소나: 사장님=Hero, 우리=조력자) */}
       <section className="banner">
         <div className="wrap banner-in reveal">
-          <p className="kick" style={{ color: "var(--yellow)" }}>MAKE IT VISIBLE</p>
-          <h2 style={{ marginTop: 16 }}>주방의 정성은,<br />보여야 무기가 됩니다.</h2>
-          <p className="banner-sub">손님은 주방을 못 봅니다. 그래서 검증된 베이스를 도입한 매장에는, 그 정성을 손님 눈에 보여주는 장치를 함께 드립니다.</p>
-          <div className="mark-mock">
-            <div className="mark-chip">
-              <img src={logoCircle} alt="" />
-              <div>
-                <b>NO IDEA BASE 사용 인증</b>
-                <s>VERIFIED SUPPLY · 본점 공급</s>
-              </div>
+          <p className="kick" style={{ color: "var(--yellow)" }}>YOU'RE THE HERO</p>
+          <h2 style={{ marginTop: 16 }}>이 이야기의 주인공은<br />저희가 아니라, 대표님입니다.</h2>
+          <p className="banner-sub">새벽에 '장사 잘되는 법'을 검색해 본 적 있는 분이라면 — 맞게 오셨습니다. 손님이 줄을 서면, 그건 대표님 가게의 이야기입니다. 저희는 주인공 자리를 탐내지 않습니다.</p>
+          <div className="cast">
+            <div className="cast-row">
+              <span className="cr">주인공</span>
+              <div className="cv"><b>대표님</b><s>간판 · 가격 · 단골 · "그 집 맛있더라"는 칭찬까지 — 전부 대표님 몫입니다.</s></div>
             </div>
-            <p className="mark-cap">도입 매장의 메뉴판과 입구에 붙는 인증 마크 — "검증된 노아이디어 베이스 · 새벽부터 끓인 소스" 한 줄과 함께 갑니다.</p>
+            <div className="cast-row">
+              <span className="cr">조연</span>
+              <div className="cv"><b>노아이디어서플라이</b><s>검증된 베이스를 대고, 거래처를 소개하고, 대표님의 새벽을 미리 끓여두는 역할.</s></div>
+            </div>
           </div>
         </div>
       </section>
@@ -459,6 +468,24 @@ function App() {
               <p>24~48시간 저온 숙성 도우. 레시피는 매일 굽는 직영 주방에서 완성했고, 생산은 HACCP 인증 공장의 전용 라인에서 — 숙성과 핸들링은 다시 매장의 손으로. 시판 원팩과 다른 점은 하나입니다: <strong>이 도우엔 레시피의 주인이 있습니다.</strong></p>
               <a href="#contact" className="btn btn-ghost" style={{ alignSelf: "flex-start", marginTop: 6, color: "var(--cobalt)" }}>도입 상담하기</a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FOUNDER LETTER — TODO: 서명 주체·실제 일화 확정 전 플레이스홀더 (무기고 S5) */}
+      <section className="letter-sec">
+        <div className="wrap">
+          <div className="letter reveal">
+            <p className="kick">A LETTER — FROM THE FOUNDER</p>
+            <div className="letter-body">
+              <p>저는 피자 회사 대표이기 전에, 매장 사장입니다.</p>
+              <p>노아이디어의 모든 것은 처음부터 직접 만들었습니다. 소스를 끓이고, 도우를 숙성하고 — 직영점에서 손님 반응으로 레시피를 다듬는 데 오랜 시간을 썼습니다.</p>
+              <p>그리고 그 레시피를 토씨 하나 바꾸지 않고, HACCP 인증 공장의 전용 라인으로 옮겼습니다. 어느 매장에서든 같은 맛이 나오게 하려고요.</p>
+              <p>시판 원팩과 다른 점은 하나입니다. <strong>이 베이스엔 레시피의 주인이 있고, 그 주인이 지금도 직영점에서 같은 베이스로 장사를 합니다.</strong></p>
+              <p>간판은 대표님 것. 가격도, 운영도 대표님 것.</p>
+              <p className="letter-punch">대표님의 새벽은 — 저희가 미리 끓여뒀습니다.</p>
+            </div>
+            <p className="letter-sign">— 노아이디어서플라이 드림</p>
           </div>
         </div>
       </section>
