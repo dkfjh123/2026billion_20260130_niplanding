@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { ClipboardList, SlidersHorizontal, Handshake, ShieldCheck } from "lucide-react";
 
+import ContactForm from "./ContactForm";
+
 import logoCircle from "../nip_assets/logo/logo_circle_blue.png";
 import conceptShot from "../nip_assets/menu/컨셉샷 1.jpg";
 import store3 from "../nip_assets/store/매장사진3.jpg";
@@ -23,9 +25,15 @@ const track = (placement: string) => {
   if (typeof w.gtag === "function") w.gtag("event", "cta_click", { placement });
 };
 
-// TODO: 문의 채널 확정 시 교체 (현재 자리표시자)
-const CONTACT_MAIL = "mailto:hello@noideasupply.example";
-const CONTACT_TEL = "tel:000";
+const CONTACT_MAIL = "mailto:noideacompany2024@gmail.com";
+const CONTACT_TEL = "tel:0507-1327-0174";
+const NAVER_MAP =
+  "https://map.naver.com/p/entry/place/1071004649?lng=126.9816937&lat=37.489736&placePath=%2Fhome&entry=plt&searchType=place&c=15.00,0,0,0,dh";
+
+const trackLead = () => {
+  const w = window as unknown as { gtag?: (...args: unknown[]) => void };
+  if (typeof w.gtag === "function") w.gtag("event", "generate_lead", { method: "contact_form" });
+};
 
 const TICKER = [
   "가맹비 0원",
@@ -559,10 +567,11 @@ function App() {
           <p className="sub">구매를 결정하라는 페이지가 아닙니다. 문의를 남겨주시면 연락드리고 — 영업 중인 직영점에서 직접 보고 맛본 뒤, 천천히 판단하세요.</p>
           <p className="punch"><span className="s"><span className="xx">원팩</span></span> <span className="s"><span className="xx">획일 프랜차이즈</span></span> — 이제, 검증된 베이스로 같이.</p>
           <p className="scarcity">직영점 방문 · 상담 무료</p>
-          <div className="cta-wrap">
-            <a href={CONTACT_MAIL} className="btn btn-pri" onClick={() => track("contact")}>도입 문의하기 <span className="ar">→</span></a>
-            <a href={CONTACT_TEL} className="btn btn-ghost" style={{ color: "#fff" }}>전화 상담</a>
-          </div>
+          <ContactForm onSubmitted={trackLead} />
+          <p className="alt-contact">
+            전화가 편하시면 <a href={CONTACT_TEL}>0507-1327-0174</a> · 메일은{" "}
+            <a href={CONTACT_MAIL}>noideacompany2024@gmail.com</a>
+          </p>
           <p className="fine">말로 설명하지 않습니다 — 돌아가는 직영점에서 직접 보여드립니다.</p>
           <p className="legal">{NOTICE}</p>
         </div>
@@ -570,9 +579,24 @@ function App() {
 
       {/* FOOTER */}
       <footer className="ft">
-        <div className="wrap foot-in">
-          <span className="fb"><img src={logoCircle} alt="" />No Idea Supply</span>
-          <span className="c">© 2026 NO IDEA PIZZA · B2B SUPPLY · 간판은 그대로, 피자 경쟁력만 노아이디어처럼.</span>
+        <div className="wrap">
+          <div className="foot-in">
+            <span className="fb"><img src={logoCircle} alt="" />No Idea Supply</span>
+            <div className="ft-links">
+              <a href="privacy.html" target="_blank" rel="noopener noreferrer">개인정보처리방침</a>
+              <a href="#contact">도입 문의</a>
+            </div>
+          </div>
+          <div className="ft-info">
+            <p>(주)노아이디어컴퍼니 · 대표 박재형 · 사업자등록번호 361-86-03473</p>
+            <p>본점 — 서울특별시 영등포구 국제금융로6길 33, 919호 씨123(여의도동, 맨하탄빌딩)</p>
+            <p>
+              이수 직영점 — 서울 동작구 동작대로33가길 5, 1층 102호 · <a href={CONTACT_TEL}>0507-1327-0174</a> ·{" "}
+              <a href={NAVER_MAP} target="_blank" rel="noopener noreferrer">네이버 지도 ↗</a>
+            </p>
+            <p>이메일 — <a href={CONTACT_MAIL}>noideacompany2024@gmail.com</a></p>
+          </div>
+          <p className="ft-copy">© 2026 NO IDEA PIZZA · B2B SUPPLY · 간판은 그대로, 피자 경쟁력만 노아이디어처럼.</p>
         </div>
       </footer>
 
