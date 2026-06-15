@@ -16,25 +16,25 @@ const IgGlyph = () => (
 import ContactForm from "./ContactForm";
 
 import logoCircle from "../nip_assets/logo/logo_circle_blue.png";
-import conceptShot from "../nip_assets/menu/컨셉샷 1.jpg";
-import store3 from "../nip_assets/store/매장사진3.jpg";
-import doughTexture from "../nip_assets/dough/폴리쉬도우2.jpg";
-import mKkwari from "../nip_assets/menu/꽈리불고기.jpg";
-import mCombi from "../nip_assets/menu/콤비네이션.jpg";
-import mBuldak from "../nip_assets/menu/불닭고구마.jpg";
-import mBanban from "../nip_assets/menu/반반피자.jpg";
-import mFourCheese from "../nip_assets/menu/4치즈.jpg";
-import mPepperoni from "../nip_assets/menu/페퍼로니.jpg";
-import mHawaiian from "../nip_assets/menu/스위트하와이안.jpg";
-import mTaco from "../nip_assets/menu/타코.jpg";
+import conceptShot from "../nip_assets/opt/hero-concept1.webp";
+import store3 from "../nip_assets/opt/store3.webp";
+import doughTexture from "../nip_assets/opt/dough2.webp";
+import mKkwari from "../nip_assets/opt/menu-kkwari.webp";
+import mCombi from "../nip_assets/opt/menu-combi.webp";
+import mBuldak from "../nip_assets/opt/menu-buldak.webp";
+import mBanban from "../nip_assets/opt/menu-banban.webp";
+import mFourCheese from "../nip_assets/opt/menu-4cheese.webp";
+import mPepperoni from "../nip_assets/opt/menu-pepperoni.webp";
+import mHawaiian from "../nip_assets/opt/menu-hawaiian.webp";
+import mTaco from "../nip_assets/opt/menu-taco.webp";
 
 // 인스타 피드용 실제 브랜드 컷
-import ig1 from "../nip_assets/menu/컨셉샷 2 (1).jpg";
-import ig2 from "../nip_assets/store/매장사진1.jpg";
-import ig3 from "../nip_assets/menu/핫새우밤.jpg";
-import ig4 from "../nip_assets/menu/컨셉샷 3.jpg";
-import ig5 from "../nip_assets/store/매장사진4.jpg";
-import ig6 from "../nip_assets/menu/크리스피포테이토.jpg";
+import ig1 from "../nip_assets/opt/ig-concept2.webp";
+import ig2 from "../nip_assets/opt/ig-store1.webp";
+import ig3 from "../nip_assets/opt/ig-shrimp.webp";
+import ig4 from "../nip_assets/opt/ig-concept3.webp";
+import ig5 from "../nip_assets/opt/ig-store4.webp";
+import ig6 from "../nip_assets/opt/ig-potato.webp";
 
 // 헌법 6절 필수 고지 — 첫 화면 근처 + CTA 근처 2곳 게재 의무
 const NOTICE =
