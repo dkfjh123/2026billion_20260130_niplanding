@@ -27,7 +27,7 @@ export default function ContactForm({ onSubmitted }: { onSubmitted?: () => void 
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
           access_key: WEB3FORMS_ACCESS_KEY,
-          subject: `[노아이디어서플라이] 도입 문의 — ${data.get("name")}`,
+          subject: `[노아이디어피자] 도입 문의 — ${data.get("name")}`,
           from_name: "noideapizza.org 문의폼",
           성함: data.get("name"),
           연락처: data.get("phone"),
@@ -55,7 +55,7 @@ export default function ContactForm({ onSubmitted }: { onSubmitted?: () => void 
         <p className="d">
           확인 후 남겨주신 연락처로 직접 연락드리겠습니다.
           <br />
-          급하시면 <a href="tel:0507-1327-0174">0507-1327-0174</a>로 전화 주셔도 됩니다.
+          급하시면 <a href="tel:070-8121-5880">070-8121-5880</a>로 전화 주셔도 됩니다.
         </p>
       </div>
     );
@@ -129,7 +129,7 @@ export default function ContactForm({ onSubmitted }: { onSubmitted?: () => void 
 
       {status === "error" && (
         <p className="cf-error" role="alert">
-          전송에 실패했습니다. 잠시 후 다시 시도하시거나, <a href="tel:0507-1327-0174">0507-1327-0174</a>로 전화 주세요.
+          전송에 실패했습니다. 잠시 후 다시 시도하시거나, <a href="tel:070-8121-5880">070-8121-5880</a>로 전화 주세요.
         </p>
       )}
 

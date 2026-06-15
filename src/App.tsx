@@ -1,5 +1,17 @@
 import { useEffect } from "react";
-import { ClipboardList, SlidersHorizontal, Handshake } from "lucide-react";
+import { ClipboardList, SlidersHorizontal, Handshake, Search, Play } from "lucide-react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
+const IgGlyph = () => (
+  <svg className="ig-glyph" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <rect x="2" y="2" width="20" height="20" rx="5.6" />
+    <circle cx="12" cy="12" r="4.4" />
+    <circle cx="17.6" cy="6.4" r="1.1" fill="#fff" stroke="none" />
+  </svg>
+);
 
 import ContactForm from "./ContactForm";
 
@@ -16,6 +28,14 @@ import mPepperoni from "../nip_assets/menu/페퍼로니.jpg";
 import mHawaiian from "../nip_assets/menu/스위트하와이안.jpg";
 import mTaco from "../nip_assets/menu/타코.jpg";
 
+// 인스타 피드용 실제 브랜드 컷
+import ig1 from "../nip_assets/menu/컨셉샷 2 (1).jpg";
+import ig2 from "../nip_assets/store/매장사진1.jpg";
+import ig3 from "../nip_assets/menu/핫새우밤.jpg";
+import ig4 from "../nip_assets/menu/컨셉샷 3.jpg";
+import ig5 from "../nip_assets/store/매장사진4.jpg";
+import ig6 from "../nip_assets/menu/크리스피포테이토.jpg";
+
 // 헌법 6절 필수 고지 — 첫 화면 근처 + CTA 근처 2곳 게재 의무
 const NOTICE =
   "본 페이지는 가맹점 모집 페이지가 아닙니다. 파트너 매장은 노아이디어피자 지점이 아니며, 기존 브랜드명·로고·간판을 사용하지 않고 독립 상호로 운영합니다. 제공되는 상품과 레시피는 파트너 매장에 맞게 선택적으로 도입할 수 있습니다.";
@@ -26,7 +46,7 @@ const track = (placement: string) => {
 };
 
 const CONTACT_MAIL = "mailto:noideacompany2024@gmail.com";
-const CONTACT_TEL = "tel:0507-1327-0174";
+const CONTACT_TEL = "tel:070-8121-5880";
 const NAVER_MAP =
   "https://map.naver.com/p/entry/place/1071004649?lng=126.9816937&lat=37.489736&placePath=%2Fhome&entry=plt&searchType=place&c=15.00,0,0,0,dh";
 
@@ -72,6 +92,30 @@ const MENU = [
   { img: mTaco, name: "타코" },
 ];
 
+// 실재 브랜드 증거 — 제3자 유튜브 콘텐츠 (실제 채널)
+const YT = [
+  {
+    id: "e9Wy2Nvtrhk",
+    kind: "video" as const,
+    title: "America Pizza in Korea! 동작맛집 노아이디어피자",
+    who: "딜라이트",
+    thumb: "https://img.youtube.com/vi/e9Wy2Nvtrhk/maxresdefault.jpg",
+    url: "https://www.youtube.com/watch?v=e9Wy2Nvtrhk",
+  },
+  {
+    id: "XRrv3VKr3_g",
+    kind: "short" as const,
+    title: "3분에 한판씩 팔리는 피자?",
+    who: "푸키키 fookikie",
+    thumb: "https://img.youtube.com/vi/XRrv3VKr3_g/hqdefault.jpg",
+    url: "https://www.youtube.com/shorts/XRrv3VKr3_g",
+  },
+];
+
+const IG = [ig1, ig2, ig3, ig4, ig5, ig6];
+const IG_MAIN = "https://www.instagram.com/noideapizza/";
+const IG_MOKDONG = "https://www.instagram.com/noideapizza_mokdong/";
+
 function App() {
   useEffect(() => {
     const io = new IntersectionObserver(
@@ -89,6 +133,22 @@ function App() {
     return () => io.disconnect();
   }, []);
 
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(".fact-chips .chip", {
+        scrollTrigger: { trigger: ".fact-chips", start: "top 85%" },
+        y: 36,
+        opacity: 0,
+        scale: 0.84,
+        rotateX: -14,
+        duration: 0.75,
+        ease: "back.out(1.7)",
+        stagger: 0.13,
+      });
+    });
+    return () => ctx.revert();
+  }, []);
+
   return (
     <div>
       {/* NAV */}
@@ -96,7 +156,7 @@ function App() {
         <div className="nav-in">
           <a href="#" className="brand">
             <img src={logoCircle} alt="" />
-            <span className="nm">노아이디어서플라이</span>
+            <span className="nm">노아이디어피자</span>
           </a>
           <div className="nav-links">
             <a href="#receipts">비용</a>
@@ -134,13 +194,68 @@ function App() {
         </div>
       </header>
 
-      {/* 신뢰 숫자 띠 */}
-      <section className="creds">
-        <div className="creds-in stagger">
-          <div className="cred"><div className="v">2023</div><div className="l">이수 직영 1호점에서 시작</div></div>
-          <div className="cred"><div className="v">24–48<u>H</u></div><div className="l">폴리쉬 도우 저온 숙성</div></div>
-          <div className="cred"><div className="v">0원</div><div className="l">가맹비 · 로열티 — 애초에 가맹이 아닙니다</div></div>
-          <div className="cred"><div className="v">100%</div><div className="l">내 상호 · 내 가격 운영</div></div>
+      {/* PERSONA HOOK — 새벽 검색 밴드 */}
+      <section className="persona">
+        <div className="wrap persona-in">
+          <span className="kick">혹시, 새벽에 이런 거 검색해 보셨다면</span>
+          <div className="searches stagger">
+            <div className="sbox s-l"><Search className="si" />장사 어떻게 해야 잘될까?</div>
+            <div className="sbox s-r"><Search className="si" />우리 가게만의 시그니처 메뉴 없을까?</div>
+            <div className="sbox s-l"><Search className="si" />원팩 말고 진짜 맛 못 내나?</div>
+            <div className="sbox s-r"><Search className="si" />개인매장도 메뉴 경쟁력 올릴 수 있을까?</div>
+          </div>
+          <p className="persona-ans reveal">이 검색들의 답 — <span className="em">검증된 피자가, 우리 가게의 무기</span>가 됩니다.</p>
+        </div>
+      </section>
+
+      {/* 실재 브랜드 증거 — 유튜브(제3자 콘텐츠) + 인스타 */}
+      <section className="proofnow" id="proofnow">
+        <div className="wrap">
+          <div className="sec-head reveal">
+            <span className="kick">직접 보세요</span>
+            <h2>노아이디어피자는,<br />이런 브랜드입니다.</h2>
+          </div>
+
+          <div className="yt-grid stagger">
+            {YT.map((v) => (
+              <a className="yt-card" key={v.id} href={v.url} target="_blank" rel="noopener noreferrer" onClick={() => track("youtube")}>
+                <div className="yt-thumb">
+                  <img src={v.thumb} alt={v.title} loading="lazy" />
+                  <span className="yt-badge">{v.kind === "short" ? "YouTube 쇼츠" : "YouTube"}</span>
+                  <div className="yt-play"><span><Play /></span></div>
+                </div>
+                <div className="yt-meta">
+                  <p className="yt-title">{v.title}</p>
+                  <p className="yt-who">유튜버 <b>{v.who}</b> 채널에서</p>
+                </div>
+              </a>
+            ))}
+          </div>
+
+          <div className="ig-block reveal">
+            <div className="ig-top">
+              <a className="ig-handle" href={IG_MAIN} target="_blank" rel="noopener noreferrer">
+                <span className="ig-ic"><IgGlyph /></span>
+                <span className="ig-id">
+                  <span className="h">@noideapizza</span>
+                </span>
+              </a>
+              <a className="ig-follow" href={IG_MAIN} target="_blank" rel="noopener noreferrer" onClick={() => track("instagram")}>인스타그램 팔로우 →</a>
+            </div>
+            <div className="ig-grid">
+              {IG.map((src, i) => (
+                <a key={i} href={i >= 4 ? IG_MOKDONG : IG_MAIN} target="_blank" rel="noopener noreferrer">
+                  <img src={src} alt="노아이디어피자 인스타그램" loading="lazy" />
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <div className="fact-chips">
+            <div className="chip"><b>직영 3곳</b><span className="cap">이수본점 · 신사점 · 목동점</span></div>
+            <div className="chip"><b>24–48H</b><span className="cap">폴리쉬 도우 저온 숙성</span></div>
+            <div className="chip"><b>100%</b><span className="cap">내 상호 · 내 가격 운영</span></div>
+          </div>
         </div>
       </section>
 
@@ -201,7 +316,7 @@ function App() {
               <span className="rc-stamp">전부 0원</span>
               <div className="rc-body">
                 <p className="rc-t">RECEIPT</p>
-                <p className="rc-name">노아이디어서플라이</p>
+                <p className="rc-name">노아이디어피자</p>
                 <div className="rc-rows">
                   <div className="rc-row"><span className="k">가맹비</span><span className="a">0원</span></div>
                   <div className="rc-row"><span className="k">로열티</span><span className="a">0원</span></div>
@@ -214,7 +329,7 @@ function App() {
               <div className="rc-zig" />
             </div>
           </div>
-          <p className="rc-note reveal">* 좌측은 업계에서 흔히 보는 수준의 예시이며, 브랜드·업종마다 다릅니다. 노아이디어서플라이는 가맹 계약이 아닌 전용상품 공급 계약으로, 상품 구매 비용 외 별도 부담이 없습니다.</p>
+          <p className="rc-note reveal">* 좌측은 업계에서 흔히 보는 수준의 예시이며, 브랜드·업종마다 다릅니다. 노아이디어피자는 가맹 계약이 아닌 전용상품 공급 계약으로, 상품 구매 비용 외 별도 부담이 없습니다.</p>
           <div className="rc-turn reveal">
             <p className="a">무조건 나쁜 구조가 아닙니다. 정말 좋은 본사도 있으니까요.</p>
             <p className="b">다만 그 비용과 시간이 아깝다고 느끼셨다면 — 아래를 보세요.</p>
@@ -264,7 +379,6 @@ function App() {
       {/* DECLARATION — 브랜드 블루 모먼트 */}
       <section className="decl">
         <div className="wrap decl-in reveal">
-          <span className="kick">저희가 일하는 방식</span>
           <p className="d-quote">묶어두는 게 아니라,<br /><span className="hl hd">계속 선택받는 게</span> 저희 일입니다.</p>
           <p className="d-sub">의무 발주도, 위약금도 없습니다. 경쟁력이 없다고 느껴지면 — 쓰시다가 멈추시면 됩니다. 그래서 저희는 매일 더 좋아질 수밖에 없습니다.</p>
         </div>
@@ -315,9 +429,9 @@ function App() {
           <div className="feat reveal">
             <img src={doughTexture} alt="폴리쉬 도우" />
             <div className="tx">
-              <span className="kick">도우 · 24–48시간</span>
+              <span className="kick">24–48시간 저온 숙성</span>
               <h3>폴리쉬 도우</h3>
-              <p>24~48시간 저온 숙성 도우. 레시피는 매일 굽는 직영 주방에서 완성했고, 생산은 HACCP 인증 공장의 전용 라인에서 — 숙성과 핸들링은 다시 매장의 손으로. 시판 원팩과 다른 점은 하나입니다: <strong>이 도우엔 레시피의 주인이 있습니다.</strong></p>
+              <p>24~48시간 저온 숙성으로 겉은 바삭, 속은 쫄깃 — 빵끝까지 먹게 되는 크러스트. 직영 주방에서 완성한 레시피 그대로, 시판 원팩과 다른 건 하나입니다. <strong>이 도우엔 레시피의 주인이 있습니다.</strong></p>
               <a href="#contact" className="btn btn-ghost">도입 상담하기</a>
             </div>
           </div>
@@ -328,16 +442,15 @@ function App() {
       <section className="letter-sec">
         <div className="wrap">
           <div className="letter reveal">
-            <span className="kick">만든 사람의 편지</span>
             <div className="letter-body">
               <p>저는 피자 회사 대표이기 전에, 매장 사장입니다.</p>
-              <p>노아이디어의 모든 것은 처음부터 직접 만들었습니다. 소스를 끓이고, 도우를 숙성하고 — 직영점에서 손님 반응으로 레시피를 다듬는 데 오랜 시간을 썼습니다.</p>
-              <p>그리고 그 레시피를 토씨 하나 바꾸지 않고, HACCP 인증 공장의 전용 라인으로 옮겼습니다. 어느 매장에서든 같은 맛이 나오게 하려고요.</p>
+              <p>노아이디어피자의 모든 것은 처음부터 직접 만들었습니다. 소스를 끓이고, 도우를 숙성하고 — 직영점에서 손님 반응으로 레시피를 다듬는 데 오랜 시간을 썼습니다.</p>
+              <p>그 레시피 그대로 — 어느 매장에서 받아도 같은 맛이 나오는 베이스로 공급합니다.</p>
               <p>시판 원팩과 다른 점은 하나입니다. <strong>이 베이스엔 레시피의 주인이 있고, 그 주인이 지금도 직영점에서 같은 베이스로 장사를 합니다.</strong></p>
               <p>간판은 대표님 것. 가격도, 운영도 대표님 것.</p>
               <p className="letter-punch">대표님의 새벽은 — 저희가 미리 끓여뒀습니다.</p>
             </div>
-            <p className="letter-sign">— 노아이디어서플라이 드림</p>
+            <p className="letter-sign">— 노아이디어피자 드림</p>
           </div>
         </div>
       </section>
@@ -403,15 +516,10 @@ function App() {
       <section className="contact" id="contact">
         <div className="wrap c-in reveal">
           <span className="kick">도입 문의</span>
-          <h2 style={{ marginTop: 10 }}>피자가 우리 매장에 붙을지,<br />직영점에서 직접 확인하세요.</h2>
-          <p className="sub">구매를 결정하라는 페이지가 아닙니다. 문의를 남겨주시면 연락드리고 — 영업 중인 직영점에서 직접 보고 맛본 뒤, 천천히 판단하세요.</p>
+          <h2 style={{ marginTop: 10 }}>이 피자가 우리 가게에 맞을지,<br />직영점에서 직접 확인하세요.</h2>
+          <p className="sub">말로 설득하지 않습니다. 매장에서 직접 판단하세요.</p>
           <p className="punch"><span className="s"><span className="xx">원팩</span></span> <span className="s"><span className="xx">획일 프랜차이즈</span></span> — 이제, 검증된 베이스로 같이.</p>
-          <p className="scarcity">직영점 방문 · 상담 무료</p>
           <ContactForm onSubmitted={trackLead} />
-          <p className="alt-contact">
-            전화가 편하시면 <a href={CONTACT_TEL}>0507-1327-0174</a> · 메일은{" "}
-            <a href={CONTACT_MAIL}>noideacompany2024@gmail.com</a>
-          </p>
           <p className="legal">{NOTICE}</p>
         </div>
       </section>
@@ -420,7 +528,7 @@ function App() {
       <footer className="ft">
         <div className="wrap">
           <div className="foot-in">
-            <span className="fb"><img src={logoCircle} alt="" />노아이디어서플라이</span>
+            <span className="fb"><img src={logoCircle} alt="" />노아이디어피자</span>
             <div className="ft-links">
               <a href="privacy.html" target="_blank" rel="noopener noreferrer">개인정보처리방침</a>
               <a href="#contact">도입 문의</a>
@@ -430,12 +538,12 @@ function App() {
             <p>(주)노아이디어컴퍼니 · 대표 박재형 · 사업자등록번호 361-86-03473</p>
             <p>본점 — 서울특별시 영등포구 국제금융로6길 33, 919호 씨123(여의도동, 맨하탄빌딩)</p>
             <p>
-              이수 직영점 — 서울 동작구 동작대로33가길 5, 1층 102호 · <a href={CONTACT_TEL}>0507-1327-0174</a> ·{" "}
+              이수 직영점 — 서울 동작구 동작대로33가길 5, 1층 102호 · <a href={CONTACT_TEL}>070-8121-5880</a> ·{" "}
               <a href={NAVER_MAP} target="_blank" rel="noopener noreferrer">네이버 지도 ↗</a>
             </p>
             <p>이메일 — <a href={CONTACT_MAIL}>noideacompany2024@gmail.com</a></p>
           </div>
-          <p className="ft-copy">© 2026 노아이디어서플라이 · 간판은 그대로, 피자 경쟁력만 노아이디어처럼.</p>
+          <p className="ft-copy">© 2026 노아이디어피자 · 간판은 그대로, 피자 경쟁력만 노아이디어처럼.</p>
         </div>
       </footer>
 
