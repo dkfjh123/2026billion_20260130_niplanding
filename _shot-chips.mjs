@@ -1,0 +1,13 @@
+import puppeteer from "puppeteer-core";
+const CHROME = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+const browser = await puppeteer.launch({ executablePath: CHROME, headless: "new" });
+const page = await browser.newPage();
+await page.setViewport({ width: 1280, height: 900, deviceScaleFactor: 2 });
+await page.goto("http://localhost:4173/", { waitUntil: "networkidle0" });
+await page.evaluate(() => document.querySelector(".fact-chips")?.scrollIntoView({ block: "center" }));
+await sleep(1700);
+const el = await page.$(".fact-chips");
+await el.screenshot({ path: "./.audit-shots/chips.png" });
+console.log("saved chips.png");
+await browser.close();

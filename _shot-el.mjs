@@ -1,0 +1,15 @@
+import puppeteer from "puppeteer-core";
+const CHROME = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
+const sel = process.argv[2] || ".decl";
+const name = process.argv[3] || "el";
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+const browser = await puppeteer.launch({ executablePath: CHROME, headless: "new" });
+const page = await browser.newPage();
+await page.setViewport({ width: 1280, height: 900, deviceScaleFactor: 2 });
+await page.goto("http://localhost:4173/", { waitUntil: "networkidle0" });
+await page.evaluate((s) => document.querySelector(s)?.scrollIntoView({ block: "center" }), sel);
+await sleep(1700);
+const el = await page.$(sel);
+await el.screenshot({ path: `./.audit-shots/${name}.png` });
+console.log(`saved ${name}.png`);
+await browser.close();

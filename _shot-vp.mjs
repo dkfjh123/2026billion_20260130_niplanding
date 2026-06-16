@@ -1,0 +1,11 @@
+import puppeteer from "puppeteer-core";
+const sleep=(ms)=>new Promise(r=>setTimeout(r,ms));
+const b=await puppeteer.launch({executablePath:String.raw`C:\Program Files\Google\Chrome\Application\chrome.exe`,headless:"new"});
+const p=await b.newPage();
+await p.setViewport({width:1180,height:640,deviceScaleFactor:1.5});
+await p.goto("http://localhost:4173/",{waitUntil:"networkidle0"});
+await p.evaluate(()=>{const e=document.querySelector("#contact");const y=e.getBoundingClientRect().top+window.scrollY-20;window.scrollTo(0,y);});
+await sleep(1500);
+await p.screenshot({path:"./.audit-shots/contact_top.png"});
+console.log("ok");
+await b.close();
