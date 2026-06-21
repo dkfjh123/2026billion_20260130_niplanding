@@ -281,7 +281,7 @@ function App() {
           </div>
           <div className="stmt reveal">
             <h2 className="sx">그래서 직영점에서 검증한 베이스를 <span className="hl">그대로 드립니다.</span></h2>
-            <p className="ss">간판도 가격도 운영도 100% 대표님 것 — 가맹점을 모으는 게 아니니까요.</p>
+            <p className="ss">그래서 가맹점을 모으지 않습니다 — 나머지 100%는 대표님 몫이니까요.</p>
           </div>
           <div className="stmt punchline reveal">
             <h2 className="sx">혼자 창업, 하지만 같이 가는 길.</h2>
@@ -348,29 +348,32 @@ function App() {
         </div>
       </section>
 
-      {/* SOLUTION */}
+      {/* SOLUTION — 점주 3대 고민 → 해결 1:1 매핑 */}
       <section className="sec" id="solution">
         <div className="wrap">
           <div className="sec-head reveal">
             <span className="kick">공급 방식</span>
-            <h2>가맹이 아니라, 같이 갑니다.</h2>
-            <p className="lead">검증된 전용상품 + 대표님 브랜드 + 믿고 거래해온 거래처까지. 상담은 구매 압박이 아니라 적용 가능성을 확인하는 과정입니다.</p>
+            <h2>그 고민, 이렇게 풉니다.</h2>
+            <p className="lead">사장님이 밤에 검색하던 그 고민 — 셋으로 나눠 하나씩 답을 드립니다. 가맹이 아니라, 같이 가는 방식으로.</p>
           </div>
           <div className="sols stagger">
             <div className="sol">
               <div className="ic"><ClipboardList /></div>
+              <p className="sol-pain">“원팩 맛으론, 손님이 다시 올 이유가 안 생겨요”</p>
               <h3>상품 모듈 상담</h3>
-              <p>도우, 소스, 토핑, 사이드 메뉴를 대표님 매장 조건에 맞춰 검토합니다.</p>
+              <p>직영점에서 검증한 도우·소스·토핑·사이드를 대표님 매장 조건에 맞춰 검토합니다. 다시 찾게 만드는 ‘한 끗’부터.</p>
             </div>
             <div className="sol">
               <div className="ic"><SlidersHorizontal /></div>
+              <p className="sol-pain">“프랜차이즈로 가자니 수천만 원, 내 간판도 내려야 하고”</p>
               <h3>100% 자율 운영</h3>
-              <p>상호, 가격, 메뉴명, 판매 방식은 파트너 매장의 판단과 상권에 맞게 유지합니다.</p>
+              <p>가맹비·로열티 0원. 상호·가격·메뉴명·판매 방식은 대표님 상권에 맞게 그대로 유지합니다.</p>
             </div>
             <div className="sol">
               <div className="ic"><Handshake /></div>
+              <p className="sol-pain">“시그니처는 만들고 싶은데 레시피도, 거래처도, 시간도 없어요”</p>
               <h3>제조사·협력업체 연결</h3>
-              <p>돈까스를 하든, 앞다리·뒷다리살을 받든 — 수년간 거래하며 검증한 곳을 소개합니다. 최종 선택과 거래는 대표님 몫입니다.</p>
+              <p>검증된 베이스에 더해, 수년간 거래하며 검증한 거래처를 소개합니다. 최종 선택과 거래는 대표님 몫입니다.</p>
             </div>
           </div>
         </div>
@@ -380,7 +383,7 @@ function App() {
       <section className="decl">
         <div className="wrap decl-in reveal">
           <p className="d-quote">묶어두는 게 아니라,<br /><span className="hl hd">계속 선택받는 게</span> 저희 일입니다.</p>
-          <p className="d-sub">의무 발주도, 위약금도 없습니다. 경쟁력이 없다고 느껴지면 — 쓰시다가 멈추시면 됩니다. 그래서 저희는 매일 더 좋아질 수밖에 없습니다.</p>
+          <p className="d-sub">붙잡아 두는 장치가 없으니, 저희가 할 수 있는 건 매일 더 좋아지는 것뿐입니다.</p>
         </div>
       </section>
 

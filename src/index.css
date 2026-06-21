@@ -13,7 +13,7 @@
 }
 
 :root{
-  --ink:#15171C; --cobalt:#0047AB; --blue:#2D6BFF; --red:#E83517;
+  --ink:#15171C; --cobalt:#0047AB; --red:#E83517;
   --paper:#F7F4EC; --cream:#FBF9F4; --white:#fff; --yellow:#FFC400;
   --t-hi:#15171C; --t-mid:rgba(21,23,28,.72); --t-lo:rgba(21,23,28,.56); --t-faint:rgba(21,23,28,.36);
   --line:rgba(21,23,28,.12); --line-soft:rgba(21,23,28,.08);
@@ -104,17 +104,6 @@ h2{font-weight:800;font-size:clamp(23px,3.4vw,38px);line-height:1.22;letter-spac
 @media(max-width:600px){.sbox{padding:18px 22px;gap:11px;}.sbox .si{width:20px;height:20px;}}
 .persona-ans{margin:48px auto 0;max-width:30ch;font-size:clamp(20px,3.4vw,32px);font-weight:800;letter-spacing:-.03em;line-height:1.4;color:#fff;}
 .persona-ans .em{color:#7FA8FF;text-shadow:0 0 22px rgba(45,107,255,.6);}
-
-/* ── 신뢰 숫자 띠 (한솥식) ── */
-.creds{background:var(--white);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);}
-.creds-in{max-width:var(--maxw);margin:0 auto;padding:0 24px;display:grid;grid-template-columns:repeat(2,1fr);}
-@media(min-width:760px){.creds-in{grid-template-columns:repeat(4,1fr);}}
-.cred{padding:34px 18px;text-align:center;}
-.cred+.cred{border-left:1px solid var(--line-soft);}
-@media(max-width:759px){.cred:nth-child(3){border-left:none;}.cred:nth-child(n+3){border-top:1px solid var(--line-soft);}}
-.cred .v{font-size:clamp(28px,3.8vw,42px);font-weight:800;letter-spacing:-.03em;line-height:1;color:var(--cobalt);}
-.cred .v u{text-decoration:none;font-size:.42em;font-weight:700;margin-left:2px;vertical-align:baseline;}
-.cred .l{margin-top:10px;font-size:13px;font-weight:500;color:var(--t-lo);line-height:1.5;}
 
 /* ── 실재 브랜드 증거 — 유튜브 + 인스타 ── */
 .proofnow{background:var(--white);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);padding:84px 0;}
@@ -221,6 +210,8 @@ h2{font-weight:800;font-size:clamp(23px,3.4vw,38px);line-height:1.22;letter-spac
 .sol .ic svg{width:25px;height:25px;stroke:var(--cobalt);stroke-width:1.7;fill:none;}
 .sol h3{margin-top:20px;font-size:clamp(18px,2.2vw,21px);font-weight:800;letter-spacing:-.02em;}
 .sol p{margin-top:10px;font-size:14.5px;color:var(--t-lo);line-height:1.75;}
+.sol .sol-pain{margin-top:18px;font-size:13.5px;font-weight:600;color:var(--t-faint);letter-spacing:-.01em;line-height:1.55;}
+.sol .sol-pain + h3{margin-top:6px;}
 
 /* declaration — 브랜드 블루 모먼트 */
 .decl{background:var(--cobalt);color:#fff;padding:100px 0;}
@@ -322,7 +313,6 @@ h2{font-weight:800;font-size:clamp(23px,3.4vw,38px);line-height:1.22;letter-spac
 .contact .punch .s .xx::after{content:"";position:absolute;left:0;top:55%;height:2px;width:0;background:var(--red);transition:width .6s cubic-bezier(.7,0,.3,1);}
 .c-in.in .punch .s:nth-child(1) .xx::after{width:100%;transition-delay:.5s;}
 .c-in.in .punch .s:nth-child(2) .xx::after{width:100%;transition-delay:.75s;}
-.contact .scarcity{margin-top:18px;font-size:13.5px;font-weight:700;color:var(--cobalt);}
 .contact .legal{margin:28px auto 0;max-width:640px;font-size:12px;line-height:1.8;color:var(--t-faint);border-top:1px solid var(--line-soft);padding-top:20px;}
 
 /* contact form */
