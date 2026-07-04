@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://noideapizza.org/sitemap.xml
